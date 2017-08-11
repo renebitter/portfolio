@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="styles.css">
   </head>
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
-
+<!--Comment-->
 	<!-- NAVBAR -->
 	<nav class="navbar fixed-top navbar-toggleable-sm navbar-inverse">
 	<div class="container navmargin">
 	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
-	 
+
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 			      <li class="nav-item">
@@ -33,13 +33,13 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="#contact">Contact</a>
 			      </li>
-			    </ul> 
-	  </div> 
+			    </ul>
+	  </div>
 	  <a class="navbar-brand" href="#">Rene Bitter<br>Front End Developer</a>
 	  </div>
 	</nav>
 
-	
+
 	<!-- /NAVBAR -->
 	<!-- JUMBOTRON -->
 	<div class="jumbotron jumbotron-fluid mb-0 text-white" id="jumbotronBg">
@@ -47,34 +47,36 @@
   <div class="container container-title">
 	    <h2 class="name">Rene Bitter</h2>
 	    <h1 class="title">Front End Developer</h1>
-	    
-	    <div class="btn-group mt-2" role="group" id="mainbuttons">	    
+
+	    <div class="btn-group mt-2" role="group" id="mainbuttons">
 		<a class="btn btn-primary btn-lg" id="btnpt" href="#portfolio" >See Portfolio</a>
 		<a class="btn btn-secondary btn-lg" href="#contact" >Contact me</a>
 		</div>
 		</div>
-		
+
 	  </div>
 	  <div id="doubleAngle"> <a href="#about" class="hvr-hang fa fa-angle-double-down fa-3x mx-auto text-white" aria-hidden="true"></a></div>
 	</div>
 	<!-- /JUMBOTRON -->
 	<!-- CONTAINER -->
-	<div class="container main-container">
+	<div>
 	<!-- /CONTAINER -->
 	<!-- ABOUT -->
-	  <h1 id="about" class="display-4 text-center pt-5 text-muted">About me</h1>	 
-	  <div class="row">	    
+  <div class="aboutdiv">
+  <div class="container aboutdiv">
+	  <h1 id="about" class="display-5 text-center pt-5 pb-3 text-muted">About me</h1>
+	  <div class="row">
 	        <div class="col-lg-4 col-xl-3 pt-5">
 			<img class="mb-3 img-fluid rounded profilepic" src="profilepic.jpg" alt="profile picture">
 	    </div>
-	    <div class="col-lg-4 col-xl-6 pt-5">	    
+	    <div class="col-lg-4 col-xl-6 pt-5">
 			<p>"I'm on a mission to live out and expand my creativity, and in this process, learn a lot of new technologies as well as people from all possible backgrounds and cultures. It is my belief that this is the ideal mindset that gives birth to great ideas."</p>
 			<p>Seeking: creativity and development.</p>
 	    </div>
 	    <div class="col-lg-4 col-xl-3">
 	      	<h3 class="mb-4">My skills</h3>
 	      	<p>Front end development:</p>
-			<ul>			
+			<ul>
 			  <li><strong>HTML5</strong>: Intermediate  level</li>
 			  <li><strong>CSS</strong>: Intermediate level</li>
 			  <li><strong>Bootstrap</strong>: Intermediate level</li>
@@ -92,10 +94,14 @@
 			  <li><strong>Portuguese</strong>: Native speaker</li>
 			</ul>
 		</div>
-		</div> 
+		</div>
+    </div>
+  </div>
 		<!-- /ABOUT-->
 		<!-- PORTFOLIO -->
-			<h1 id="portfolio" class="display-4 text-center pt-5 text-muted">My portfolio</h1>
+    <div class="portfoliodiv">
+    <div class="container portfoliodiv">
+			<h1 id="portfolio" class="display-5 text-center pt-5 pb-3 text-muted">My portfolio</h1>
 			<div class="row">
 				<ul class="gallery">
 					<li class="col-md-6 col-lg-4 pt-3">
@@ -217,9 +223,13 @@
 					</li>
 				</ul>
 			</div>
+    </div>
+  </div>
 			<!-- /PORTFOLIO -->
 			<!-- CONTACT -->
-			<h1  id="contact" class="display-4  text-center pt-5 text-muted">Contact</h1>
+      <div class="contactdiv">
+      <div class="container contactdiv">
+			<h1  id="contact" class="display-5  text-center pt-5 pb-3 text-muted">Contact</h1>
 			<button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#contactModal">Contact me</button>
 
 			<!-- signup form -->
@@ -244,7 +254,7 @@
 			        <span class="fa fa-facebook fa-2x"></span></a>
 			      <a href="http://www.instagram.com/r.bitter" target="_blank" class="btn btn-social-icon btn-instagram text-info">
 			        <span class="fa fa-instagram fa-2x"></span></a>
-				  
+
 			      </span>
 			    </div>
 			  </div>
@@ -271,15 +281,17 @@
 				  </div>
 				</div>
 			  </li>
-			</ul>		  	
+			</ul>
 		  </div>
 		  <div class="col-md-6">
 		  	<small class="copyright">&copy; 2017 Rene Bitter</small>
 		  </div>
 		</div>
+    </div>
+  </div>
 		<!-- /FOOTER -->
 	</div> <!-- /.container-->
-		<!-- FORM -->	
+		<!-- FORM -->
 		<div id="contactModal" class="modal fade">
 		  <div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content">
@@ -311,18 +323,18 @@
                   <label for="message">Message:</label>
                   <input type="message" class="form-control" id="message">
                 </div>
-                  
-                  
-                  
+
+
+
                   <hr class="mb-4">
                   <button type="submit" class="btn btn-primary btn-lg">Send</button>
-                  
+
                 </div>
               </form>
             <!-- registration form -->
 
 	<!-- jQuery first, then bootstrap js -->
-	
+
 
 	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
