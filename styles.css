@@ -28,13 +28,13 @@
 
 /*---/Media Query---*/
 body {
-  background-color: #EFEEEF;
-  background-image: -webkit-linear-gradient(360deg, #EFEEEF 45%, #FFF 45%);
+  background-color: #f2f2f2;
+  /*background-image: -webkit-linear-gradient(360deg, #EFEEEF 45%, #FFF 45%);*/
 }
 
 .main-container {
-  background-color: #E0E0E0;
-  background-image: -webkit-linear-gradient(30deg, #EFEEEF 45%, #FFF 45%);
+  /*background-color: #E0E0E0;
+  background-image: -webkit-linear-gradient(30deg, #EFEEEF 45%, #FFF 45%);*/
 }
 
 .brdisplay {
@@ -42,8 +42,8 @@ body {
 }
 
 .navbar {
-	background-color: #6E6E6E;
-	box-shadow: 0 .5em 1em #111;
+	background-color: #f2f2f2;
+	box-shadow: 3px 3px 3px #888888;
 	top: 0;
 	left: 0;
 	z-index: 900;
@@ -78,6 +78,7 @@ body {
 }
 
 /*---FONTS---*/
+
 
 .title{
   padding: 0;
@@ -192,7 +193,29 @@ body.modal-open {
   background: rgba(255,90,9,1);
 }
 /*---/BUTTONS---*/
+/*---ABOUT---*/
+.aboutdiv {
+  background-color: #fafbfc;
+  padding-bottom: 15px;
+}
+.contactdiv {
+  background-color: #fafbfc;
+}
+
+.portfoliodiv {
+  background-color: #f2f2f2;
+  padding-bottom: 30px;
+
+}
+
+h1 {
+  font-weight: 100;
+}
+
+
+/*---/ABOUT---*/
 /*---GALLERY---*/
+
 .gallery {
   margin: 0;
   padding: 0;
