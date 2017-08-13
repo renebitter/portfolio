@@ -1,11 +1,21 @@
 ﻿/*---Media Query---*/
+@media (max-width: 992px) {
+  .title {
+    display: inline-block;
+    font-size: 4em !important;
+    font-weight: 300;
+    letter-spacing: -3px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
 @media (max-width: 576px) {
   .navmargin {
     margin: 0;
   }
   .title {
     display: inline-block;
-    font-size: 2.5em;
+    font-size: 2em !important;
     font-weight: 300;
     letter-spacing: -3px;
     margin-bottom: 40px;
@@ -25,6 +35,7 @@
   }
 
 }
+
 
 /*---/Media Query---*/
 body {
@@ -51,10 +62,15 @@ body {
   margin-bottom: 5px;
 }
 
-.navbar-brand {
-  font-size: .8em;
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-toggler:hover{
+ text-align: center;
 }
-
+a.nav-link {
+  color: slategrey !important;
+}
+a.nav-link.active {
+  color: #FF5A09 !important;
+}
 
 
 #jumbotronBg {
@@ -78,16 +94,21 @@ body {
 }
 
 /*---FONTS---*/
+.container-title {
+padding: 0;
+}
 
+.title2 {
+  text-align: center;
+}
 
 .title{
   padding: 0;
-  margin-bottom: 100px;
+  margin-bottom: 125px;
   color: ;
-  font-size: 4.5em;
+  font-size: 6em;
   font-weight: 400;
   letter-spacing: ;
-  text-shadow: 1px 1px 1px #000;
 }
 
 .name {
@@ -143,6 +164,10 @@ body.modal-open {
 .btn,
 .active {
   transition: .5s;
+}
+
+.btn-social-icon {
+  padding: .5rem .5rem;
 }
 
 .btn-primary:hover {
@@ -216,10 +241,26 @@ h1 {
 /*---/ABOUT---*/
 /*---GALLERY---*/
 
+
+
 .gallery {
   margin: 0;
   padding: 0;
   list-style: none;
+  display:inline;
+}
+
+#gallery {
+  list-style: none;
+  padding: 30px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+#gallery li {
+  width: 300px;
+  height: 250px;
+  display: inline-block;
 }
 
 .galleryfade {
@@ -260,9 +301,9 @@ h1 {
   padding: 10px;
 }
 
-.gallery li {
-  float: left;
-}
+
+
+
 /*---/GALLERY---*/
 /*---ANIMATION---*/
 @-webkit-keyframes hvr-hang {
@@ -340,3 +381,15 @@ h1 {
   animation-direction: normal, alternate;
 }
 /*----------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: ;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
