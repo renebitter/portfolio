@@ -1,11 +1,21 @@
 ﻿/*---Media Query---*/
+@media (max-width: 992px) {
+  .title {
+    display: inline-block;
+    font-size: 4em !important;
+    font-weight: 300;
+    letter-spacing: -3px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
 @media (max-width: 576px) {
   .navmargin {
     margin: 0;
   }
   .title {
     display: inline-block;
-    font-size: 2.5em;
+    font-size: 2em !important;
     font-weight: 300;
     letter-spacing: -3px;
     margin-bottom: 40px;
@@ -26,15 +36,16 @@
 
 }
 
+
 /*---/Media Query---*/
 body {
-  background-color: #EFEEEF;
-  background-image: -webkit-linear-gradient(360deg, #EFEEEF 45%, #FFF 45%);
+  background-color: #f2f2f2;
+  /*background-image: -webkit-linear-gradient(360deg, #EFEEEF 45%, #FFF 45%);*/
 }
 
 .main-container {
-  background-color: #E0E0E0;
-  background-image: -webkit-linear-gradient(30deg, #EFEEEF 45%, #FFF 45%);
+  /*background-color: #E0E0E0;
+  background-image: -webkit-linear-gradient(30deg, #EFEEEF 45%, #FFF 45%);*/
 }
 
 .brdisplay {
@@ -42,8 +53,8 @@ body {
 }
 
 .navbar {
-	background-color: #6E6E6E;
-	box-shadow: 0 .5em 1em #111;
+	background-color: #f2f2f2;
+	box-shadow: 3px 3px 3px #888888;
 	top: 0;
 	left: 0;
 	z-index: 900;
@@ -51,10 +62,15 @@ body {
   margin-bottom: 5px;
 }
 
-.navbar-brand {
-  font-size: .8em;
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-toggler:hover{
+ text-align: center;
 }
-
+a.nav-link {
+  color: slategrey !important;
+}
+a.nav-link.active {
+  color: #FF5A09 !important;
+}
 
 
 #jumbotronBg {
@@ -78,15 +94,21 @@ body {
 }
 
 /*---FONTS---*/
+.container-title {
+padding: 0;
+}
+
+.title2 {
+  text-align: center;
+}
 
 .title{
   padding: 0;
-  margin-bottom: 100px;
+  margin-bottom: 125px;
   color: ;
-  font-size: 4.5em;
+  font-size: 6em;
   font-weight: 400;
   letter-spacing: ;
-  text-shadow: 1px 1px 1px #000;
 }
 
 .name {
@@ -144,6 +166,10 @@ body.modal-open {
   transition: .5s;
 }
 
+.btn-social-icon {
+  padding: .5rem .5rem;
+}
+
 .btn-primary:hover {
   color: #FFF;
   background: #FF5A09;
@@ -192,11 +218,49 @@ body.modal-open {
   background: rgba(255,90,9,1);
 }
 /*---/BUTTONS---*/
+/*---ABOUT---*/
+.aboutdiv {
+  background-color: #fafbfc;
+  padding-bottom: 15px;
+}
+.contactdiv {
+  background-color: #fafbfc;
+}
+
+.portfoliodiv {
+  background-color: #f2f2f2;
+  padding-bottom: 30px;
+
+}
+
+h1 {
+  font-weight: 100;
+}
+
+
+/*---/ABOUT---*/
 /*---GALLERY---*/
+
+
+
 .gallery {
   margin: 0;
   padding: 0;
   list-style: none;
+  display:inline;
+}
+
+#gallery {
+  list-style: none;
+  padding: 30px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+#gallery li {
+  width: 300px;
+  height: 250px;
+  display: inline-block;
 }
 
 .galleryfade {
@@ -237,9 +301,9 @@ body.modal-open {
   padding: 10px;
 }
 
-.gallery li {
-  float: left;
-}
+
+
+
 /*---/GALLERY---*/
 /*---ANIMATION---*/
 @-webkit-keyframes hvr-hang {
@@ -317,3 +381,15 @@ body.modal-open {
   animation-direction: normal, alternate;
 }
 /*----------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: ;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
