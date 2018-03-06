@@ -74,7 +74,7 @@ a.nav-link.active {
 
 
 #jumbotronBg {
-	background-image: url('scriptimg.jpg'), linear-gradient(#6E6E6E, #393939);
+	background-image: url('https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixlib=rb-0.3.5&s=61ead6562974b58aeaf66646026a1f0f&auto=format&fit=crop&w=1950&q=80'), linear-gradient(#6E6E6E, #393939);
   background-blend-mode: ;
 	background-repeat: repeat;
 	background-attachment: fixed;
@@ -138,9 +138,10 @@ ul li strong {
 
 a, a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
-  color: #FF9900;
 }
-
+.caption {
+  color: #636c72;
+}
 .profilepic {
     border-radius: ;
     display: block;
