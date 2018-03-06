@@ -138,6 +138,7 @@ ul li strong {
 
 a, a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
+  color: #FF9900;
 }
 
 .profilepic {
@@ -267,6 +268,9 @@ h1 {
   position: relative;
 }
 
+.img-thumbnail{
+}
+
 .image {
   display: block;
   width: 100%;
@@ -295,7 +299,8 @@ h1 {
 
 .text {
   color: white;
-  font-size: 20px;
+  text-shadow: 6px solid red;
+  font-size: 15px;
   position: absolute;
   overflow: hidden;
   padding: 10px;
