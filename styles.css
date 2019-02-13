@@ -251,6 +251,13 @@ body.modal-open {
 h1 {
 	font-weight: 100;
 }
+h2 {
+	font-weight: 100;
+}
+h3{
+	font-size: 18px;
+	font-weight: 400;
+}
 
 
 /*---/ABOUT---*/
