@@ -265,6 +265,10 @@ h3{
 
 /*---GALLERY---*/
 
+.large-icon{
+	font-size: 180px;
+}
+
 .caption {
 	color: #636c72;
 	/* border: 1px solid lightgray; */
