@@ -1,0 +1,57 @@
+.portfolio .card img {
+  border-radius: 5px;
+}
+
+.portfolio small {
+  font-style: italic;
+  color: #616161;
+}
+
+.portfolio-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio-links a {
+  margin-right: 15px;
+  color: #f4494e;
+}
+
+.portfolio-links a:hover {
+  color: #000;
+}
+
+.portfolio-links i {
+  color: #000;
+}
+
+.portfolio .project {
+  margin-top: 50px;
+}
+
+.portfolio .column-right {
+  max-width: 500px;
+  margin: 50px auto 0;
+}
+
+.portfolio .description {
+  margin: 25px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    margin-top: 100px;
+  }
+
+  .portfolio .column-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+  }
+
+  .portfolio .column-right {
+    width: 50%;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.cta-buttons {
+  margin-top: 35px;
+  display: flex;
+}
+
+.cta-buttons .btn-outlined {
+  margin-right: 15px;
+}
+
+.greetings .column-right {
+  max-width: 250px;
+  max-height: 250px;
+  text-align: center;
+  margin: auto;
+}
+
+.greetings .profile-pic {
+  margin: 0 auto 50px;
+}
+
+.greetings .column-right.profile-pic img {
+  border-radius: 50%;
+  margin: auto;
+  /* box-shadow: -25px -50px 0px 24px #ff8c4d; */
+}
+
+/* .greetings .profile-pic:before {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    top: -30px;
+    right: 80px;
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(#ff8c4d, #f4494e);
+    content: '';
+  } */
+
+@media only screen and (min-width: 768px) {
+  .greetings .column-left {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    /* padding-right: 100px; */
+    margin-bottom: unset;
+  }
+
+  .greetings .column-right {
+    width: 40%;
+    margin: auto;
+  }
+}

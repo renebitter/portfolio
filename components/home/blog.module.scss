@@ -1,0 +1,26 @@
+.gallery-wrap {
+  margin-top: 50px;
+}
+
+.gallery-title {
+  margin-bottom: 15px;
+}
+
+.blog .card {
+  border-radius: 5px;
+  padding: 25px;
+  border: 1px solid #cecece;
+  margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+
+  .blog .card {
+    margin-bottom: unset;
+  }
+}

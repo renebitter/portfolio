@@ -1,0 +1,35 @@
+.about .column-left {
+  margin-top: 50px;
+}
+
+.about .column-left p {
+  margin: 10px 0;
+}
+
+.about .column-right.profile-pic img {
+  border-radius: 50%;
+}
+.about .column-right.profile-pic {
+  max-width: 350px;
+  max-height: 350px;
+  text-align: center;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .about .column-left {
+    align-self: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+  }
+
+  .about .column-right {
+    width: 40%;
+  }
+
+  .about .column-right.profile-pic {
+    position: relative;
+  }
+}
