@@ -6,6 +6,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -19,8 +23,8 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
-  font-family: 'Poppins', sans-serif;
+h2 {
+  font-size: 2rem;
 }
 
 .btn {

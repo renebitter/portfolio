@@ -1,26 +1,41 @@
-.gallery-wrap {
-  margin-top: 50px;
-}
+.blog {
+  padding: 50px 15px;
 
-.gallery-title {
-  margin-bottom: 15px;
-}
-
-.blog .card {
-  border-radius: 5px;
-  padding: 25px;
-  border: 1px solid #cecece;
-  margin-bottom: 25px;
-}
-
-@media only screen and (min-width: 768px) {
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 25px;
+  .galleryWrap {
+    margin-top: 50px;
   }
 
-  .blog .card {
-    margin-bottom: unset;
+  .galleryTitle {
+    margin-bottom: 15px;
+  }
+
+  .card {
+    border-radius: 5px;
+    padding: 25px;
+    border: 1px solid #cecece;
+    margin-bottom: 25px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 100px 25px;
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px;
+    }
+
+    .card {
+      margin-bottom: unset;
+    }
   }
 }

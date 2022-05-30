@@ -3,7 +3,7 @@ import classes from './footer.module.scss';
 const Footer = () => {
   return (
     <footer className={classes.footer}>
-      <div className='social-media'>
+      <div className={classes.socialMedia}>
         <a
           href='https://github.com/renebitter'
           target='_blank'

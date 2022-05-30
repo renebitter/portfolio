@@ -6,16 +6,6 @@ const Hero = () => {
     <section className={classes.greetings}>
       <div className={classes.container}>
         <div className={classes.row}>
-          <div
-            className={`${classes.columnRight} ${classes.profilePic} ${classes.columnRight}`}>
-            <Image
-              src='/images/profile-pic.png'
-              width={360}
-              height={360}
-              alt='profile-pic'
-            />
-          </div>
-
           <div className={classes.columnLeft}>
             <h3>Hi, my name is Rene.</h3>
             <h1>
@@ -34,6 +24,15 @@ const Hero = () => {
                 Let&apos;s Talk
               </a>
             </div>
+          </div>
+
+          <div className={`${classes.columnRight} ${classes.profilePic}`}>
+            <Image
+              src='/images/profile-pic.png'
+              width={360}
+              height={360}
+              alt='profile-pic'
+            />
           </div>
         </div>
       </div>

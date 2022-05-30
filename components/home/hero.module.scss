@@ -1,53 +1,34 @@
 .greetings {
   padding: 50px 15px;
 
-  .ctaButtons {
-    margin-top: 35px;
+  .row {
     display: flex;
+    flex-flow: column;
   }
 
-  .ctaButtons {
-    a {
-      margin-right: 15px;
-    }
-  }
+  .columnLeft {
+    order: 2;
+    .ctaButtons {
+      margin-top: 35px;
+      display: flex;
 
-  .columnRight {
-    max-width: 250px;
-    max-height: 250px;
-    text-align: center;
-    margin: auto;
-  }
-
-  .profilePic {
-    margin: 0 auto 50px;
-  }
-
-  .columnRight {
-    &.profilePic {
-      img {
-        border-radius: 50%;
-        margin: auto;
+      a {
+        margin-right: 15px;
       }
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    .columnLeft {
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      /* padding-right: 100px; */
-      margin-bottom: unset;
-    }
-
-    .columnRight {
-      width: 40%;
+  .columnRight {
+    order: 1;
+    &.profilePic {
+      max-width: 350px;
+      max-height: 350px;
+      text-align: center;
       margin: auto;
+      margin: 0 auto 50px;
+
       img {
-        max-width: 100%;
-        height: auto;
+        border-radius: 50%;
       }
     }
   }
@@ -55,21 +36,34 @@
   @media only screen and (min-width: 768px) {
     padding: 100px 25px;
 
-    .columnLeft {
-      order: 1;
-    }
-
-    .columnRight {
-      order: 2;
+    .container {
+      max-width: 1200px;
+      margin: auto;
     }
 
     .row {
       display: flex;
+      flex-flow: row;
     }
 
-    .container {
-      max-width: 1200px;
+    .columnLeft {
+      order: 1;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      margin-bottom: unset;
+      /* padding-right: 100px; */
+    }
+
+    .columnRight {
+      order: 2;
+      width: 40%;
       margin: auto;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
   }
 }

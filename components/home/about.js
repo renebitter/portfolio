@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className='about' id='about'>
-      <div className='container'>
+    <section className={classes.about} id='about'>
+      <div className={classes.container}>
         <h2>About me</h2>
 
-        <div className='row'>
-          <div className='column-left'>
+        <div className={classes.row}>
+          <div className={classes.columnLeft}>
             <p>
               Moved by the desire to work with something creative I started
               learning Web Development in 2017. I started my developer career
@@ -29,7 +29,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className='column-right profile-pic'>
+          <div className={`${classes.columnRight} ${classes.profilePic}`}>
             <Image
               src='/images/profile-pic.png'
               width={360}

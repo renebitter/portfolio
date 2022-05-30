@@ -43,16 +43,16 @@ const Navbar = (props) => {
             }
             id='navMenu'>
             <div className={classes.linkWrapper}>
-              <a href='#about' onClick={closeNav}>
-                About
-              </a>
               <a href='#portfolio' onClick={closeNav}>
                 Portfolio
+              </a>
+              <a href='#about' onClick={closeNav}>
+                About
               </a>
               <a href='#blog' onClick={closeNav}>
                 Blog
               </a>
-              <a href='#' onClick={closeNav}>
+              <a href='#!' onClick={closeNav}>
                 Contact
               </a>
             </div>
