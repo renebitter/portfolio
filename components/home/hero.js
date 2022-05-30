@@ -7,7 +7,7 @@ const Hero = () => {
       <div className={classes.container}>
         <div className={classes.row}>
           <div
-            className={`${classes['column-right']} ${classes['profile-pic']}`}>
+            className={`${classes.columnRight} ${classes.profilePic} ${classes.columnRight}`}>
             <Image
               src='/images/profile-pic.png'
               width={360}
@@ -16,33 +16,21 @@ const Hero = () => {
             />
           </div>
 
-          <div className={classes['column-left']}>
+          <div className={classes.columnLeft}>
             <h3>Hi, my name is Rene.</h3>
             <h1>
-              I&apos;m a Frontend Developer mainly focusing on React having also
-              worked on Shopware projects.
+              I&apos;m a React Frontend Developer having also worked on Shopware
+              projects.
             </h1>
             <p>
               {' '}
               I&apos;m fluent in English, German, Portuguese and Javascript.
             </p>
-            <div className={classes['cta-buttons']}>
-              {/* <a
-                href='#portfolio'
-                className={`${classes.btn} ${classes['btn-outlined']}`}>
-                My Work
-              </a>
-              <a
-                href='#'
-                className={`${classes.btn} ${classes['btn-filled']}`}
-                contact-modal>
-                Let&apos;s Talk
-              </a> */}
-
+            <div className={classes.ctaButtons}>
               <a href='#portfolio' className='btn btn-outlined'>
                 My Work
               </a>
-              <a href='#' className='btn btn-filled' contact-modal>
+              <a href='#' className='btn btn-filled'>
                 Let&apos;s Talk
               </a>
             </div>

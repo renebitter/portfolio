@@ -1,57 +1,65 @@
 import classes from './navbar.module.scss';
+import { useState, useEffect } from 'react';
 
 const Navbar = (props) => {
-  //   window.onscroll = function () {
-  //     fixNavbar();
-  //   };
-  //   const navbar = document.getElementById('navbar');
+  const [navExpanded, setNavExpanded] = useState(false);
+  const [sticky, setSticky] = useState(false);
 
-  //   function fixNavbar() {
-  //     if (window.pageYOffset >= 400) {
-  //       navbar.classList.add('sticky');
-  //     } else {
-  //       navbar.classList.remove('sticky');
-  //     }
-  //   }
+  const toggleNav = () => {
+    setNavExpanded(!navExpanded);
+  };
 
-  function navMenu() {
-    const navMenu = document.getElementById('navMenu');
-    if (navMenu.className === 'nav-menu') {
-      navMenu.className += ' responsive';
+  const closeNav = () => {
+    setNavExpanded(false);
+  };
+
+  function fixNavbar() {
+    if (window.pageYOffset >= 400) {
+      setSticky(true);
     } else {
-      navMenu.className = 'nav-menu';
+      setSticky(false);
     }
   }
 
+  useEffect(() => {
+    window.onscroll = fixNavbar;
+  }, []);
+
   return (
     <>
-      <div className={classes.navbar} id='navbar'>
+      <div
+        className={
+          sticky ? `${classes.navbar}  ${classes.sticky}` : `${classes.navbar} `
+        }>
         <div className={classes.container}>
           <a href='#' className={classes.logo}>
-            &lt/&gt
+            {'</>'}
           </a>
-          <nav className={classes['nav-menu']} id='navMenu'>
-            <div className={classes['link-wrapper']}>
-              <a href='#about' onClick={navMenu}>
+          <nav
+            className={
+              navExpanded
+                ? `${classes.navMenu} ${classes.responsive}`
+                : `${classes.navMenu}`
+            }
+            id='navMenu'>
+            <div className={classes.linkWrapper}>
+              <a href='#about' onClick={closeNav}>
                 About
               </a>
-              <a href='#portfolio' onClick={navMenu}>
+              <a href='#portfolio' onClick={closeNav}>
                 Portfolio
               </a>
-              <a href='#blog' onClick={navMenu}>
+              <a href='#blog' onClick={closeNav}>
                 Blog
               </a>
-              <a href='#' onClick={navMenu} contact-modal>
+              <a href='#' onClick={closeNav}>
                 Contact
               </a>
             </div>
           </nav>
-          <a
-            href='javascript:void(0);'
-            className={classes.icon}
-            onClick={navMenu}>
+          <button className={classes.icon} onClick={toggleNav}>
             <i className='fa fa-bars'></i>
-          </a>
+          </button>
         </div>
       </div>
       <main>{props.children}</main>
