@@ -6,13 +6,17 @@
   }
 
   .columnLeft {
+    h3 {
+      margin-bottom: 0;
+    }
+
     small {
       font-style: italic;
       color: #616161;
     }
 
     .description {
-      margin: 25px 0;
+      margin: 25px 0 10px;
     }
 
     .portfolioLinks {

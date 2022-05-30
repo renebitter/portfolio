@@ -9,11 +9,14 @@ const About = () => {
 
         <div className={classes.row}>
           <div className={classes.columnLeft}>
+            <h3>
+              Moved by the desire to work with something creative I began
+              learning Web Development in 2017.
+            </h3>
             <p>
-              Moved by the desire to work with something creative I started
-              learning Web Development in 2017. I started my developer career
-              with a great emphasis on e-commerce as a Shopware Frontend
-              Developer and later specialized in React and it&apos;s ecosystem.
+              My developer career started with a great emphasis on e-commerce as
+              a Shopware Frontend Developer and later I specialized in React and
+              it&apos;s ecosystem.
             </p>
 
             <p>
