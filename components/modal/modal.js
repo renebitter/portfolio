@@ -7,7 +7,7 @@ const Modal = (props) => {
       <div className={classes.backdrop} onClick={props.onClose} />
       <div className={classes.modal}>
         {props.contact && (
-          <>
+          <div className={classes.contactModal}>
             <h2>Contact</h2>
             <form id='contactForm' className={classes.contactForm} action=''>
               <div className={classes.row}>
@@ -21,26 +21,22 @@ const Modal = (props) => {
                 </div>
               </div>
 
-              <div className={classes.row}>
-                <div className={classes.inputField}>
-                  <textarea
-                    id='textArea'
-                    className={classes.textarea}></textarea>
-                  <label htmlFor='textArea'>Your message here...</label>
-                </div>
+              <div className={classes.inputField}>
+                <textarea id='textArea' className={classes.textarea}></textarea>
+                <label htmlFor='textArea'>Your message here...</label>
               </div>
 
-              <div className={classes.row}>
+              <div className={classes.action}>
                 <a href='#!' className='btn btn-filled' onClick={props.onClose}>
                   Send
                 </a>
               </div>
             </form>
-          </>
+          </div>
         )}
 
         {props.project && (
-          <>
+          <div className={classes.projectModal}>
             <h2>Project Name</h2>
             <div className='main'>
               <div className='project-row'>
@@ -108,7 +104,7 @@ const Modal = (props) => {
                 />
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     </>

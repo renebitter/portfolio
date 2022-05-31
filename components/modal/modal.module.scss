@@ -4,11 +4,12 @@
   background-color: white;
   padding: 1rem;
   text-align: center;
-  width: 30rem;
+  // width: 30rem;
   z-index: 3;
   position: fixed;
   top: 20vh;
-  left: calc(50% - 15rem);
+  // left: calc(50% - 15rem);
+  margin: auto;
 }
 
 .backdrop {
@@ -19,4 +20,22 @@
   height: 100vh;
   top: 0;
   left: 0;
+}
+
+.contactModal {
+  .row {
+    display: flex;
+  }
+
+  .inputField {
+    display: flex;
+    margin-bottom: 25px;
+
+    label {
+      position: absolute;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
 }
