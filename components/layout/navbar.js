@@ -1,9 +1,19 @@
 import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
+import Modal from '../modal/modal';
 
 const Navbar = (props) => {
   const [navExpanded, setNavExpanded] = useState(false);
   const [sticky, setSticky] = useState(false);
+  const [showModal, setShowModal] = useState();
+
+  function showModalHandler() {
+    setShowModal(true);
+  }
+
+  function closeModalHandler() {
+    setShowModal(false);
+  }
 
   const toggleNav = () => {
     setNavExpanded(!navExpanded);
@@ -52,7 +62,12 @@ const Navbar = (props) => {
               <a href='#blog' onClick={closeNav}>
                 Blog
               </a>
-              <a href='#!' onClick={closeNav}>
+              <a
+                href='#!'
+                onClick={() => {
+                  showModalHandler();
+                  closeNav();
+                }}>
                 Contact
               </a>
             </div>
@@ -62,6 +77,7 @@ const Navbar = (props) => {
           </button>
         </div>
       </div>
+      {showModal && <Modal contact onClose={closeModalHandler} />}
       <main>{props.children}</main>
     </>
   );

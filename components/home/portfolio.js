@@ -1,7 +1,19 @@
 import classes from './portfolio.module.scss';
 import Image from 'next/image';
+import { useState } from 'react';
+import Modal from '../modal/modal';
 
 const Portfolio = () => {
+  const [showModal, setShowModal] = useState();
+
+  function showModalHandler() {
+    setShowModal(true);
+  }
+
+  function closeModalHandler() {
+    setShowModal(false);
+  }
+
   return (
     <section className={classes.portfolio} id='portfolio'>
       <div className={classes.container}>
@@ -38,12 +50,14 @@ const Portfolio = () => {
 
             <div className={classes.columnRight}>
               <div className={classes.card}>
-                <Image
-                  src='https://images.unsplash.com/photo-1634084462412-b54873c0a56d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2060&q=80'
-                  width={500}
-                  height={360}
-                  alt=''
-                />
+                <a href='#!' onClick={showModalHandler}>
+                  <Image
+                    src='https://images.unsplash.com/photo-1634084462412-b54873c0a56d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2060&q=80'
+                    width={500}
+                    height={360}
+                    alt=''
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -128,6 +142,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      {showModal && <Modal project onClose={closeModalHandler} />}
     </section>
   );
 };

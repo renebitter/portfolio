@@ -1,7 +1,19 @@
 import classes from './hero.module.scss';
 import Image from 'next/image';
 
+import { useState } from 'react';
+import Modal from '../modal/modal';
+
 const Hero = () => {
+  const [showModal, setShowModal] = useState();
+
+  function showModalHandler() {
+    setShowModal(true);
+  }
+
+  function closeModalHandler() {
+    setShowModal(false);
+  }
   return (
     <section className={classes.greetings}>
       <div className={classes.container}>
@@ -20,7 +32,10 @@ const Hero = () => {
               <a href='#portfolio' className='btn btn-outlined'>
                 My Work
               </a>
-              <a href='#' className='btn btn-filled'>
+              <a
+                href='#!'
+                className='btn btn-filled'
+                onClick={showModalHandler}>
                 Let&apos;s Talk
               </a>
             </div>
@@ -36,6 +51,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {showModal && <Modal contact onClose={closeModalHandler} />}
     </section>
   );
 };
