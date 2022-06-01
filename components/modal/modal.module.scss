@@ -8,11 +8,11 @@
   left: 0;
 }
 
-.modal {
+.contactModal,
+.projectModal {
   border-radius: 5px;
   background-color: white;
   padding: 1rem;
-  text-align: center;
   overflow: auto;
   z-index: 3;
   position: fixed;
@@ -26,6 +26,8 @@
 }
 
 .contactModal {
+  text-align: center;
+
   .inputField {
     margin: 25px 0;
 
@@ -89,6 +91,73 @@
       justify-content: flex-end;
       margin-top: auto;
       margin-bottom: unset;
+    }
+  }
+}
+
+.projectModal {
+  width: 90%;
+
+  .main {
+    .projectRow {
+      .image {
+        text-align: center;
+      }
+
+      .modalLinks {
+        a {
+          margin-right: 15px;
+          color: #f4494e;
+        }
+
+        a:hover {
+          color: #000;
+        }
+
+        i {
+          margin-right: 5px;
+          color: #000;
+        }
+      }
+
+      // .description {
+      // }
+    }
+
+    .flowchart {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main {
+      .projectRow {
+        display: flex;
+        margin-bottom: 50px;
+
+        .image {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          order: 2;
+          width: 50%;
+
+          .modalLinks {
+            display: flex;
+          }
+        }
+
+        .description {
+          order: 1;
+          width: 50%;
+          margin-right: 25px;
+        }
+      }
+
+      .flowchart {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
