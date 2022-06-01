@@ -1,5 +1,6 @@
 import classes from './modal.module.scss';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Modal = (props) => {
   return (
@@ -8,27 +9,31 @@ const Modal = (props) => {
       <div className={classes.modal}>
         {props.contact && (
           <div className={classes.contactModal}>
-            <h2>Contact</h2>
+            <h2>Say hi!</h2>
             <form id='contactForm' className={classes.contactForm} action=''>
               <div className={classes.row}>
                 <div className={classes.inputField}>
-                  <input id='name' type='text' className='validate' />
                   <label htmlFor='name'>Name</label>
+                  <input id='name' type='text' required />
                 </div>
+
                 <div className={classes.inputField}>
-                  <input id='email' type='email' className='validate' />
-                  <label htmlFor='email'>Email</label>
+                  <label htmlFor='email'>E-mail</label>
+                  <input id='email' type='email' required />
                 </div>
               </div>
 
               <div className={classes.inputField}>
-                <textarea id='textArea' className={classes.textarea}></textarea>
-                <label htmlFor='textArea'>Your message here...</label>
+                <label htmlFor='textArea'>Your message here:</label>
+                <textarea
+                  id='textArea'
+                  className={classes.textarea}
+                  required></textarea>
               </div>
 
               <div className={classes.action}>
                 <a href='#!' className='btn btn-filled' onClick={props.onClose}>
-                  Send
+                  Send Message
                 </a>
               </div>
             </form>

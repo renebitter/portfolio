@@ -1,17 +1,3 @@
-.modal {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  background-color: white;
-  padding: 1rem;
-  text-align: center;
-  // width: 30rem;
-  z-index: 3;
-  position: fixed;
-  top: 20vh;
-  // left: calc(50% - 15rem);
-  margin: auto;
-}
-
 .backdrop {
   position: fixed;
   z-index: 2;
@@ -22,20 +8,87 @@
   left: 0;
 }
 
-.contactModal {
-  .row {
-    display: flex;
-  }
-
-  .inputField {
-    display: flex;
-    margin-bottom: 25px;
-
-    label {
-      position: absolute;
-    }
-  }
+.modal {
+  border-radius: 5px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  overflow: auto;
+  z-index: 3;
+  position: fixed;
+  max-width: 1200px;
+  min-width: 340px;
+  max-height: 80vh;
+  min-height: 550px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media only screen and (min-width: 768px) {
+.contactModal {
+  .inputField {
+    margin: 25px 0;
+
+    label {
+      margin-bottom: 5px;
+      text-align: left;
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #d0ced6;
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid #d0ced6;
+      border-radius: 5px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+
+    textarea {
+      width: 100%;
+      height: 175px;
+    }
+  }
+
+  .action {
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 1rem;
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      height: 425px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .inputField {
+      margin: 25px 0;
+    }
+    .inputField:first-child {
+      margin-right: 25px;
+    }
+
+    .action {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+      margin-bottom: unset;
+    }
+  }
 }
