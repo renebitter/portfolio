@@ -15,20 +15,22 @@ const About = () => {
             </h3>
             <p>
               My developer career started with a great emphasis on e-commerce as
-              a Shopware Frontend Developer and later I specialized in React and
+              a Shopware Frontend Developer and I even worked on the development
+              of Shopware 6 itself. Later on I specialized in React and
               it&apos;s ecosystem.
             </p>
 
             <p>
-              Besides Web Development I have a diverse working experience
-              ranging from airfreight logistics at the Frankfurt Airport to
-              customer support in tech companies around Europe and Brazil.
+              Besides Web Development I have a diverse work experience ranging
+              from Airfreight Logistics at the Frankfurt Airport to Customer
+              Support in Tech Companies around Europe and Brazil.
             </p>
 
             <p>
-              As a Brazilian-German I appreciate diversity as well as
-              discovering and experiencing new cultures. Loving nature and being
-              outdoors makes my favorite pastime hiking and mountain climbing.
+              I&apos;m no stranger to multiculturalism and I appreciate
+              diversity as well as discovering and experiencing new cultures.
+              Loving nature and being outdoors makes my favorite pastime hiking
+              and mountain climbing.
             </p>
           </div>
 
