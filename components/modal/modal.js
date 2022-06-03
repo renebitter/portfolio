@@ -33,9 +33,22 @@ const Modal = (props) => {
               </div>
 
               <div className={classes.action}>
-                <a href='#!' className='btn btn-filled' onClick={props.onClose}>
-                  Send Message
-                </a>
+                <div className={classes.linkedinLink}>
+                  <a
+                    href='https://www.linkedin.com/in/rene-bitter/'
+                    target='_blank'
+                    rel='noreferrer'>
+                    <i className='fab fa-linkedin'></i>
+                  </a>
+                </div>
+                <div className={classes.sendLink}>
+                  <a
+                    href='#!'
+                    className='btn btn-filled'
+                    onClick={props.onClose}>
+                    Send Message
+                  </a>
+                </div>
               </div>
             </form>
           </div>

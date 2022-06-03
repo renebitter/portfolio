@@ -63,6 +63,18 @@
 
   .action {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    i {
+      font-size: 3.4rem;
+      color: #ff8d4d;
+    }
+
+    .sendLink {
+      align-self: center;
+    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -87,9 +99,6 @@
     }
 
     .action {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: auto;
       margin-bottom: unset;
     }
   }
