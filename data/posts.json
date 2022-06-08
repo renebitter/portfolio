@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "1",
+    "title": "Fullstack eCommerce Website based on the MERN Stack",
+    "category": "React, Redux, Mongo, Node, Express",
+    "excerpt": "Build with React and Redux for it's state management, this is a fully functional e-commerce website includiding payment, admin user, etc."
+  },
+  {
+    "_id": "2",
+    "title": "Bolg Website using Next.js",
+    "category": "React, Next.js",
+    "excerpt": "Static website using Next.js's getStaticProps() & getStaticPaths()."
+  }
+]

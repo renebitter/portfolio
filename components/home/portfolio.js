@@ -6,12 +6,15 @@ import projects from '../../data/projects.json';
 
 const Portfolio = () => {
   const [showModal, setShowModal] = useState();
+  const [currentProject, setCurrentProject] = useState();
 
-  function showModalHandler() {
+  function showModalHandler(project) {
+    setCurrentProject(project);
     setShowModal(true);
   }
 
   function closeModalHandler() {
+    setCurrentProject(null);
     setShowModal(false);
   }
 
@@ -42,7 +45,7 @@ const Portfolio = () => {
 
               <div className={classes.columnRight}>
                 <div className={classes.card}>
-                  <a href='#!' onClick={showModalHandler}>
+                  <a href='#!' onClick={() => showModalHandler(project)}>
                     <Image
                       src={project.image}
                       width={500}
@@ -56,8 +59,9 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-
-      {showModal && <Modal project onClose={closeModalHandler} />}
+      {showModal && (
+        <Modal project={currentProject} onClose={closeModalHandler} />
+      )}
     </section>
   );
 };
