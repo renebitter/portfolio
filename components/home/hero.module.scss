@@ -1,7 +1,9 @@
 .greetings {
-  padding: 50px 15px;
+  padding: 25px 15px 50px;
+  height: 85vh;
 
   .row {
+    height: 100%;
     display: flex;
     flex-flow: column;
   }
@@ -21,11 +23,11 @@
   .columnRight {
     order: 1;
     &.profilePic {
-      max-width: 350px;
-      max-height: 350px;
+      max-width: 205px;
+      max-height: 205px;
       text-align: center;
       margin: auto;
-      margin: 0 auto 50px;
+      margin: 0 auto 15px;
 
       img {
         border-radius: 50%;
@@ -33,10 +35,25 @@
     }
   }
 
+  .iconScroll {
+    display: none;
+  }
+
+  @media only screen and (min-width: 480px) {
+    .columnRight {
+      &.profilePic {
+        max-width: 350px;
+        max-height: 350px;
+        margin: 0 auto 50px;
+      }
+    }
+  }
+
   @media only screen and (min-width: 768px) {
-    padding: 100px 25px;
+    padding: 120px 25px;
 
     .container {
+      // height: 100%;
       max-width: 1200px;
       margin: auto;
     }
@@ -55,7 +72,12 @@
       margin-bottom: unset;
 
       h1 {
+        font-size: 2.3rem;
         margin: 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
       }
 
       h3,
@@ -68,9 +90,50 @@
       order: 2;
       width: 40%;
       margin: auto;
+      &.profilePic {
+        margin: auto;
+      }
       img {
         max-width: 100%;
         height: auto;
+      }
+    }
+
+    .iconScroll,
+    .iconScroll:before {
+      position: absolute;
+      left: 50%;
+    }
+    .iconScroll {
+      display: block;
+      width: 30px;
+      height: 50px;
+      margin-left: -20px;
+      bottom: 120px;
+      margin-top: -35px;
+      border: 2px solid #6e6d7a;
+      border-radius: 25px;
+    }
+
+    .iconScroll:before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #6e6d7a;
+      margin-left: -4px;
+      top: 8px;
+      border-radius: 4px;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-name: scroll;
+    }
+    @keyframes scroll {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(26px);
       }
     }
   }

@@ -4,7 +4,7 @@ import projects from '../../data/projects.json';
 
 const PortfolioGallery = () => {
   const [showProjects, setShowProjects] = useState(false);
-  console.log(showProjects);
+
   function showProjectsHandler() {
     if (showProjects) {
       setShowProjects(false);

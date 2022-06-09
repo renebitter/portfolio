@@ -21,8 +21,8 @@ const Hero = () => {
           <div className={classes.columnLeft}>
             <h3>Hi, my name is Rene.</h3>
             <h1>
-              I&apos;m a React Frontend Developer having also worked on Shopware
-              projects.
+              I&apos;m a React Frontend Developer. <br />I also worked on
+              Shopware projects.
             </h1>
             <p>
               {' '}
@@ -50,6 +50,7 @@ const Hero = () => {
             />
           </div>
         </div>
+        <div className={classes.iconScroll}></div>
       </div>
 
       {showModal && <Modal contact onClose={closeModalHandler} />}

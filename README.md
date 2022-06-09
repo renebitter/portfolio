@@ -3,8 +3,11 @@
 Todo:
 
 - Finish PortfolioGallery (add more projects and "featured" to JSON)
+- Filter featured projects
+- Remove scroll animation indicator after scrolling down
 - React animation
 - React-modal?
+- React carousel
 - prop drilling vs context?
 - Modal Scrolling
 - Add Contact Form Service https://formspree.io/
