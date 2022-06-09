@@ -2,6 +2,7 @@
 
 Todo:
 
+- react animation
 - react-modal?
 - prop drilling vs context?
 - Modal Scrolling
