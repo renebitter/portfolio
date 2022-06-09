@@ -50,7 +50,9 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className={classes.iconScroll}></div>
+        <a href='#portfolio'>
+          <div className={classes.iconScroll}></div>
+        </a>
       </div>
 
       {showModal && <Modal contact onClose={closeModalHandler} />}
