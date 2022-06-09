@@ -1,6 +1,5 @@
 .greetings {
   padding: 25px 15px 50px;
-  height: 85vh;
 
   .row {
     height: 100%;
@@ -53,7 +52,6 @@
     padding: 120px 25px;
 
     .container {
-      // height: 100%;
       max-width: 1200px;
       margin: auto;
     }
@@ -99,41 +97,39 @@
       }
     }
 
-    .iconScroll,
-    .iconScroll:before {
-      position: absolute;
-      left: 50%;
-    }
-    .iconScroll {
-      display: block;
-      width: 30px;
-      height: 50px;
-      margin-left: -20px;
-      bottom: 120px;
-      margin-top: -35px;
-      border: 2px solid #6e6d7a;
-      border-radius: 25px;
-    }
-
-    .iconScroll:before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: #6e6d7a;
-      margin-left: -4px;
-      top: 8px;
-      border-radius: 4px;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite;
-      animation-name: scroll;
-    }
-    @keyframes scroll {
-      0% {
-        opacity: 1;
+    .iconScrollContainer {
+      .iconScroll {
+        position: relative;
+        margin: auto;
+        display: block;
+        width: 30px;
+        height: 50px;
+        border: 2px solid #6e6d7a;
+        border-radius: 25px;
       }
-      100% {
-        opacity: 0;
-        transform: translateY(26px);
+
+      .iconScroll:before {
+        position: absolute;
+        left: 50%;
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #6e6d7a;
+        margin-left: -4px;
+        top: 8px;
+        border-radius: 4px;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-name: scroll;
+      }
+      @keyframes scroll {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(26px);
+        }
       }
     }
   }
