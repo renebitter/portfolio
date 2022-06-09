@@ -2,8 +2,9 @@
 
 Todo:
 
-- react animation
-- react-modal?
+- Finish PortfolioGallery (add more projects and "featured" to JSON)
+- React animation
+- React-modal?
 - prop drilling vs context?
 - Modal Scrolling
 - Add Contact Form Service https://formspree.io/

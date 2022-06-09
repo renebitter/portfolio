@@ -69,11 +69,11 @@
     right: 0;
     top: 65px;
     width: 100%;
-    background-color: #ffffffe6;
+    background-color: hsla(0, 0%, 100%, 0.99);
 
     a {
       display: block;
-      padding: 5px 0;
+      padding: 25px 0;
     }
   }
 }
@@ -105,6 +105,7 @@
 
       a {
         border-bottom: none;
+        padding: 5px;
       }
 
       a:first-child {

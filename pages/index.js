@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Hero from '../components/home/hero';
 import Portfolio from '../components/home/portfolio';
+import PortfolioGallery from '../components/home/portfolioGallery';
 import About from '../components/home/about';
 import Blog from '../components/home/blog';
 import Footer from '../components/home/footer';
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Portfolio />
+      <PortfolioGallery />
       <About />
       <Blog />
       <Footer />
