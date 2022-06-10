@@ -8,6 +8,8 @@ const Portfolio = () => {
   const [showModal, setShowModal] = useState();
   const [currentProject, setCurrentProject] = useState();
 
+  const featuredProjects = projects.filter((project) => project.isFeatured);
+
   function showModalHandler(project) {
     setCurrentProject(project);
     setShowModal(true);
@@ -23,7 +25,7 @@ const Portfolio = () => {
       <div className={classes.container}>
         <h2>Featured projects</h2>
 
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <div key={project._id} className={classes.project}>
             <div className={classes.row}>
               <div className={classes.columnLeft}>

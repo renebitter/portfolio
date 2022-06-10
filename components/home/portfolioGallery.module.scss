@@ -1,9 +1,11 @@
 .portfolioGallery {
-  text-align: center;
-}
-
-.portfolioGallery {
   padding: 50px 15px;
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
 
   .galleryWrap {
     margin-top: 50px;
@@ -22,10 +24,29 @@
     h4 {
       margin: 0;
     }
+
+    .portfolioLinks {
+      display: flex;
+      flex-direction: row;
+
+      a {
+        margin-right: 15px;
+        color: #f4494e;
+      }
+
+      a:hover {
+        color: #000;
+      }
+
+      i {
+        margin-right: 5px;
+        color: #000;
+      }
+    }
   }
 
   @media only screen and (min-width: 768px) {
-    padding: 100px 25px;
+    padding: 50px 15px 50px;
 
     .container {
       max-width: 1200px;
@@ -38,7 +59,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 25px;
     }
 

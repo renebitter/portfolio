@@ -2,20 +2,25 @@
 
 Todo:
 
-- Finish PortfolioGallery (add more projects and "featured" to JSON)
-- Filter featured projects
 - Remove scroll animation indicator after scrolling down?
 - Scroll directly to next section
 - React animation
 - React-modal?
 - React carousel
-- prop drilling vs context?
+
 - Modal Scrolling
+
 - Add Contact Form Service https://formspree.io/
+
 - Dark Mode
+- Add global colors / variables
 - Animated projects card
+
+- prop drilling vs context?
+
 - Blog MD and staticPaths?
 - Static props?
+
 - Site photos
 - Full project description
 - Deploy Github Pages

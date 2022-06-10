@@ -1,65 +1,89 @@
 import classes from './portfolioGallery.module.scss';
+// import Image from 'next/image';
 import { useState } from 'react';
 import projects from '../../data/projects.json';
 
 const PortfolioGallery = () => {
   const [showProjects, setShowProjects] = useState(false);
+  const nonFeaturedProjects = projects.filter((project) => !project.isFeatured);
 
   function showProjectsHandler() {
+    const portfolioGallery = document.getElementById('portfolioGallery');
+    const portfolio = document.getElementById('portfolio');
+
     if (showProjects) {
       setShowProjects(false);
+      portfolioGallery.scrollIntoView({
+        behavior: 'smooth',
+      });
     } else {
       setShowProjects(true);
+      portfolioGallery.scrollIntoView({
+        behavior: 'smooth',
+      });
     }
   }
 
   return (
-    <>
-      {!showProjects && (
-        <div className={classes.portfolioGallery}>
-          <a
-            href='#!'
-            className='btn btn-outlined'
-            onClick={showProjectsHandler}>
-            More Projects
-          </a>
-        </div>
-      )}
-      {showProjects && (
-        <section className={classes.portfolioGallery} id='portfolioGallery'>
-          <div className={classes.container}>
+    <section className={classes.portfolioGallery} id='portfolioGallery'>
+      <div className={classes.container}>
+        {!showProjects && (
+          <div className={classes.buttonWrapper}>
+            <button className='btn btn-outlined' onClick={showProjectsHandler}>
+              More Projects
+            </button>
+          </div>
+        )}
+        {showProjects && (
+          <>
             <h2>Other Projects</h2>
 
             <div className={classes.galleryWrap}>
-              <h3 className={classes.galleryTitle}>Other projects</h3>
               <div className={classes.gallery}>
-                {projects.map((project) => (
+                {nonFeaturedProjects.map((project) => (
                   <div key={project._id} className={classes.card}>
                     <div className={classes.cardContent}>
                       <h4>{project.title}</h4>
-                      <p>{project.excerpt}</p>
+                      <small>{project.subtitle}</small>
+                      <p>{project.description}</p>
                     </div>
-                    <div className={classes.cardAction}>
-                      <a href='#!' onClick={() => showModalHandler(post)}>
-                        Read more
+                    {/* <Image
+                      src={project.image}
+                      width={500}
+                      height={360}
+                      alt={project.title}
+                    /> */}
+                    <div className={classes.portfolioLinks}>
+                      <a
+                        href={project.liveLink}
+                        target='_blank'
+                        rel='noreferrer'>
+                        <i className='fas fa-link'></i>
+                        Live
+                      </a>
+                      <a
+                        href={project.githubLink}
+                        target='_blank'
+                        rel='noreferrer'>
+                        <i className='fab fa-github'></i>
+                        Github
                       </a>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div>
-              <a
-                href='#!'
+            <div className={classes.buttonWrapper}>
+              <button
                 className='btn btn-outlined'
                 onClick={showProjectsHandler}>
                 Close Projects
-              </a>
+              </button>
             </div>
-          </div>
-        </section>
-      )}
-    </>
+          </>
+        )}
+      </div>
+    </section>
   );
 };
 export default PortfolioGallery;
