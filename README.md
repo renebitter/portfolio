@@ -4,7 +4,8 @@ Todo:
 
 - Finish PortfolioGallery (add more projects and "featured" to JSON)
 - Filter featured projects
-- Remove scroll animation indicator after scrolling down
+- Remove scroll animation indicator after scrolling down?
+- Scroll directly to next section
 - React animation
 - React-modal?
 - React carousel
