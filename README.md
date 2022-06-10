@@ -2,8 +2,6 @@
 
 Todo:
 
-- Fix Portfolio & About Padding
-
 - Remove scroll animation indicator after scrolling down?
 - Scroll directly to next section
 - React animation
