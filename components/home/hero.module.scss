@@ -8,8 +8,13 @@
 
   .columnLeft {
     order: 2;
+
+    span {
+      position: relative;
+      top: 1px;
+    }
     .socialMedia {
-      margin-bottom: 5px;
+      margin-top: 19px;
       i {
         font-size: 2rem;
         margin: 0 5px;

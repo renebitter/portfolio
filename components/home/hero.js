@@ -21,12 +21,46 @@ const Hero = () => {
           <div className={classes.columnLeft}>
             <h3>Hi, my name is Rene.</h3>
             <h1>
-              I&apos;m a React Frontend Developer. <br />I also worked on
-              Shopware projects.
+              I&apos;m a React Frontend Developer with experience in e-commerce.
             </h1>
             <p>
-              {' '}
-              I&apos;m fluent in English, German, Portuguese and Javascript.
+              I&apos;m fluent in English{' '}
+              <span>
+                <Image
+                  src='/images/usa.png'
+                  alt='usa-flag'
+                  width={16}
+                  height={16}
+                />
+              </span>
+              , German{' '}
+              <span>
+                <Image
+                  src='/images/germany.png'
+                  alt='usa-flag'
+                  width={16}
+                  height={16}
+                />
+              </span>
+              , Portuguese{' '}
+              <span>
+                <Image
+                  src='/images/brazil.png'
+                  alt='usa-flag'
+                  width={16}
+                  height={16}
+                />
+              </span>{' '}
+              and Javascript{' '}
+              <span>
+                <Image
+                  src='/images/js.png'
+                  alt='usa-flag'
+                  width={16}
+                  height={16}
+                />
+              </span>
+              .
             </p>
             <div className={classes.socialMedia}>
               <a

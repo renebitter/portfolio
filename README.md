@@ -25,6 +25,8 @@ Todo:
 - Full project description
 - Deploy Github Pages
 
+- www.flaticon.com
+
 Blog posts:
 
 - Blog post: How to build a Next.js Portfolio with Blog Website and deploy with Github Pages
