@@ -8,6 +8,15 @@
 
   .columnLeft {
     order: 2;
+    .socialMedia {
+      margin-bottom: 5px;
+      i {
+        font-size: 2rem;
+        margin: 0 5px;
+        // color: #fd814d;
+        filter: drop-shadow(0 1px 1px rgb(0 0 0 / 14%));
+      }
+    }
     .ctaButtons {
       margin-top: 35px;
       display: flex;

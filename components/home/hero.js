@@ -28,6 +28,20 @@ const Hero = () => {
               {' '}
               I&apos;m fluent in English, German, Portuguese and Javascript.
             </p>
+            <div className={classes.socialMedia}>
+              <a
+                href='https://github.com/renebitter'
+                target='_blank'
+                rel='noreferrer'>
+                <i className='fab fa-github'></i>
+              </a>
+              <a
+                href='https://www.linkedin.com/in/rene-bitter/'
+                target='_blank'
+                rel='noreferrer'>
+                <i className='fab fa-linkedin'></i>
+              </a>
+            </div>
             <div className={classes.ctaButtons}>
               <a href='#portfolio' className='btn btn-outlined'>
                 My Work
