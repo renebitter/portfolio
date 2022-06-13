@@ -2,23 +2,21 @@
 
 Todo:
 
-- Scroll directly to next section /Remove scroll animation indicator after scrolling down?
-- React animation
-
-- Modal Scrolling
-- React-modal?
-- React carousel
-
-- Add Contact Form Service https://formspree.io/
-
 - Dark Mode
 - Add global colors / variables
 - Animated projects card
 
-- prop drilling vs context?
+- Add Contact Form Service https://formspree.io/
 
 - Blog MD and staticPaths?
 - Static props?
+- prop drilling vs context?
+
+- React animation
+- Modal Scrolling
+- React-modal?
+- React carousel
+- Scroll directly to next section /Remove scroll animation indicator after scrolling down?
 
 - Site photos
 - Full project description
