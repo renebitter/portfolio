@@ -6,6 +6,13 @@ const Navbar = (props) => {
   const [navExpanded, setNavExpanded] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [showModal, setShowModal] = useState();
+  const [theme, setTheme] = useState('dark');
+
+  function setThemeHandler() {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    props.theme(newTheme);
+  }
 
   function showModalHandler() {
     setShowModal(true);
@@ -69,6 +76,13 @@ const Navbar = (props) => {
                   closeNav();
                 }}>
                 Contact
+              </a>
+              <a href='#!' onClick={setThemeHandler}>
+                {theme === 'light' ? (
+                  <i className='fa fa-moon'></i>
+                ) : (
+                  <i className='fa fa-sun'></i>
+                )}
               </a>
             </div>
           </nav>
