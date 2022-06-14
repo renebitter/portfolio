@@ -6,12 +6,18 @@ Todo:
 - Static props?
 - prop drilling vs context?
 
+- Update dark mode to github tone (muted text color #768390 )
+- Update dark mode to purplish color?
+- Update navbar dark color
+- Update navbar nav width 60%?
+
 - Animated projects card/pills
 - React animation
 - Modal Scrolling
 - React-modal?
 - React carousel
 - Scroll directly to next section /Remove scroll animation indicator after scrolling down?
+- Parallax?
 
 - Fix Dark mode / useLocalStorage
 
