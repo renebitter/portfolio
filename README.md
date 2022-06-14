@@ -2,8 +2,6 @@
 
 Todo:
 
-- Add Contact Form Service https://formspree.io/
-
 - Blog MD and staticPaths?
 - Static props?
 - prop drilling vs context?
@@ -14,6 +12,8 @@ Todo:
 - React-modal?
 - React carousel
 - Scroll directly to next section /Remove scroll animation indicator after scrolling down?
+
+- Fix Dark mode / useLocalStorage
 
 - Site photos
 - Full project description
@@ -32,3 +32,4 @@ Done:
 
 - Dark Mode
 - Add global colors / variables
+- Add Contact Form Service https://formspree.io/
