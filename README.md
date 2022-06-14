@@ -2,8 +2,6 @@
 
 Todo:
 
-- Dark Mode
-- Add global colors / variables
 - Animated projects card
 
 - Add Contact Form Service https://formspree.io/
@@ -30,3 +28,8 @@ Blog posts:
 - Blog post: Must know JS (interview questions)
 - Blog post: Using redux for MERNShop
 - Blog post: scroll-snap vs JS
+
+Done:
+
+- Dark Mode
+- Add global colors / variables
