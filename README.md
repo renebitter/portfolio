@@ -2,14 +2,13 @@
 
 Todo:
 
-- Animated projects card
-
 - Add Contact Form Service https://formspree.io/
 
 - Blog MD and staticPaths?
 - Static props?
 - prop drilling vs context?
 
+- Animated projects card/pills
 - React animation
 - Modal Scrolling
 - React-modal?
