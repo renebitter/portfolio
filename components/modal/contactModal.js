@@ -1,31 +1,69 @@
 import classes from './modal.module.scss';
+import { useForm, ValidationError } from '@formspree/react';
 
-const ContactModal = (props) => {
-  //prop drilling
+// const ContactModal = (props) => {
 
+function ContactModal(props) {
+  const [state, handleSubmit] = useForm('mdobjbdw');
+  if (state.succeeded) {
+    return (
+      <div className={classes.modal}>
+        <div
+          className={`${classes.contactModal} ${classes.contactModalConfirmation}`}>
+          <div>
+            <h2>Thanks for your contact!</h2>
+            <p>
+              Your message was sent!
+              <br />
+              Also feel free to contact me via Linkedin:
+            </p>
+            <div className={classes.linkedinLink}>
+              <a
+                href='https://www.linkedin.com/in/rene-bitter/'
+                target='_blank'
+                rel='noreferrer'>
+                <i className='fab fa-linkedin'></i>
+              </a>
+            </div>
+          </div>
+
+          <div className={classes.confirmationButton}>
+            <button className='btn btn-outlined' onClick={props.onClose}>
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={classes.modal}>
       <div className={classes.contactModal}>
         <h2>Say hi!</h2>
-        <form id='contactForm' className={classes.contactForm} action=''>
+
+        <form
+          id='contactForm'
+          className={classes.contactForm}
+          onSubmit={handleSubmit}>
           <div className={classes.row}>
             <div className={classes.inputField}>
-              <label htmlFor='name'>Name</label>
-              <input id='name' type='text' required />
-            </div>
+              <label htmlFor='email'>Email Address</label>
+              <input id='email' type='email' name='email' required />
 
-            <div className={classes.inputField}>
-              <label htmlFor='email'>E-mail</label>
-              <input id='email' type='email' required />
+              <ValidationError
+                prefix='Email'
+                field='email'
+                errors={state.errors}
+              />
             </div>
           </div>
-
           <div className={classes.inputField}>
-            <label htmlFor='textArea'>Your message here:</label>
-            <textarea
-              id='textArea'
-              className={classes.textarea}
-              required></textarea>
+            <textarea id='message' name='message' required />
+            <ValidationError
+              prefix='Message'
+              field='message'
+              errors={state.errors}
+            />
           </div>
 
           <div className={classes.action}>
@@ -38,14 +76,20 @@ const ContactModal = (props) => {
               </a>
             </div>
             <div className={classes.sendLink}>
-              <a href='#!' className='btn btn-filled' onClick={props.onClose}>
+              <button
+                type='submit'
+                disabled={state.submitting}
+                className='btn btn-filled'>
                 Send Message
-              </a>
+              </button>
             </div>
           </div>
+          {/* <button type='submit' disabled={state.submitting}>
+            Submit
+          </button> */}
         </form>
       </div>
     </div>
   );
-};
+}
 export default ContactModal;

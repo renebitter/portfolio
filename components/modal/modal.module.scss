@@ -25,6 +25,23 @@
   transform: translate(-50%, -50%);
 }
 
+.contactModalConfirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .linkedinLink {
+    i {
+      font-size: 4rem;
+    }
+  }
+
+  .confirmationButton {
+    button {
+      width: 100%;
+    }
+  }
+}
+
 .contactModal {
   text-align: center;
 
@@ -96,9 +113,9 @@
     .inputField {
       margin: 25px 0;
     }
-    .inputField:first-child {
-      margin-right: 25px;
-    }
+    // .inputField:first-child {
+    //   margin-right: 25px;
+    // }
 
     .action {
       margin-bottom: unset;
