@@ -1,5 +1,9 @@
 .footer {
-  background-image: linear-gradient(90deg, #ff8d4d, #f4494e);
+  background-image: linear-gradient(
+    90deg,
+    var(--gradient-primary),
+    var(--gradient-secondary)
+  );
   color: #fff;
   text-align: center;
   padding: 25px;

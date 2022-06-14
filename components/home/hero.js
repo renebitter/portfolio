@@ -74,6 +74,18 @@ const Hero = () => {
                 target='_blank'
                 rel='noreferrer'>
                 <i className='fab fa-linkedin'></i>
+              </a>{' '}
+              <a
+                href='https://twitter.com/Rene_Bitter'
+                target='_blank'
+                rel='noreferrer'>
+                <i className='fab fa-twitter'></i>
+              </a>{' '}
+              <a
+                href='https://codepen.io/rbitterdev'
+                target='_blank'
+                rel='noreferrer'>
+                <i className='fab fa-codepen'></i>
               </a>
             </div>
             <div className={classes.ctaButtons}>

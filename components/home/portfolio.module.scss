@@ -12,7 +12,7 @@
 
     small {
       font-style: italic;
-      color: #616161;
+      color: var(--text-secondary);
     }
 
     .description {
@@ -25,16 +25,16 @@
 
       a {
         margin-right: 15px;
-        color: #f4494e;
+        color: var(--accent);
       }
 
       a:hover {
-        color: #000;
+        color: var(--text-primary);
       }
 
       i {
         margin-right: 5px;
-        color: #000;
+        color: var(--text-primary);
       }
     }
   }

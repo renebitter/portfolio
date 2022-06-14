@@ -18,7 +18,7 @@
   .card {
     border-radius: 5px;
     padding: 25px;
-    border: 1px solid #cecece;
+    border: 1px solid var(--border-card); //rgb(93, 101, 105) #cecece
     margin-bottom: 25px;
 
     h4 {
@@ -31,16 +31,16 @@
 
       a {
         margin-right: 15px;
-        color: #f4494e;
+        color: var(--accent);
       }
 
       a:hover {
-        color: #000;
+        color: var(--text-primary);
       }
 
       i {
         margin-right: 5px;
-        color: #000;
+        color: var(--text-primary);
       }
     }
   }
