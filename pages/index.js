@@ -5,8 +5,10 @@ import PortfolioGallery from '../components/home/portfolioGallery';
 import About from '../components/home/about';
 import Blog from '../components/home/blog';
 import Footer from '../components/home/footer';
+import { getFeaturedPosts } from '../util/posts-util';
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props);
   return (
     <>
       <Head>
@@ -20,8 +22,19 @@ export default function Home() {
       <Portfolio />
       <PortfolioGallery />
       <About />
-      <Blog />
+      {/* <Blog /> */}
+      <Blog posts={props.posts} />
       <Footer />
     </>
   );
 }
+
+export const getStaticProps = () => {
+  const featuredPosts = getFeaturedPosts();
+
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
+};

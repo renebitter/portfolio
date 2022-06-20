@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Modal from '../modal/modal';
 import posts from '../../data/posts.json';
 
-const Blog = () => {
+const Blog = (props) => {
   const [showModal, setShowModal] = useState();
   const [currentPost, setCurrentPost] = useState();
 
