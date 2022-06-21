@@ -1,8 +1,8 @@
 ---
-title: 'Second Markdown Post'
+title: 'First Markdown Post'
 date: '2022-04-03'
-image: Second-Markdown.jpg
-excerpt: 'Second Markdown Post Aute eiusmod anim exercitation minim labore commodo et amet sunt occaecat proident proident pariatur.'
+image: profile-pic.png
+excerpt: 'First Markdown Post Aute eiusmod anim exercitation minim labore commodo et amet sunt occaecat proident proident pariatur.'
 isFeatured: true
 ---
 
