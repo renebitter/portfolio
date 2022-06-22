@@ -32,65 +32,42 @@
   },
   {
     "_id": "4",
-    "title": "Fullstack Logger App using the MERN Stack",
-    "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
+    "title": "NEXT.JS BLOG",
+    "subtitle": "React, Next.js, Mongodb",
+    "description": "Blog posts written in markdown and rendered with \"react-markdown\". Notifications displayed via react portal through \"_document.js.\". \"Head\" for Meta and image domain set at \"next.config.js\". Contact form using mongodb.",
+    "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
+    "githubLink": "https://github.com/renebitter/nextjs-blog"
   },
   {
     "_id": "5",
-    "title": "Fullstack Logger App using the MERN Stack",
-    "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
+    "title": "NEXT.JS AUTHENTICATION USING NEXT-AUTH",
+    "subtitle": "React, Next.js",
+    "description": "Project built using next-auth library to handle authentication. SessionProvider, useSession, getSession, CredentialsProvider, JWT & bcryptjs (for password hashing), mongodb, HTTP requests sent using fetch.",
+    "liveLink": "https://nextjs-authentication-eight.vercel.app/",
+    "githubLink": "https://github.com/renebitter/nextjs-authentication"
   },
   {
     "_id": "6",
-    "title": "Fullstack Logger App using the MERN Stack",
-    "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
+    "title": "Contact Keeper",
+    "subtitle": "React, Mongo, Node, Express",
+    "description": "This is a MERN project with authentication and CRUD functionality.",
+    "liveLink": "https://contactkeeper53773.herokuapp.com/",
+    "githubLink": "https://github.com/renebitter/contact_keeper"
   },
   {
     "_id": "7",
     "title": "Fullstack Logger App using the MERN Stack",
     "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
+    "description": "This is a MERN + Redux project with authentication and CRUD functionality. Functionalities: Add/delete logs & users; list logs/users",
+    "liveLink": "https://itlogger-04360.herokuapp.com/",
+    "githubLink": "https://github.com/renebitter/it-logger-full-stack"
   },
   {
     "_id": "8",
-    "title": "Fullstack Logger App using the MERN Stack",
-    "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
-  },
-  {
-    "_id": "9",
-    "title": "Fullstack Logger App using the MERN Stack",
-    "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
-  },
-  {
-    "_id": "10",
-    "title": "Fullstack Logger App using the MERN Stack",
-    "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "CRUD functionality.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75"
+    "title": "Resort Site with room listing",
+    "subtitle": "React, Contentful",
+    "description": "Simple resort site with room listing and filter settings. Used react context API for state management and Contentful for content (image, text) delivery.",
+    "liveLink": "https://react-resort-project.netlify.app/",
+    "githubLink": "https://github.com/renebitter/react_resort"
   }
 ]
