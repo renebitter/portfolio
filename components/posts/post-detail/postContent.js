@@ -1,41 +1,56 @@
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
+import classes from './postContent.module.scss';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const PostContent = (props) => {
   const { post } = props;
 
   const title = post.title;
   const content = post.content;
-
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
-  //   const customRenderers = {
-  //     p(paragraph) {
-  //       const { node } = paragraph;
+  const customRenderers = {
+    p(paragraph) {
+      const { node } = paragraph;
 
-  //       if (node.children[0].tagName === 'img') {
-  //         const image = node.children[0];
+      if (node.children[0].tagName === 'img') {
+        const image = node.children[0];
 
-  //         return (
-  //           <div>
-  //             <Image
-  //               src={`/images/posts/${post.slug}/${image.properties.src}`}
-  //               alt={image.alt}
-  //               width={500}
-  //               height={340}
-  //             />
-  //           </div>
-  //         );
-  //       }
+        return (
+          <div>
+            <Image src={imagePath} alt={image.alt} width={450} height={450} />
+          </div>
+        );
+      }
 
-  //       return <p>{paragraph.children}</p>;
-  //     },
-  //   };
+      return <p>{paragraph.children}</p>;
+    },
+
+    code(code) {
+      const { className, children } = code;
+      const language = className.split('-')[1]; // className is something like language-js => We need the "js" part here
+
+      return (
+        <SyntaxHighlighter
+          language={language}
+          style={atomDark}
+          // eslint-disable-next-line react/no-children-prop
+          children={children}
+        />
+      );
+    },
+  };
 
   return (
-    <article>
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </article>
+    <div className={classes.postContent}>
+      <div className={classes.container}>
+        <article>
+          <ReactMarkdown components={customRenderers}>{content}</ReactMarkdown>
+        </article>
+      </div>
+    </div>
   );
 };
 

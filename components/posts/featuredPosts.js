@@ -1,9 +1,9 @@
 import classes from './posts.module.scss';
 import PostItem from './postItem';
 
-const Posts = (props) => {
+const FeaturedPosts = (props) => {
   const { posts } = props;
-
+  console.log(posts);
   return (
     <section className={classes.blog} id='blog'>
       <div className={classes.container}>
@@ -21,4 +21,4 @@ const Posts = (props) => {
     </section>
   );
 };
-export default Posts;
+export default FeaturedPosts;

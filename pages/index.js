@@ -3,7 +3,7 @@ import Hero from '../components/home/hero';
 import Portfolio from '../components/home/portfolio';
 import PortfolioGallery from '../components/home/portfolioGallery';
 import About from '../components/home/about';
-import Posts from '../components/posts/posts';
+import FeaturedPosts from '../components/posts/featuredPosts';
 import Footer from '../components/home/footer';
 import { getFeaturedPosts } from '../util/posts-util';
 
@@ -21,8 +21,7 @@ export default function Home(props) {
       <Portfolio />
       <PortfolioGallery />
       <About />
-      {/* <Blog /> */}
-      <Posts posts={props.posts} />
+      <FeaturedPosts posts={props.posts} />
       <Footer />
     </>
   );

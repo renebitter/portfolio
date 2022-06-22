@@ -1,0 +1,10 @@
+.postContent {
+  padding: 50px 15px;
+  @media only screen and (min-width: 768px) {
+    padding: 100px 25px;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+}
