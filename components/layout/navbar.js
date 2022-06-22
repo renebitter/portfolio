@@ -1,6 +1,7 @@
 import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
 import Modal from '../modal/modal';
+import Link from 'next/link';
 
 const Navbar = (props) => {
   const [navExpanded, setNavExpanded] = useState(false);
@@ -49,9 +50,9 @@ const Navbar = (props) => {
           sticky ? `${classes.navbar}  ${classes.sticky}` : `${classes.navbar} `
         }>
         <div className={classes.container}>
-          <a href='#' className={classes.logo}>
-            {'</>'}
-          </a>
+          <Link href='/'>
+            <a className={classes.logo}>{'</>'}</a>
+          </Link>
           <nav
             className={
               navExpanded
@@ -60,15 +61,17 @@ const Navbar = (props) => {
             }
             id='navMenu'>
             <div className={classes.linkWrapper}>
-              <a href='#portfolio' onClick={closeNav}>
-                Portfolio
-              </a>
-              <a href='#about' onClick={closeNav}>
-                About
-              </a>
-              <a href='#blog' onClick={closeNav}>
-                Blog
-              </a>
+              <Link href='/#portfolio'>
+                <a onClick={closeNav}>Portfolio</a>
+              </Link>
+              <Link href='/#about'>
+                <a onClick={closeNav}>About</a>
+              </Link>
+              <Link href='/#blog'>
+                <a href='#blog' onClick={closeNav}>
+                  Blog
+                </a>
+              </Link>
               <a
                 href='#!'
                 onClick={() => {
@@ -77,7 +80,12 @@ const Navbar = (props) => {
                 }}>
                 Contact
               </a>
-              <a href='#!' onClick={setThemeHandler}>
+              <a
+                href='#!'
+                onClick={() => {
+                  setThemeHandler();
+                  closeNav();
+                }}>
                 {theme === 'light' ? (
                   <i className='fa fa-moon'></i>
                 ) : (
