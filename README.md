@@ -11,6 +11,8 @@ Todo:
 - Update navbar dark color
 - Update navbar nav width 60%?
 
+- Apply dark-theme to body (probably with props)
+
 - Animated projects card/pills
 - React animation
 - Modal Scrolling
