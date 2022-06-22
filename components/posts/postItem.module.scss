@@ -1,0 +1,20 @@
+.card {
+  border-radius: 5px;
+  padding: 25px;
+  border: 1px solid var(--border-card);
+  margin-bottom: 25px;
+
+  h4 {
+    margin: 0;
+  }
+
+  a {
+    color: var(--accent);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    margin-bottom: unset;
+  }
+}

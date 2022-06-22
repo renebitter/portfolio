@@ -3,7 +3,6 @@ import PostContent from '../../components/posts/post-detail/postContent';
 import { getPostData, getPostsFiles } from '../../util/posts-util';
 
 const PostDetailPage = (props) => {
-  console.log(props);
   return (
     <>
       <Head>

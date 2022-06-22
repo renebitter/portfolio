@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import classes from './posts.module.scss';
+import classes from './postItem.module.scss';
 
 const PostItem = (props) => {
   const { title, excerpt, date, slug } = props.post;
