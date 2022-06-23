@@ -1,7 +1,7 @@
 [
   {
     "_id": "1",
-    "title": "Portfolio & Blog Website using Next.js",
+    "title": "Portfolio & Blog website using Next.js",
     "subtitle": "Next.js",
     "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
@@ -11,7 +11,7 @@
   },
   {
     "_id": "2",
-    "title": "Fullstack eCommerce Website - MERN Stack",
+    "title": "Fullstack eCommerce website - MERN Stack",
     "subtitle": "React, Redux, Mongo, Node, Express",
     "description": "Build with React and Redux for it's state management, this is a fully functional e-commerce website including payment, admin user, etc.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
@@ -22,7 +22,7 @@
 
   {
     "_id": "3",
-    "title": "Fullstack eCommerce Website - Next.js and Typescript",
+    "title": "Fullstack eCommerce website - Next.js and Typescript",
     "subtitle": "React, Typescript, Next.js, Redux, Mongo, Node, Express, Contentful ",
     "description": "Current project under development.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
@@ -64,9 +64,9 @@
   },
   {
     "_id": "8",
-    "title": "Resort Site with room listing",
+    "title": "Resort website with room listing",
     "subtitle": "React, Contentful",
-    "description": "Simple resort site with room listing and filter settings. Used react context API for state management and Contentful for content (image, text) delivery.",
+    "description": "Simple resort website with room listing and filter settings. Used react context API for state management and Contentful for content (image, text) delivery.",
     "liveLink": "https://react-resort-project.netlify.app/",
     "githubLink": "https://github.com/renebitter/react_resort"
   }
