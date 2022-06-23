@@ -12,7 +12,12 @@ const ProjectModal = (props) => {
           <div className={classes.projectRow}>
             <div className={classes.image}>
               {project.image && (
-                <Image src={project.image} width={500} height={360} alt='' />
+                <Image
+                  src={`/portfolio-nextjs/images/projects/${project.image}`}
+                  width={500}
+                  height={360}
+                  alt=''
+                />
               )}
 
               <div className={classes.modalLinks}>
@@ -34,7 +39,12 @@ const ProjectModal = (props) => {
           </div>
           <div className={classes.flowchart}>
             {project.image && (
-              <Image src={project.image} width={500} height={360} alt='' />
+              <Image
+                src={`/portfolio-nextjs/images/projects/${project.image}`}
+                width={500}
+                height={360}
+                alt=''
+              />
             )}
           </div>
         </div>

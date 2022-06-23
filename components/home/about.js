@@ -36,7 +36,7 @@ const About = () => {
 
           <div className={`${classes.columnRight} ${classes.profilePic}`}>
             <Image
-              src='/images/profile-pic.png'
+              src='/portfolio-nextjs/images/profile-pic.png'
               width={360}
               height={360}
               alt='profile-pic'

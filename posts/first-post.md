@@ -22,7 +22,7 @@ const PostContent = (props) => {
 
   const title = post.title;
   const content = post.content;
-  const imagePath = `/images/posts/${post.slug}/${post.image}`;
+  const imagePath = `/portfolio-nextjs/images/posts/${post.slug}/${post.image}`;
 
   const customRenderers = {
     p(paragraph) {

@@ -47,12 +47,7 @@ const PortfolioGallery = () => {
                       <small>{project.subtitle}</small>
                       <p>{project.description}</p>
                     </div>
-                    {/* <Image
-                      src={project.image}
-                      width={500}
-                      height={360}
-                      alt={project.title}
-                    /> */}
+
                     <div className={classes.portfolioLinks}>
                       <a
                         href={project.liveLink}

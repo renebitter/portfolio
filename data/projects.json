@@ -6,7 +6,7 @@
     "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652860-471b4228023e%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75",
+    "image": "project01.jpg",
     "isFeatured": true
   },
   {
@@ -16,7 +16,7 @@
     "description": "Build with React and Redux for it's state management, this is a fully functional e-commerce website including payment, admin user, etc.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1634084462412-b54873c0a56d%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75",
+    "image": "project01.jpg",
     "isFeatured": true
   },
 
@@ -27,7 +27,7 @@
     "description": "Current project under development.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "http://localhost:3000/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1642132652809-8c6ab1971169%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D2060%26q%3D80&w=640&q=75",
+    "image": "project01.jpg",
     "isFeatured": true
   },
   {

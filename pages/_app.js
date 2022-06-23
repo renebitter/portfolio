@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
               name='viewport'
               content='width=device-width, initial-scale=1'
             />
+            <link rel='shortcut icon' href='/portfolio-nextjs/favicon.ico' />
           </Head>
           <Component {...pageProps} />
         </Navbar>

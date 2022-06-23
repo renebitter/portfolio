@@ -22,9 +22,7 @@ const PostItem = (props) => {
       </div>
       <div className={classes.cardAction}>
         <Link href={linkPath}>
-          <a href='#!' onClick={props.showModalHandler}>
-            Read more
-          </a>
+          <a>Read more</a>
         </Link>
       </div>
     </div>
