@@ -1,7 +1,7 @@
 ---
 title: 'Using Markdown as a blog format'
 date: '2022-04-03'
-image: profile-pic.png
+image: first-post.jpg
 excerpt: 'First Markdown Post Aute eiusmod anim exercitation minim labore commodo et amet sunt occaecat proident proident pariatur.'
 isFeatured: true
 ---
@@ -72,4 +72,4 @@ export default PostContent;
 
 Ad veniam fugiat tempor magna ad voluptate esse velit minim minim veniam elit. Ea enim culpa magna sit cupidatat adipisicing eu Lorem cillum deserunt adipisicing cupidatat ad qui. Deserunt do magna ipsum culpa duis. Voluptate ipsum minim consequat consectetur ea. Aliqua et ex ut dolore aliqua sint ipsum dolore labore mollit labore. Occaecat labore do tempor qui.
 
-![Image ...](/public/images/posts/profile-pic.png)
+![Image ...](/public/images/posts/first-post/first-post.jpg)
