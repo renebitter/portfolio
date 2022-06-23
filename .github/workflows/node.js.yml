@@ -27,8 +27,7 @@ jobs:
           cache: 'npm'
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: yarn export
+      - run: yarn build && export
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
