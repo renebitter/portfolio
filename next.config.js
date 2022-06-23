@@ -2,9 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    loader: 'akamai',
-    path: '',
+    loader: 'imgix',
+    path: 'https://renebitter.github.io/',
   },
+  basePath: '/portfolio-nextjs',
 };
 
 module.exports = nextConfig;
