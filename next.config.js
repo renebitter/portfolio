@@ -6,6 +6,8 @@ const nextConfig = {
     path: '',
     domains: ['images.unsplash.com', 'localhost'],
   },
+  basePath: '/portfolio-nextjs',
+  assetPrefix: '/portfolio-nextjs',
 };
 
 module.exports = nextConfig;
