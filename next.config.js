@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === 'production';
+console.log(process.env.NODE_ENV);
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    loader: 'imgix',
-    path: 'https://renebitter.github.io/',
+    loader: 'akamai',
+    path: isProd ? 'https://renebitter.github.io/' : '',
   },
   basePath: '/portfolio-nextjs',
 };
