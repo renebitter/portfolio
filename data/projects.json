@@ -1,8 +1,8 @@
 [
   {
     "_id": "1",
-    "title": "Portfolio & Blog website using Next.js",
-    "subtitle": "Next.js",
+    "title": "Portfolio-Blog website",
+    "subtitle": "React, Next.js, Markdown",
     "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog",
@@ -11,9 +11,9 @@
   },
   {
     "_id": "2",
-    "title": "Fullstack eCommerce website - MERN Stack",
+    "title": "eCommerce website - MERN Fullstack",
     "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "Build with React and Redux for it's state management, this is a fully functional e-commerce website including payment, admin user, etc.",
+    "description": "Build with React and Redux for it's state management. This is a fully functional e-commerce website including: product listing, pagination, product detail page, search, user authentication, user profile page, rating, review, payment (paypal integration). Admin user and admin area with CRUD functionality for users, products, orders.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
     "image": "project01.jpg",
@@ -22,7 +22,7 @@
 
   {
     "_id": "3",
-    "title": "Fullstack eCommerce website - Next.js and Typescript",
+    "title": "eCommerce website - Next.js and Typescript (Fullstack)",
     "subtitle": "React, Typescript, Next.js, Redux, Mongo, Node, Express, Contentful ",
     "description": "Current project under development.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
@@ -32,15 +32,15 @@
   },
   {
     "_id": "4",
-    "title": "NEXT.JS BLOG",
+    "title": "Blog",
     "subtitle": "React, Next.js, Mongodb",
-    "description": "Blog posts written in markdown and rendered with \"react-markdown\". Notifications displayed via react portal through \"_document.js.\". \"Head\" for Meta and image domain set at \"next.config.js\". Contact form using mongodb.",
+    "description": "Blog posts written in markdown and rendered with \"react-markdown\". Notifications displayed via react portal through \"_document.js.\". Contact form using mongodb.",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog"
   },
   {
     "_id": "5",
-    "title": "NEXT.JS AUTHENTICATION USING NEXT-AUTH",
+    "title": "Next.js authentication using next-auth",
     "subtitle": "React, Next.js",
     "description": "Project built using next-auth library to handle authentication. SessionProvider, useSession, getSession, CredentialsProvider, JWT & bcryptjs (for password hashing), mongodb, HTTP requests sent using fetch.",
     "liveLink": "https://nextjs-authentication-eight.vercel.app/",
@@ -48,15 +48,15 @@
   },
   {
     "_id": "6",
-    "title": "Contact Keeper",
+    "title": "Contact Keeper - MERN Fullstack",
     "subtitle": "React, Mongo, Node, Express",
-    "description": "This is a MERN project with authentication and CRUD functionality.",
+    "description": "This is a MERN Fullstack project with authentication and CRUD functionality.",
     "liveLink": "https://contactkeeper53773.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/contact_keeper"
   },
   {
     "_id": "7",
-    "title": "Fullstack Logger App using the MERN Stack",
+    "title": "Message Logger App - MERN Fullstack",
     "subtitle": "React, Redux, Mongo, Node, Express",
     "description": "This is a MERN + Redux project with authentication and CRUD functionality. Functionalities: Add/delete logs & users; list logs/users",
     "liveLink": "https://itlogger-04360.herokuapp.com/",
@@ -64,7 +64,7 @@
   },
   {
     "_id": "8",
-    "title": "Resort website with room listing",
+    "title": "Resort website with room listing and filtering",
     "subtitle": "React, Contentful",
     "description": "Simple resort website with room listing and filter settings. Used react context API for state management and Contentful for content (image, text) delivery.",
     "liveLink": "https://react-resort-project.netlify.app/",
