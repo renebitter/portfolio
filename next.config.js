@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     loader: 'akamai',
     path: '',
-    domains: ['images.unsplash.com', 'localhost'],
   },
   basePath: '/portfolio-nextjs',
 };

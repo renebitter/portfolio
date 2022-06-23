@@ -1,5 +1,23 @@
 .postContent {
   padding: 50px 15px;
+
+  a {
+    color: var(--accent);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  strong {
+    background: #cecece;
+    padding: 0 4px;
+    border-radius: 4px;
+    color: black;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
   @media only screen and (min-width: 768px) {
     padding: 100px 25px;
     .container {

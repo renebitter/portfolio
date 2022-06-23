@@ -12,21 +12,21 @@ const PostContent = (props) => {
   const imagePath = `../images/posts/${post.slug}/${post.image}`;
 
   const customRenderers = {
-    p(paragraph) {
-      const { node } = paragraph;
+    // p(paragraph) {
+    //   const { node } = paragraph;
+    //   console.log(node);
+    //   if (node.children[0].tagName === 'img') {
+    //     const image = node.children[0];
 
-      if (node.children[0].tagName === 'img') {
-        const image = node.children[0];
+    //     return (
+    //       <div>
+    //         <Image src={imagePath} alt={image.alt} width={1230} height={760} />
+    //       </div>
+    //     );
+    //   }
 
-        return (
-          <div>
-            <Image src={imagePath} alt={image.alt} width={450} height={450} />
-          </div>
-        );
-      }
-
-      return <p>{paragraph.children}</p>;
-    },
+    //   return <p>{paragraph.children}</p>;
+    // },
 
     code(code) {
       const { className, children } = code;
