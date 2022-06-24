@@ -31,6 +31,8 @@ Todo:
 - Parallax?
 - Add loading animation to sending message on contact form
 
+- Performance check with lighthouse and optimization
+
 - Check for prop drilling vs context
 - Site photos
 - Full project description
