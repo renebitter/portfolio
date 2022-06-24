@@ -18,9 +18,11 @@ Todo:
 - Update dark mode to purplish color?
 - Update navbar dark color
 - Update navbar nav width 60%?
-- Refactor anchors to buttons
 - Apply dark mode to body (probably with props)
 - Dark mode / useLocalStorage
+
+- Refactor anchors to buttons
+- Remove links if there are none
 
 - Animated projects card/pills
 - React animation
@@ -29,6 +31,7 @@ Todo:
 - React carousel
 - Scroll directly to next section /Remove scroll animation indicator after scrolling down?
 - Parallax?
+
 - Add loading animation to sending message on contact form
 
 - Performance check with lighthouse and optimization
