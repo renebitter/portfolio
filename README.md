@@ -19,7 +19,8 @@ Todo:
 - Update navbar dark color
 - Update navbar nav width 60%?
 - Refactor anchors to buttons
-- Dark mode to body
+- Apply dark mode to body (probably with props)
+- Dark mode / useLocalStorage
 
 - Animated projects card/pills
 - React animation
@@ -31,9 +32,6 @@ Todo:
 - Add loading animation to sending message on contact form
 
 - Check for prop drilling vs context
-- Apply dark mode to body (probably with props)
-- Dark mode / useLocalStorage
-
 - Site photos
 - Full project description
 
