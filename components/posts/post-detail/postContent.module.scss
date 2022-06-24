@@ -7,6 +7,11 @@
 
   img {
     max-width: 100%;
+    // &:first-child {
+    //   display: block;
+    //   margin: auto;
+    //   height: 400px;
+    // }
   }
 
   strong {
@@ -18,11 +23,24 @@
     font-size: 0.8rem;
   }
 
+  ol {
+    margin-bottom: 50px;
+  }
+
   @media only screen and (min-width: 768px) {
     padding: 100px 25px;
     .container {
       max-width: 1200px;
       margin: auto;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      text-align: center;
+    }
+
+    li {
+      margin-bottom: 35px;
     }
   }
 }
