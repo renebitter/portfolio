@@ -10,7 +10,7 @@ const PostContent = (props) => {
   const title = post.title;
   const content = post.content;
   const imagePath = `../images/posts/${post.slug}/${post.image}`;
-  console.log(props);
+
   const customRenderers = {
     // p(paragraph) {
     //   const { node } = paragraph;

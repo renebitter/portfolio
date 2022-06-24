@@ -62,7 +62,11 @@ The original idea was to **next build** and **next export** the project and then
        - run: npm test
    ```
 
-3. Select the node version e.g. **node-version: [16.x]** then start replacing at **- run: npm ci** like the code below. Since I'm using **yarn** I also changed the respective **npm** commands. For example: **run: yarn install --frozen-lockfile** is equivalent to **run: npm ci**. We also need to bypass Jekyll since it doesn't recognize folders that start with an underscore, like "\_next". More about bypassing Jekyll on Github [Github Blog](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/) and [Stackoverflow](https://stackoverflow.com/questions/61450307/js-and-css-not-loading-when-hosting-next-application-on-github-pages).
+3. Select the node version e.g. **node-version: [16.x]** then start replacing at **- run: npm ci** like the code below. Since I'm using **yarn** I also changed the respective **npm** commands. For example: **run: yarn install --frozen-lockfile** is equivalent to **run: npm ci**.
+
+   We also need to bypass Jekyll since it doesn't recognize folders that start with an underscore, like "\_next". More about bypassing Jekyll on Github [Github Blog](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/) and [Stackoverflow](https://stackoverflow.com/questions/61450307/js-and-css-not-loading-when-hosting-next-application-on-github-pages).
+
+   The section starting with **- name: Deploy** is the ["Deploy to Github Pages"](https://github.com/marketplace/actions/deploy-to-github-pages).
 
    ```yml
    - run: npm install -g yarn # Installs yarn.

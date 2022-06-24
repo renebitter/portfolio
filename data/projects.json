@@ -6,7 +6,7 @@
     "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog",
-    "image": "project01.jpg",
+    "image": "portfolio.png",
     "isFeatured": true
   },
   {
@@ -16,18 +16,26 @@
     "description": "Build with React and Redux for it's state management. This is a fully functional e-commerce website including: product listing, pagination, product detail page, search, user authentication, user profile page, rating, review, payment (paypal integration). Admin user and admin area with CRUD functionality for users, products, orders.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "project01.jpg",
+    "image": "mernshop.png",
     "isFeatured": true
   },
 
   {
     "_id": "3",
-    "title": "eCommerce website - Next.js and Typescript (Fullstack)",
+    "title": "eCommerce website - Next.js and Typescript",
     "subtitle": "React, Typescript, Next.js, Redux, Mongo, Node, Express, Contentful ",
     "description": "Current project under development.",
-    "liveLink": "https://mernshop-99.herokuapp.com/",
-    "githubLink": "https://github.com/renebitter/mernshop",
     "image": "project01.jpg",
+    "isFeatured": true
+  },
+
+  {
+    "_id": "9",
+    "title": "Shopware",
+    "subtitle": "Shopware 5 & 6, Bootstrap 3 & 4, Twig, Smarty",
+    "description": "Worked on the development of Shopware 6 itself and many other Shopware 5 and 6 projects.",
+    "githubLink": "https://github.com/shopware/platform",
+    "image": "shopware.png",
     "isFeatured": true
   },
   {
