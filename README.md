@@ -1,17 +1,25 @@
-## My Developer Portfolio
+## My Personal Developer Portfolio
+
+Developed with Next.js and Sass. Posts are written in markdown and rendered with react-markdown and react-syntax-highlighter.
+
+Live at: [https://renebitter.github.io/portfolio-nextjs](https://renebitter.github.io/portfolio-nextjs)
+
+basePath configured in next.config.js to repository's name since it is intended to be hosted on github pages. To access it locally add the repository name to the url. e.g. "http://localhost:3000/portfolio-nextjs".
+
+Dark mode also applies to blog post's preformatted text code.
+
+Third party static contact form (formspree).
 
 Todo:
 
-- Blog MD and staticPaths?
-- Static props?
-- prop drilling vs context?
+- Add loading/sending message to contact form
+- Add Project Detail Page (dynamic route) instead of modal
 
 - Update dark mode to github tone (muted text color #768390 )
 - Update dark mode to purplish color?
 - Update navbar dark color
 - Update navbar nav width 60%?
-
-- Apply dark-theme to body (probably with props)
+- Refactor anchors to buttons
 
 - Animated projects card/pills
 - React animation
@@ -21,23 +29,18 @@ Todo:
 - Scroll directly to next section /Remove scroll animation indicator after scrolling down?
 - Parallax?
 
-- Fix Dark mode / useLocalStorage
+- Check for prop drilling vs context
+- Apply dark mode to body (probably with props)
+- Dark mode / useLocalStorage
 
 - Site photos
 - Full project description
-- Deploy to Github Pages
 
 - www.flaticon.com
 
 Blog posts:
 
-- Blog post: How to build a Next.js Portfolio with Blog Website and deploy with Github Pages
+- Blog post: How to build a Next.js Portfolio with Blog Website
 - Blog post: Must know JS (interview questions)
 - Blog post: Using redux for MERNShop
 - Blog post: scroll-snap vs JS
-
-Done:
-
-- Dark Mode
-- Add global colors / variables
-- Add Contact Form Service https://formspree.io/

@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('dark');
-
   return (
     <>
       <div className='app' data-theme={theme}>
@@ -17,7 +16,7 @@ function MyApp({ Component, pageProps }) {
             />
             <link rel='shortcut icon' href='/portfolio-nextjs/favicon.ico' />
           </Head>
-          <Component {...pageProps} />
+          <Component {...pageProps} currentTheme={theme} />
         </Navbar>
       </div>
     </>

@@ -2,10 +2,13 @@ import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import classes from './postContent.module.scss';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import {
+  darcula,
+  solarizedlight,
+} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const PostContent = (props) => {
-  const { post } = props;
+  const { post, currentTheme } = props;
 
   const title = post.title;
   const content = post.content;
@@ -33,12 +36,23 @@ const PostContent = (props) => {
       const language = className.split('-')[1]; // className is something like language-js => We need the "js" part here
 
       return (
-        <SyntaxHighlighter
-          language={language}
-          style={darcula}
-          // eslint-disable-next-line react/no-children-prop
-          children={children}
-        />
+        <>
+          {currentTheme === 'dark' ? (
+            <SyntaxHighlighter
+              language={language}
+              style={darcula}
+              // eslint-disable-next-line react/no-children-prop
+              children={children}
+            />
+          ) : (
+            <SyntaxHighlighter
+              language={language}
+              style={solarizedlight}
+              // eslint-disable-next-line react/no-children-prop
+              children={children}
+            />
+          )}
+        </>
       );
     },
   };

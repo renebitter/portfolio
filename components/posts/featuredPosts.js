@@ -3,7 +3,6 @@ import PostItem from './postItem';
 
 const FeaturedPosts = (props) => {
   const { posts } = props;
-
   return (
     <section className={classes.blog} id='blog'>
       <div className={classes.container}>
