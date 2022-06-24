@@ -5,6 +5,33 @@ import { useForm, ValidationError } from '@formspree/react';
 
 function ContactModal(props) {
   const [state, handleSubmit] = useForm('mdobjbdw');
+
+  if (state.submitting) {
+    return (
+      <div className={classes.modal}>
+        <div
+          className={`${classes.contactModal} ${classes.contactModalConfirmation}`}>
+          <div>
+            <h2>Sending Message</h2>
+            <p>
+              Just a sec...
+              <br />
+              Also feel free to contact me via Linkedin:
+            </p>
+            <div className={classes.linkedinLink}>
+              <a
+                href='https://www.linkedin.com/in/rene-bitter/'
+                target='_blank'
+                rel='noreferrer'>
+                <i className='fab fa-linkedin'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (state.succeeded) {
     return (
       <div className={classes.modal}>

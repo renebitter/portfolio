@@ -12,7 +12,6 @@ Third party static contact form (formspree).
 
 Todo:
 
-- Add loading/sending message to contact form
 - Add Project Detail Page (dynamic route) instead of modal
 
 - Update dark mode to github tone (muted text color #768390 )
@@ -20,6 +19,7 @@ Todo:
 - Update navbar dark color
 - Update navbar nav width 60%?
 - Refactor anchors to buttons
+- Dark mode to body
 
 - Animated projects card/pills
 - React animation
@@ -28,6 +28,7 @@ Todo:
 - React carousel
 - Scroll directly to next section /Remove scroll animation indicator after scrolling down?
 - Parallax?
+- Add loading animation to sending message on contact form
 
 - Check for prop drilling vs context
 - Apply dark mode to body (probably with props)
