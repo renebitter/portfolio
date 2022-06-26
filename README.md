@@ -13,6 +13,7 @@ Third party static contact form (formspree).
 Todo:
 
 - Add Project Detail Page (dynamic route) instead of modal
+- Add border to featured projects
 
 - Update dark mode to github tone (muted text color #768390 )
 - Update dark mode to purplish color?
