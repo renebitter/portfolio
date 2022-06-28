@@ -6,7 +6,7 @@
     "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog",
-    "image": "portfolio.png",
+    "image": "portfolio.webp",
     "isFeatured": true
   },
   {
@@ -16,7 +16,7 @@
     "description": "Build with React and Redux for it's state management. This is a fully functional e-commerce website including: product listing, pagination, product detail page, search, user authentication, user profile page, rating, review and payment (paypal integration). Admin user and admin area with CRUD functionality for users, products and orders.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
-    "image": "mernshop-2.png",
+    "image": "mernshop.webp",
     "isFeatured": true
   },
 
