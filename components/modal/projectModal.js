@@ -13,7 +13,7 @@ const ProjectModal = (props) => {
             <div className={classes.image}>
               {project.image && (
                 <Image
-                  src={`/portfolio-nextjs/images/projects/${project.image}`}
+                  src={`/portfolio/images/projects/${project.image}`}
                   width={500}
                   height={360}
                   alt=''
@@ -40,7 +40,7 @@ const ProjectModal = (props) => {
           <div className={classes.flowchart}>
             {project.image && (
               <Image
-                src={`/portfolio-nextjs/images/projects/${project.image}`}
+                src={`/portfolio/images/projects/${project.image}`}
                 width={500}
                 height={360}
                 alt=''

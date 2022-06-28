@@ -8,7 +8,7 @@ isFeatured: true
 
 # Using Markdown as a blog format
 
-![Image ...](/portfolio-nextjs/images/posts/first-post/markdown.jpg)
+![Image ...](/portfolio/images/posts/first-post/markdown.jpg)
 
 ```text
 ---
@@ -33,7 +33,7 @@ const PostContent = (props) => {
 
   const title = post.title;
   const content = post.content;
-  const imagePath = `/portfolio-nextjs/images/posts/${post.slug}/${post.image}`;
+  const imagePath = `/portfolio/images/posts/${post.slug}/${post.image}`;
 
   const customRenderers = {
     p(paragraph) {

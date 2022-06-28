@@ -27,7 +27,7 @@ const Hero = () => {
               I&apos;m fluent in English{' '}
               <span>
                 <Image
-                  src='/portfolio-nextjs/images/usa.png'
+                  src='/portfolio/images/usa.png'
                   alt='usa-flag'
                   width={16}
                   height={16}
@@ -36,7 +36,7 @@ const Hero = () => {
               , German{' '}
               <span>
                 <Image
-                  src='/portfolio-nextjs/images/germany.png'
+                  src='/portfolio/images/germany.png'
                   alt='usa-flag'
                   width={16}
                   height={16}
@@ -45,7 +45,7 @@ const Hero = () => {
               , Portuguese{' '}
               <span>
                 <Image
-                  src='/portfolio-nextjs/images/brazil.png'
+                  src='/portfolio/images/brazil.png'
                   alt='usa-flag'
                   width={16}
                   height={16}
@@ -54,7 +54,7 @@ const Hero = () => {
               and Javascript{' '}
               <span>
                 <Image
-                  src='/portfolio-nextjs/images/js.png'
+                  src='/portfolio/images/js.png'
                   alt='usa-flag'
                   width={16}
                   height={16}
@@ -103,7 +103,7 @@ const Hero = () => {
 
           <div className={`${classes.columnRight} ${classes.profilePic}`}>
             <Image
-              src='/portfolio-nextjs/images/profile-pic.webp'
+              src='/portfolio/images/profile-pic.webp'
               width={360}
               height={360}
               alt='profile-pic'

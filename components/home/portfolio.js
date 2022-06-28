@@ -49,7 +49,7 @@ const Portfolio = () => {
                 <div className={classes.card}>
                   <a href='#!' onClick={() => showModalHandler(project)}>
                     <Image
-                      src={`/portfolio-nextjs/images/projects/${project.image}`}
+                      src={`/portfolio/images/projects/${project.image}`}
                       width={500}
                       height={360}
                       alt=''

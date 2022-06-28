@@ -2,9 +2,9 @@
 
 Developed with Next.js and Sass. Posts are written in markdown and rendered with react-markdown and react-syntax-highlighter.
 
-Live at: [https://renebitter.github.io/portfolio-nextjs](https://renebitter.github.io/portfolio-nextjs)
+Live at: [https://renebitter.github.io/portfolio](https://renebitter.github.io/portfolio)
 
-basePath configured in next.config.js to repository's name since it is intended to be hosted on github pages. To access it locally add the repository name to the url. e.g. "http://localhost:3000/portfolio-nextjs".
+basePath configured in next.config.js to repository's name since it is intended to be hosted on github pages. To access it locally add the repository name to the url. e.g. "http://localhost:3000/portfolio".
 
 Dark mode also applies to blog post's preformatted text code.
 
