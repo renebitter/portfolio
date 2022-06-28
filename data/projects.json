@@ -1,16 +1,6 @@
 [
   {
     "_id": "1",
-    "title": "Portfolio-Blog website",
-    "subtitle": "React, Next.js, Markdown",
-    "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
-    "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
-    "githubLink": "https://github.com/renebitter/nextjs-blog",
-    "image": "portfolio.webp",
-    "isFeatured": true
-  },
-  {
-    "_id": "2",
     "title": "eCommerce website - MERN Fullstack",
     "subtitle": "React, Redux, Mongo, Node, Express",
     "description": "Build with React and Redux for it's state management. This is a fully functional e-commerce website including: product listing, pagination, product detail page, search, user authentication, user profile page, rating, review and payment (paypal integration). Admin user and admin area with CRUD functionality for users, products and orders.",
@@ -19,7 +9,16 @@
     "image": "mernshop.webp",
     "isFeatured": true
   },
-
+  {
+    "_id": "2",
+    "title": "Portfolio-Blog website",
+    "subtitle": "React, Next.js, Markdown",
+    "description": "Static website using Next.js (the one you're on). I tried to keep it at a minimum regarding dependencies. Used some for animation and markdown. ",
+    "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
+    "githubLink": "https://github.com/renebitter/nextjs-blog",
+    "image": "portfolio.webp",
+    "isFeatured": true
+  },
   {
     "_id": "3",
     "title": "eCommerce website - Next.js and Typescript",
