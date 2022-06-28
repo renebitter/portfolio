@@ -15,12 +15,12 @@
   --gradient-secondary: #f4494e;
 }
 [data-theme='dark'] {
-  --background: #242729;
-  --background-card: #2f2f2f;
-  --text-primary: white;
+  --background: #22272e;
+  --background-card: #373e47;
+  --text-primary: #adbac7;
   --text-secondary: #efe3cf;
   --accent: #ff787e;
-  --transparent-primary: #242729f2;
+  --transparent-primary: #2d333bed;
   --transparent-secondary: #242729fc;
   --border: #4b5154;
   --border-light: #ffffff0d;
@@ -63,6 +63,7 @@ html {
 
 h2 {
   font-size: 2rem;
+  color: var(--text-secondary);
 }
 
 button {

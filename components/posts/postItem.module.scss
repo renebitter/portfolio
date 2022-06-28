@@ -1,11 +1,13 @@
 .card {
   border-radius: 5px;
   padding: 25px;
+  background-color: var(--background-card);
   border: 1px solid var(--border-card);
   margin-bottom: 25px;
 
   h4 {
     margin: 0;
+    color: var(--text-secondary);
   }
 
   a {

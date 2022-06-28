@@ -15,11 +15,8 @@ Todo:
 - Add Project Detail Page (dynamic route) instead of modal
 - Add border to featured projects
 
-- Update dark mode to github tone (muted text color #768390 )
 - Update dark mode to purplish color?
-- Update navbar dark color
 - Update navbar nav width 60%?
-- Apply dark mode to body (probably with props)
 - Dark mode / useLocalStorage
 
 - Refactor anchors to buttons
