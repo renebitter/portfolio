@@ -1,11 +1,13 @@
 :root {
   --background: white;
+  --background-card: #ffffff;
   --text-primary: black;
   --text-secondary: #6e6d7a;
   --accent: #f4494e;
   --transparent-primary: #fffffff2;
   --transparent-secondary: #fffffffc;
   --border: #f8f8f8;
+  --border-light: #6464640d;
   --border-card: #cecece;
   --button-color: #fd814d;
   --button-border: #fd814d;
@@ -14,12 +16,14 @@
 }
 [data-theme='dark'] {
   --background: #242729;
+  --background-card: #2f2f2f;
   --text-primary: white;
   --text-secondary: #efe3cf;
   --accent: #ff787e;
   --transparent-primary: #242729f2;
   --transparent-secondary: #242729fc;
   --border: #4b5154;
+  --border-light: #ffffff0d;
   --border-card: #4b5154;
   --button-color: #ffc478;
   --button-border: #e74703;

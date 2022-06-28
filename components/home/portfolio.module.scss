@@ -2,7 +2,11 @@
   padding: 50px 15px;
 
   .project {
+    background-color: var(--background-card);
     margin-top: 50px;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    padding: 25px;
   }
 
   .columnLeft {
@@ -43,8 +47,18 @@
     max-width: 500px;
     margin: 50px auto 0;
 
-    .card img {
+    .card {
+      border: 1px solid #ffffff0d;
       border-radius: 5px;
+    }
+
+    .card img {
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .card span {
+      display: block !important;
     }
   }
 
