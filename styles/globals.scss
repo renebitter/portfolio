@@ -3,32 +3,34 @@
   --background-card: #ffffff;
   --text-primary: black;
   --text-secondary: #6e6d7a;
+  --text-tertiary: #8bb2c3;
   --accent: #f4494e;
   --transparent-primary: #fffffff2;
   --transparent-secondary: #fffffffc;
   --border: #f8f8f8;
   --border-light: #6464640d;
   --border-card: #cecece;
-  --button-color: #fd814d;
-  --button-border: #fd814d;
-  --gradient-primary: #ff8d4d;
-  --gradient-secondary: #f4494e;
+  --button-color: #687886;
+  --button-border: #687886;
+  --gradient-primary: #687886;
+  --gradient-secondary: #aab8c5;
 }
 [data-theme='dark'] {
   --background: #22272e;
   --background-card: #373e47;
   --text-primary: #adbac7;
   --text-secondary: #efe3cf;
+  --text-tertiary: #8bb2c3;
   --accent: #ff787e;
   --transparent-primary: #2d333bed;
   --transparent-secondary: #242729fc;
   --border: #4b5154;
   --border-light: #ffffff0d;
   --border-card: #4b5154;
-  --button-color: #ffc478;
-  --button-border: #e74703;
-  --gradient-primary: #ed5600;
-  --gradient-secondary: #ec0f15;
+  --button-color: #efe3cf;
+  --button-border: #687886;
+  --gradient-primary: #687886;
+  --gradient-secondary: #aab8c5;
 }
 
 html,
@@ -90,7 +92,7 @@ button {
 .btn-filled {
   color: #fff;
   background-image: linear-gradient(
-    90deg,
+    310deg,
     var(--gradient-primary),
     var(--gradient-secondary)
   );

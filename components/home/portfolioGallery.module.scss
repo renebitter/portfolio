@@ -21,15 +21,23 @@
     background-color: var(--background-card);
     border: 1px solid var(--border-card); //rgb(93, 101, 105) #cecece
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
 
     h4 {
       margin: 0;
       color: var(--text-secondary);
     }
 
+    small {
+      color: var(--text-tertiary);
+    }
+
     .portfolioLinks {
       display: flex;
       flex-direction: row;
+      margin-top: auto;
 
       a {
         margin-right: 15px;
@@ -61,7 +69,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
     }
 
