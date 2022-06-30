@@ -18,9 +18,10 @@ class MyDocument extends Document {
 
           <link
             rel='stylesheet'
-            href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
-            integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'
+            integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=='
             crossOrigin='anonymous'
+            referrerPolicy='no-referrer'
           />
         </Head>
         <body>

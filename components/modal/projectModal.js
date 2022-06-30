@@ -7,6 +7,9 @@ const ProjectModal = (props) => {
   return (
     <div className={classes.modal}>
       <div className={classes.projectModal}>
+        <a href='#!' className={classes.close} onClick={props.onClose}>
+          <i className='fa fa-xmark'></i>
+        </a>
         <h2>{project.title}</h2>
         <div className={classes.main}>
           <div className={classes.projectRow}>

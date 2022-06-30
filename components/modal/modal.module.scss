@@ -45,6 +45,12 @@
 .contactModal {
   text-align: center;
 
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
   .inputField {
     margin: 25px 0;
 
@@ -112,10 +118,8 @@
 
     .inputField {
       margin: 25px 0;
+      width: 100%;
     }
-    // .inputField:first-child {
-    //   margin-right: 25px;
-    // }
 
     .action {
       margin-bottom: unset;
@@ -126,6 +130,12 @@
 .projectModal {
   text-align: center;
   width: 90%;
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
 
   .main {
     .projectRow {
@@ -150,10 +160,6 @@
         }
       }
     }
-
-    .flowchart {
-      text-align: center;
-    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -174,11 +180,6 @@
             display: flex;
           }
         }
-      }
-
-      .flowchart {
-        display: flex;
-        justify-content: center;
       }
     }
   }
