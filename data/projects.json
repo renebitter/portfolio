@@ -16,7 +16,7 @@
     "description": "Developed with Next.js using Static Site Generation. Dynamic pages for projects and blog posts. Blog posts written in markdown and rendered with react-markdown.",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog",
-    "image": "portfolio.webp",
+    "image": "portfolio.jpg",
     "isFeatured": true
   },
   {
@@ -24,7 +24,7 @@
     "title": "eCommerce website - Next.js and Typescript",
     "subtitle": "React, Typescript, Next.js, Mongo, Node, Express, Contentful ",
     "description": "Current project under development.",
-    "image": "project01.jpg",
+    "image": "typescript.webp",
     "isFeatured": true
   },
 
@@ -32,21 +32,13 @@
     "_id": "9",
     "title": "Shopware",
     "subtitle": "Shopware 5 & 6, Bootstrap 3 & 4, Twig, Smarty",
-    "description": "Worked on the development of Shopware 6 itself and many other Shopware 5 and 6 projects.",
+    "description": "Worked on the development of Shopware 6 itself and many other Shopware 5 and 6 projects for mid and large size B2B and B2C clients in Germany.",
     "githubLink": "https://github.com/shopware/platform",
     "image": "shopware.png",
     "isFeatured": true
   },
   {
     "_id": "4",
-    "title": "Blog",
-    "subtitle": "React, Next.js, Mongodb",
-    "description": "Blog posts written in markdown and rendered with \"react-markdown\". Notifications displayed via react portal through \"_document.js.\". Contact form using mongodb.",
-    "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
-    "githubLink": "https://github.com/renebitter/nextjs-blog"
-  },
-  {
-    "_id": "5",
     "title": "Next.js authentication using next-auth",
     "subtitle": "React, Next.js",
     "description": "Project built using next-auth library to handle authentication. SessionProvider, useSession, getSession, CredentialsProvider, JWT & bcryptjs (for password hashing), mongodb, HTTP requests sent using fetch.",
@@ -54,7 +46,7 @@
     "githubLink": "https://github.com/renebitter/nextjs-authentication"
   },
   {
-    "_id": "6",
+    "_id": "5",
     "title": "Contact Keeper - MERN Fullstack",
     "subtitle": "React, Mongo, Node, Express",
     "description": "This is a MERN Fullstack project with authentication and CRUD functionality.",
@@ -62,12 +54,20 @@
     "githubLink": "https://github.com/renebitter/contact_keeper"
   },
   {
-    "_id": "7",
+    "_id": "6",
     "title": "Message Logger App - MERN Fullstack",
     "subtitle": "React, Redux, Mongo, Node, Express",
     "description": "This is a MERN + Redux project with authentication and CRUD functionality. Functionalities: Add/delete logs & users; list logs/users",
     "liveLink": "https://itlogger-04360.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/it-logger-full-stack"
+  },
+  {
+    "_id": "7",
+    "title": "Blog",
+    "subtitle": "React, Next.js, Mongodb",
+    "description": "Blog posts written in markdown and rendered with \"react-markdown\". Notifications displayed via react portal through \"_document.js.\". Contact form using mongodb.",
+    "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
+    "githubLink": "https://github.com/renebitter/nextjs-blog"
   },
   {
     "_id": "8",

@@ -1,7 +1,6 @@
 import classes from './modal.module.scss';
 import ContactModal from './contactModal';
 import ProjectModal from './projectModal';
-import BlogModal from './blogModal';
 
 const Modal = (props) => {
   return (
@@ -11,8 +10,6 @@ const Modal = (props) => {
       {props.contact && <ContactModal {...props} />}
 
       {props.project && <ProjectModal {...props} />}
-
-      {props.post && <BlogModal {...props} />}
     </>
   );
 };

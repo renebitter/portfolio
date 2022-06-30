@@ -19,33 +19,25 @@ const ProjectModal = (props) => {
                   alt=''
                 />
               )}
-
-              <div className={classes.modalLinks}>
-                <a href={project.liveLink} target='_blank' rel='noreferrer'>
-                  <i className='fas fa-link'></i>
-                  Live
-                </a>
+            </div>
+            <div className={classes.modalLinks}>
+              {project.githubLink && (
                 <a href={project.githubLink} target='_blank' rel='noreferrer'>
                   <i className='fab fa-github'></i>
                   Github
                 </a>
-              </div>
+              )}
+              {project.liveLink && (
+                <a href={project.liveLink} target='_blank' rel='noreferrer'>
+                  <i className='fas fa-link'></i>
+                  Live
+                </a>
+              )}
             </div>
-
             <div className={classes.description}>
               <p>{project.subtitle}</p>
               <p>{project.description}</p>
             </div>
-          </div>
-          <div className={classes.flowchart}>
-            {project.image && (
-              <Image
-                src={`/portfolio/images/projects/${project.image}`}
-                width={500}
-                height={360}
-                alt=''
-              />
-            )}
           </div>
         </div>
       </div>
