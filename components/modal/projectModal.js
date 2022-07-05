@@ -1,5 +1,6 @@
 import classes from './modal.module.scss';
 import Image from 'next/image';
+import ImageSlider from '../slider/slider';
 
 const ProjectModal = (props) => {
   const { project } = props;
@@ -38,7 +39,9 @@ const ProjectModal = (props) => {
             </div>
           </div>
           <div>
-            {project.screenshots &&
+            <ImageSlider slides={project.screenshots} />
+
+            {/* {project.screenshots &&
               project.screenshots.map((screenshot) => (
                 <div key={screenshot.screenshot}>
                   <Image
@@ -49,7 +52,7 @@ const ProjectModal = (props) => {
                   />
                   <p>{screenshot.description}</p>
                 </div>
-              ))}
+              ))} */}
           </div>
         </div>
       </div>
