@@ -22,13 +22,23 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <section className='slider'>
-      <i className='fa fa-arrow-left left-arrow' onClick={prevSlide} />
-      <i className='fa fa-arrow-right right-arrow' onClick={nextSlide} />
+    <section className={classes.slider}>
+      <i
+        className={`${classes['left-arrow']} fa fa-arrow-left`}
+        onClick={prevSlide}
+      />
+      <i
+        className={`${classes['right-arrow']} fa fa-arrow-right`}
+        onClick={nextSlide}
+      />
       {slides.map((slide, index) => {
         return (
           <div
-            className={index === current ? 'slide active' : 'slide'}
+            className={
+              index === current
+                ? (classes.slide, classes.active)
+                : classes.slide
+            }
             key={slide.screenshot}>
             {index === current && (
               <>
