@@ -37,15 +37,19 @@ const ProjectModal = (props) => {
               <p>{project.description}</p>
             </div>
           </div>
-          <div className={classes.flowchart}>
-            {project.image && (
-              <Image
-                src={`/portfolio/images/projects/${project.image}`}
-                width={500}
-                height={360}
-                alt=''
-              />
-            )}
+          <div>
+            {project.screenshots &&
+              project.screenshots.map((screenshot) => (
+                <div key={screenshot.screenshot}>
+                  <Image
+                    src={`/portfolio/images/projects/mernshop/${screenshot.screenshot}`}
+                    width={1000}
+                    height={720}
+                    alt={screenshot.screenshot}
+                  />
+                  <p>{screenshot.description}</p>
+                </div>
+              ))}
           </div>
         </div>
       </div>

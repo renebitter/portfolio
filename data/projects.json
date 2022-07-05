@@ -7,7 +7,48 @@
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
     "image": "mernshop.webp",
-    "isFeatured": true
+    "isFeatured": true,
+    "screenshots": [
+      {
+        "screenshot": "home01.png",
+        "description": "Home page with navbar and hero element."
+      },
+      {
+        "screenshot": "home02.png",
+        "description": "Carousel with 3 top-rated products and general product listing."
+      },
+      {
+        "screenshot": "user_profile.png",
+        "description": "User profile page. Change user information and password and list user orders."
+      },
+
+      {
+        "screenshot": "users_admin.png",
+        "description": "Admin view of registered users."
+      },
+      {
+        "screenshot": "user_edit_admin.png",
+        "description": "Admin user edit page."
+      },
+      {
+        "screenshot": "products_admin.png",
+        "description": "Admin list of registered products"
+      },
+      {
+        "screenshot": "product_edit_admin.png",
+        "description": "Admin update/create products page."
+      },
+      {
+        "screenshot": "orders_admin.png",
+        "description": "Admin list of global orders."
+      },
+
+      { "screenshot": "cart01.png", "description": "Empty cart." },
+      {
+        "screenshot": "cart02.png",
+        "description": "Multiple products added to cart. Quantity selection and price updates."
+      }
+    ]
   },
   {
     "_id": "2",
