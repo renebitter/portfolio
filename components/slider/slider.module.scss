@@ -29,7 +29,8 @@
 
 .slide {
   opacity: 0;
-  transition-duration: 500ms ease;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
 }
 
 .slide.active {
