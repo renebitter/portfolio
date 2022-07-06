@@ -13,53 +13,43 @@ const ProjectModal = (props) => {
         </a>
         <h2>{project.title}</h2>
         <div className={classes.main}>
-          <div className={classes.projectRow}>
-            <div className={classes.image}>
-              {project.image && (
-                <Image
-                  src={`/portfolio/images/projects/${project.image}`}
-                  width={500}
-                  height={360}
-                  alt=''
-                />
-              )}
+          {project.screenshots ? (
+            <div>
+              <h3>Screenshots & description</h3>
+              <ImageSlider slides={project.screenshots} />
             </div>
-            <div className={classes.modalLinks}>
-              {project.githubLink && (
-                <a href={project.githubLink} target='_blank' rel='noreferrer'>
-                  <i className='fab fa-github'></i>
-                  Github
-                </a>
-              )}
-              {project.liveLink && (
-                <a href={project.liveLink} target='_blank' rel='noreferrer'>
-                  <i className='fas fa-link'></i>
-                  Live
-                </a>
-              )}
-            </div>
-            <div className={classes.description}>
-              <p>{project.subtitle}</p>
-              <p>{project.description}</p>
-            </div>
-          </div>
-          <div>
-            <h3>Screenshots & description</h3>
-            <ImageSlider slides={project.screenshots} />
-
-            {/* {project.screenshots &&
-              project.screenshots.map((screenshot) => (
-                <div key={screenshot.screenshot}>
+          ) : (
+            <div className={classes.projectRow}>
+              <div className={classes.image}>
+                {project.image && (
                   <Image
-                    src={`/portfolio/images/projects/mernshop/${screenshot.screenshot}`}
-                    width={1000}
-                    height={720}
-                    alt={screenshot.screenshot}
+                    src={`/portfolio/images/projects/${project.image}`}
+                    width={500}
+                    height={360}
+                    alt=''
                   />
-                  <p>{screenshot.description}</p>
-                </div>
-              ))} */}
-          </div>
+                )}
+              </div>
+              <div className={classes.modalLinks}>
+                {project.githubLink && (
+                  <a href={project.githubLink} target='_blank' rel='noreferrer'>
+                    <i className='fab fa-github'></i>
+                    Github
+                  </a>
+                )}
+                {project.liveLink && (
+                  <a href={project.liveLink} target='_blank' rel='noreferrer'>
+                    <i className='fas fa-link'></i>
+                    Live
+                  </a>
+                )}
+              </div>
+              <div className={classes.description}>
+                <p>{project.subtitle}</p>
+                <p>{project.description}</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
