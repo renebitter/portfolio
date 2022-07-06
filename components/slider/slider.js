@@ -1,9 +1,6 @@
-import classes from './slider.module.scss';
-
 import { useState } from 'react';
 import Image from 'next/image';
-// import { SliderData } from './SliderData';
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import classes from './slider.module.scss';
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -22,13 +19,13 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <section className={classes.slider}>
+    <div className={classes.slider}>
       <i
-        className={`${classes['left-arrow']} fa fa-arrow-left`}
+        className={`${classes['left-arrow']} fa fa-angle-left`}
         onClick={prevSlide}
       />
       <i
-        className={`${classes['right-arrow']} fa fa-arrow-right`}
+        className={`${classes['right-arrow']} fa fa-angle-right`}
         onClick={nextSlide}
       />
       {slides.map((slide, index) => {
@@ -36,25 +33,25 @@ const ImageSlider = ({ slides }) => {
           <div
             className={
               index === current
-                ? (classes.slide, classes.active)
+                ? `${classes.slide} ${classes.active}`
                 : classes.slide
             }
             key={slide.screenshot}>
             {index === current && (
-              <>
+              <div>
                 <Image
                   src={`/portfolio/images/projects/mernshop/${slide.screenshot}`}
                   width={1000}
                   height={720}
                   alt={slide.screenshot}
                 />
-                <p>{slide.description}</p>
-              </>
+                <div>{slide.description}</div>
+              </div>
             )}
           </div>
         );
       })}
-    </section>
+    </div>
   );
 };
 

@@ -39,6 +39,7 @@ const ProjectModal = (props) => {
             </div>
           </div>
           <div>
+            <h3>Screenshots & description</h3>
             <ImageSlider slides={project.screenshots} />
 
             {/* {project.screenshots &&
