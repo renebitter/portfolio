@@ -46,7 +46,7 @@ const ImageSlider = ({ slides }) => {
                   alt={slide.screenshot}
                 />
                 <div>
-                  {index}. {slide.description}
+                  {index + 1}. {slide.description}
                 </div>
               </div>
             )}
