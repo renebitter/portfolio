@@ -1,6 +1,6 @@
 import classes from './modal.module.scss';
 import Image from 'next/image';
-import ImageSlider from '../slider/slider';
+import ImageSlider from '../imageSlider/imageSlider';
 
 const ProjectModal = (props) => {
   const { project } = props;
@@ -24,8 +24,8 @@ const ProjectModal = (props) => {
                 {project.image && (
                   <Image
                     src={`/portfolio/images/projects/${project.image}`}
-                    width={500}
-                    height={360}
+                    width='100%'
+                    height='100%'
                     alt=''
                   />
                 )}

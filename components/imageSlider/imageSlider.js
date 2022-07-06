@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import classes from './slider.module.scss';
+import classes from './imageSlider.module.scss';
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
