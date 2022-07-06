@@ -49,20 +49,24 @@ const PortfolioGallery = () => {
                     </div>
 
                     <div className={classes.portfolioLinks}>
-                      <a
-                        href={project.liveLink}
-                        target='_blank'
-                        rel='noreferrer'>
-                        <i className='fas fa-link'></i>
-                        Live
-                      </a>
-                      <a
-                        href={project.githubLink}
-                        target='_blank'
-                        rel='noreferrer'>
-                        <i className='fab fa-github'></i>
-                        Github
-                      </a>
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target='_blank'
+                          rel='noreferrer'>
+                          <i className='fab fa-github'></i>
+                          Github
+                        </a>
+                      )}
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target='_blank'
+                          rel='noreferrer'>
+                          <i className='fas fa-link'></i>
+                          Live
+                        </a>
+                      )}
                     </div>
                   </div>
                 ))}

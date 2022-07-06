@@ -11,7 +11,7 @@
 .contactModal,
 .projectModal {
   border-radius: 5px;
-  background-color: var(--background);
+  background-color: var(--background-card);
   padding: 1rem;
   overflow: auto;
   z-index: 3;
@@ -44,6 +44,12 @@
 
 .contactModal {
   text-align: center;
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
 
   .inputField {
     margin: 25px 0;
@@ -112,10 +118,8 @@
 
     .inputField {
       margin: 25px 0;
+      width: 100%;
     }
-    // .inputField:first-child {
-    //   margin-right: 25px;
-    // }
 
     .action {
       margin-bottom: unset;
@@ -124,12 +128,20 @@
 }
 
 .projectModal {
+  text-align: center;
   width: 90%;
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
 
   .main {
     .projectRow {
       .image {
         text-align: center;
+        align-items: center;
       }
 
       .modalLinks {
@@ -147,13 +159,6 @@
           color: var(--text-primary);
         }
       }
-
-      // .description {
-      // }
-    }
-
-    .flowchart {
-      text-align: center;
     }
   }
 
@@ -163,30 +168,18 @@
     .main {
       .projectRow {
         display: flex;
+        flex-direction: column;
         margin-bottom: 50px;
 
         .image {
           display: flex;
           flex-direction: column;
-          align-items: flex-end;
-          order: 2;
-          width: 50%;
+          margin-bottom: 25px;
 
           .modalLinks {
             display: flex;
           }
         }
-
-        .description {
-          order: 1;
-          width: 50%;
-          margin-right: 25px;
-        }
-      }
-
-      .flowchart {
-        display: flex;
-        justify-content: center;
       }
     }
   }

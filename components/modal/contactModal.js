@@ -37,6 +37,9 @@ function ContactModal(props) {
       <div className={classes.modal}>
         <div
           className={`${classes.contactModal} ${classes.contactModalConfirmation}`}>
+          <a href='#!' className={classes.close} onClick={props.onClose}>
+            <i className='fa fa-xmark'></i>
+          </a>
           <div>
             <h2>Thanks for your contact!</h2>
             <p>
@@ -66,6 +69,10 @@ function ContactModal(props) {
   return (
     <div className={classes.modal}>
       <div className={classes.contactModal}>
+        <a href='#!' className={classes.close} onClick={props.onClose}>
+          <i className='fa fa-xmark'></i>
+        </a>
+
         <h2>Say hi!</h2>
 
         <form

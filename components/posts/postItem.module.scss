@@ -4,14 +4,27 @@
   background-color: var(--background-card);
   border: 1px solid var(--border-card);
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
 
   h4 {
     margin: 0;
     color: var(--text-secondary);
   }
 
-  a {
-    color: var(--accent);
+  time {
+    color: var(--text-tertiary);
+  }
+
+  .cardAction {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+
+    a {
+      color: var(--accent);
+    }
   }
 }
 

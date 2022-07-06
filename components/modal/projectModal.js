@@ -8,6 +8,9 @@ const ProjectModal = (props) => {
   return (
     <div className={classes.modal}>
       <div className={classes.projectModal}>
+        <a href='#!' className={classes.close} onClick={props.onClose}>
+          <i className='fa fa-xmark'></i>
+        </a>
         <h2>{project.title}</h2>
         <div className={classes.main}>
           <div className={classes.projectRow}>
@@ -20,19 +23,21 @@ const ProjectModal = (props) => {
                   alt=''
                 />
               )}
-
-              <div className={classes.modalLinks}>
-                <a href={project.liveLink} target='_blank' rel='noreferrer'>
-                  <i className='fas fa-link'></i>
-                  Live
-                </a>
+            </div>
+            <div className={classes.modalLinks}>
+              {project.githubLink && (
                 <a href={project.githubLink} target='_blank' rel='noreferrer'>
                   <i className='fab fa-github'></i>
                   Github
                 </a>
-              </div>
+              )}
+              {project.liveLink && (
+                <a href={project.liveLink} target='_blank' rel='noreferrer'>
+                  <i className='fas fa-link'></i>
+                  Live
+                </a>
+              )}
             </div>
-
             <div className={classes.description}>
               <p>{project.subtitle}</p>
               <p>{project.description}</p>
