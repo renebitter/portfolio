@@ -41,8 +41,8 @@ const ImageSlider = ({ slides }) => {
               <div>
                 <Image
                   src={`/portfolio/images/projects/mernshop/${slide.screenshot}`}
-                  width={1000}
-                  height={720}
+                  width={500}
+                  height={360}
                   alt={slide.screenshot}
                 />
                 <div>

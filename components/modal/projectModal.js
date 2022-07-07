@@ -24,8 +24,8 @@ const ProjectModal = (props) => {
                 {project.image && (
                   <Image
                     src={`/portfolio/images/projects/${project.image}`}
-                    width='100%'
-                    height='100%'
+                    width={500}
+                    height={360}
                     alt=''
                   />
                 )}
