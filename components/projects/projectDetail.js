@@ -9,49 +9,47 @@ const ProjectDetail = (props) => {
   const router = useRouter();
 
   return (
-    <div className='container section'>
-      <Link href='/#projects'>
-        <button className='btn btn-outlined'>Go Back</button>
-      </Link>
+    <div className={classes.projectDetail}>
+      <div className='container section'>
+        <h1>{project.title}</h1>
 
-      <h2>{project.title}</h2>
-
-      <div>
-        {project.githubLink && (
-          <a href={project.githubLink} target='_blank' rel='noreferrer'>
-            <i className='fab fa-github'></i>
-            Github
-          </a>
-        )}
-        {project.liveLink && (
-          <a href={project.liveLink} target='_blank' rel='noreferrer'>
-            <i className='fas fa-link'></i>
-            Live
-          </a>
-        )}
-      </div>
-
-      {project.screenshots ? (
         <div>
-          <h3>Screenshots & description</h3>
-          <ImageSlider slides={project.screenshots} />
+          <small>{project.subtitle}</small>
+          <p>{project.description}</p>
         </div>
-      ) : (
-        project.image && (
-          <div>
-            <Image
-              src={`../../portfolio/images/projects/${project.image}`}
-              width={500}
-              height={360}
-              alt=''
-            />
-          </div>
-        )
-      )}
 
-      <div>
-        <p>{project.subtitle}</p>
-        <p>{project.description}</p>
+        <div className={classes.projectLinks}>
+          {project.githubLink && (
+            <a href={project.githubLink} target='_blank' rel='noreferrer'>
+              <i className='fab fa-github'></i>
+              Github
+            </a>
+          )}
+          {project.liveLink && (
+            <a href={project.liveLink} target='_blank' rel='noreferrer'>
+              <i className='fas fa-link'></i>
+              Website
+            </a>
+          )}
+        </div>
+
+        {project.screenshots ? (
+          <div>
+            <h2>Screenshots & description</h2>
+            <ImageSlider slides={project.screenshots} />
+          </div>
+        ) : (
+          project.image && (
+            <div className={classes.projectImage}>
+              <Image
+                src={`../../portfolio/images/projects/${project.image}`}
+                width={500}
+                height={360}
+                alt=''
+              />
+            </div>
+          )
+        )}
       </div>
     </div>
   );

@@ -44,6 +44,7 @@ body {
 .app {
   color: var(--text-primary);
   background-color: var(--background);
+  min-height: 100vh;
 }
 
 * {
