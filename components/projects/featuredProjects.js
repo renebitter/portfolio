@@ -31,7 +31,7 @@ const FeaturedProjects = (props) => {
                   {project.liveLink && (
                     <a href={project.liveLink} target='_blank' rel='noreferrer'>
                       <i className='fas fa-link'></i>
-                      Live
+                      Website
                     </a>
                   )}
                   <Link href={`/projects/${project._id}`}>
