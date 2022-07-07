@@ -6,7 +6,10 @@ import About from '../components/home/about';
 import FeaturedPosts from '../components/posts/featuredPosts';
 import Footer from '../components/home/footer';
 import { getFeaturedPosts } from '../util/posts-util';
-import projects from '../data/projects.json';
+import {
+  getFeaturedProjects,
+  getNonFeaturedProjects,
+} from '../util/projects-util';
 
 export default function Home(props) {
   return (
@@ -30,8 +33,8 @@ export default function Home(props) {
 
 export const getStaticProps = () => {
   const featuredPosts = getFeaturedPosts();
-  const featuredProjects = projects.filter((project) => project.isFeatured);
-  const nonFeaturedProjects = projects.filter((project) => !project.isFeatured);
+  const featuredProjects = getFeaturedProjects();
+  const nonFeaturedProjects = getNonFeaturedProjects();
 
   return {
     props: {

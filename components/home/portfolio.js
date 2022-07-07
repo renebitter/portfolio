@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Modal from '../modal/modal';
 import Link from 'next/link';
-// import projects from '../../data/projects.json';
 
 const Portfolio = (props) => {
   const [showModal, setShowModal] = useState();
