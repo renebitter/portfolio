@@ -61,8 +61,8 @@ const Navbar = (props) => {
             }
             id='navMenu'>
             <div className={classes.linkWrapper}>
-              <Link href='/#portfolio'>
-                <a onClick={closeNav}>Portfolio</a>
+              <Link href='/#projects'>
+                <a onClick={closeNav}>Projects</a>
               </Link>
               <Link href='/#about'>
                 <a onClick={closeNav}>About</a>

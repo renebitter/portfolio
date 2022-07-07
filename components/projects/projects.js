@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Projects = (props) => {
   const [showProjects, setShowProjects] = useState(false);
-  const nonFeaturedProjects = props.nonFeaturedProjects;
+  const { nonFeaturedProjects } = props;
 
   function showProjectsHandler() {
     const portfolioGallery = document.getElementById('portfolioGallery');

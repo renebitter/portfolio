@@ -1,27 +1,12 @@
 import classes from './featuredProjects.module.scss';
 import Image from 'next/image';
-import { useState } from 'react';
-import Modal from '../modal/modal';
 import Link from 'next/link';
 
 const FeaturedProjects = (props) => {
-  const [showModal, setShowModal] = useState();
-  const [currentProject, setCurrentProject] = useState();
-
-  const featuredProjects = props.featuredProjects;
-
-  function showModalHandler(project) {
-    setCurrentProject(project);
-    setShowModal(true);
-  }
-
-  function closeModalHandler() {
-    setCurrentProject(null);
-    setShowModal(false);
-  }
+  const { featuredProjects } = props;
 
   return (
-    <section className={classes.portfolio} id='portfolio'>
+    <section className={classes.portfolio} id='projects'>
       <div className={classes.container}>
         <h2>Featured projects</h2>
 
@@ -60,23 +45,22 @@ const FeaturedProjects = (props) => {
 
               <div className={classes.columnRight}>
                 <div className={classes.card}>
-                  <a href='#!' onClick={() => showModalHandler(project)}>
-                    <Image
-                      src={`/portfolio/images/projects/${project.image}`}
-                      width={500}
-                      height={360}
-                      alt=''
-                    />
-                  </a>
+                  <Link href={`/projects/${project._id}`}>
+                    <a>
+                      <Image
+                        src={`/portfolio/images/projects/${project.image}`}
+                        width={500}
+                        height={360}
+                        alt={project.title}
+                      />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
-      {showModal && (
-        <Modal project={currentProject} onClose={closeModalHandler} />
-      )}
     </section>
   );
 };

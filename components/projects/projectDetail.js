@@ -10,7 +10,7 @@ const ProjectDetail = (props) => {
 
   return (
     <div className='container section'>
-      <Link href='/#portfolio'>
+      <Link href='/#projects'>
         <button className='btn btn-outlined'>Go Back</button>
       </Link>
 

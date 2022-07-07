@@ -3,7 +3,7 @@
     "_id": "1",
     "title": "eCommerce website - MERN Fullstack",
     "subtitle": "React, Redux, Mongo, Node, Express",
-    "description": "Developed with the MERN stack + Redux for the state management, this is a fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT.",
+    "description": "Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.",
     "liveLink": "https://mernshop-99.herokuapp.com/",
     "githubLink": "https://github.com/renebitter/mernshop",
     "image": "mernshop.webp",
