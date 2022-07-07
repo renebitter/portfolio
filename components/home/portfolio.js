@@ -2,13 +2,15 @@ import classes from './portfolio.module.scss';
 import Image from 'next/image';
 import { useState } from 'react';
 import Modal from '../modal/modal';
-import projects from '../../data/projects.json';
+import Link from 'next/link';
+// import projects from '../../data/projects.json';
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+  console.log(props.featuredProjects);
   const [showModal, setShowModal] = useState();
   const [currentProject, setCurrentProject] = useState();
 
-  const featuredProjects = projects.filter((project) => project.isFeatured);
+  const featuredProjects = props.featuredProjects;
 
   function showModalHandler(project) {
     setCurrentProject(project);
@@ -49,6 +51,12 @@ const Portfolio = () => {
                       Live
                     </a>
                   )}
+                  <Link href={`/projects/${project._id}`}>
+                    <a>
+                      <i className='fa fa-circle-info'></i>
+                      Project details
+                    </a>
+                  </Link>
                 </div>
               </div>
 

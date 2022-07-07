@@ -1,11 +1,10 @@
 import classes from './portfolioGallery.module.scss';
-// import Image from 'next/image';
 import { useState } from 'react';
-import projects from '../../data/projects.json';
+import Link from 'next/link';
 
-const PortfolioGallery = () => {
+const PortfolioGallery = (props) => {
   const [showProjects, setShowProjects] = useState(false);
-  const nonFeaturedProjects = projects.filter((project) => !project.isFeatured);
+  const nonFeaturedProjects = props.nonFeaturedProjects;
 
   function showProjectsHandler() {
     const portfolioGallery = document.getElementById('portfolioGallery');
@@ -67,6 +66,12 @@ const PortfolioGallery = () => {
                           Live
                         </a>
                       )}
+                      <Link href={`/projects/${project._id}`}>
+                        <a>
+                          <i className='fa fa-circle-info'></i>
+                          Project details
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 ))}

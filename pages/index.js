@@ -6,6 +6,7 @@ import About from '../components/home/about';
 import FeaturedPosts from '../components/posts/featuredPosts';
 import Footer from '../components/home/footer';
 import { getFeaturedPosts } from '../util/posts-util';
+import projects from '../data/projects.json';
 
 export default function Home(props) {
   return (
@@ -18,8 +19,8 @@ export default function Home(props) {
         />
       </Head>
       <Hero />
-      <Portfolio />
-      <PortfolioGallery />
+      <Portfolio featuredProjects={props.featuredProjects} />
+      <PortfolioGallery nonFeaturedProjects={props.nonFeaturedProjects} />
       <About />
       <FeaturedPosts posts={props.posts} />
       <Footer />
@@ -29,10 +30,14 @@ export default function Home(props) {
 
 export const getStaticProps = () => {
   const featuredPosts = getFeaturedPosts();
+  const featuredProjects = projects.filter((project) => project.isFeatured);
+  const nonFeaturedProjects = projects.filter((project) => !project.isFeatured);
 
   return {
     props: {
       posts: featuredPosts,
+      featuredProjects: featuredProjects,
+      nonFeaturedProjects: nonFeaturedProjects,
     },
   };
 };
