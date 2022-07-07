@@ -1,10 +1,10 @@
-import classes from './portfolio.module.scss';
+import classes from './featuredProjects.module.scss';
 import Image from 'next/image';
 import { useState } from 'react';
 import Modal from '../modal/modal';
 import Link from 'next/link';
 
-const Portfolio = (props) => {
+const FeaturedProjects = (props) => {
   const [showModal, setShowModal] = useState();
   const [currentProject, setCurrentProject] = useState();
 
@@ -80,4 +80,4 @@ const Portfolio = (props) => {
     </section>
   );
 };
-export default Portfolio;
+export default FeaturedProjects;

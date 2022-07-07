@@ -1,8 +1,8 @@
-import classes from './portfolioGallery.module.scss';
+import classes from './projects.module.scss';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const PortfolioGallery = (props) => {
+const Projects = (props) => {
   const [showProjects, setShowProjects] = useState(false);
   const nonFeaturedProjects = props.nonFeaturedProjects;
 
@@ -90,4 +90,4 @@ const PortfolioGallery = (props) => {
     </section>
   );
 };
-export default PortfolioGallery;
+export default Projects;

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Hero from '../components/home/hero';
-import Portfolio from '../components/home/portfolio';
-import PortfolioGallery from '../components/home/portfolioGallery';
+import FeaturedProjects from '../components/projects/featuredProjects';
+import Projects from '../components/projects/projects';
 import About from '../components/home/about';
 import FeaturedPosts from '../components/posts/featuredPosts';
 import Footer from '../components/home/footer';
@@ -22,8 +22,8 @@ export default function Home(props) {
         />
       </Head>
       <Hero />
-      <Portfolio featuredProjects={props.featuredProjects} />
-      <PortfolioGallery nonFeaturedProjects={props.nonFeaturedProjects} />
+      <FeaturedProjects featuredProjects={props.featuredProjects} />
+      <Projects nonFeaturedProjects={props.nonFeaturedProjects} />
       <About />
       <FeaturedPosts posts={props.posts} />
       <Footer />
