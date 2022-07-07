@@ -6,7 +6,6 @@ import Link from 'next/link';
 // import projects from '../../data/projects.json';
 
 const Portfolio = (props) => {
-  console.log(props.featuredProjects);
   const [showModal, setShowModal] = useState();
   const [currentProject, setCurrentProject] = useState();
 
