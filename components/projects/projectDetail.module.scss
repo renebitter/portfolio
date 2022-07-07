@@ -1,0 +1,40 @@
+.projectDetail {
+  h1 {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+  }
+
+  small {
+    color: var(--text-tertiary);
+  }
+
+  .projectLinks {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+
+    a {
+      margin-right: 15px;
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: var(--text-primary);
+    }
+
+    i {
+      margin-right: 5px;
+      color: var(--text-primary);
+    }
+  }
+
+  .projectImage {
+    display: flex;
+    justify-content: center;
+  }
+}

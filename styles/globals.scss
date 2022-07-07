@@ -1,5 +1,5 @@
 :root {
-  --background: white;
+  --background: whitesmoke;
   --background-card: #ffffff;
   --text-primary: black;
   --text-secondary: #6e6d7a;
@@ -44,6 +44,7 @@ body {
 .app {
   color: var(--text-primary);
   background-color: var(--background);
+  min-height: 100vh;
 }
 
 * {
@@ -101,5 +102,24 @@ button {
 @media only screen and (min-width: 480px) {
   .btn {
     width: unset;
+  }
+}
+
+.section {
+  padding: 50px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 100px 25px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
   }
 }

@@ -1,27 +1,12 @@
-import classes from './portfolio.module.scss';
+import classes from './featuredProjects.module.scss';
 import Image from 'next/image';
-import { useState } from 'react';
-import Modal from '../modal/modal';
-import projects from '../../data/projects.json';
+import Link from 'next/link';
 
-const Portfolio = () => {
-  const [showModal, setShowModal] = useState();
-  const [currentProject, setCurrentProject] = useState();
-
-  const featuredProjects = projects.filter((project) => project.isFeatured);
-
-  function showModalHandler(project) {
-    setCurrentProject(project);
-    setShowModal(true);
-  }
-
-  function closeModalHandler() {
-    setCurrentProject(null);
-    setShowModal(false);
-  }
+const FeaturedProjects = (props) => {
+  const { featuredProjects } = props;
 
   return (
-    <section className={classes.portfolio} id='portfolio'>
+    <section className={classes.portfolio} id='projects'>
       <div className={classes.container}>
         <h2>Featured projects</h2>
 
@@ -46,32 +31,37 @@ const Portfolio = () => {
                   {project.liveLink && (
                     <a href={project.liveLink} target='_blank' rel='noreferrer'>
                       <i className='fas fa-link'></i>
-                      Live
+                      Website
                     </a>
                   )}
+                  <Link href={`/projects/${project._id}`}>
+                    <a>
+                      <i className='fa fa-circle-info'></i>
+                      Project details
+                    </a>
+                  </Link>
                 </div>
               </div>
 
               <div className={classes.columnRight}>
                 <div className={classes.card}>
-                  <a href='#!' onClick={() => showModalHandler(project)}>
-                    <Image
-                      src={`/portfolio/images/projects/${project.image}`}
-                      width={500}
-                      height={360}
-                      alt=''
-                    />
-                  </a>
+                  <Link href={`/projects/${project._id}`}>
+                    <a>
+                      <Image
+                        src={`/portfolio/images/projects/${project.image}`}
+                        width={500}
+                        height={360}
+                        alt={project.title}
+                      />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
-      {showModal && (
-        <Modal project={currentProject} onClose={closeModalHandler} />
-      )}
     </section>
   );
 };
-export default Portfolio;
+export default FeaturedProjects;

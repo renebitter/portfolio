@@ -38,17 +38,19 @@ const ImageSlider = ({ slides }) => {
             }
             key={slide.screenshot}>
             {index === current && (
-              <div>
-                <Image
-                  src={`/portfolio/images/projects/mernshop/${slide.screenshot}`}
-                  width={500}
-                  height={360}
-                  alt={slide.screenshot}
-                />
+              <>
+                <div>
+                  <Image
+                    src={`../../portfolio/images/projects/mernshop/${slide.screenshot}`}
+                    width={1000}
+                    height={760}
+                    alt={slide.screenshot}
+                  />
+                </div>
                 <div>
                   {index + 1}. {slide.description}
                 </div>
-              </div>
+              </>
             )}
           </div>
         );

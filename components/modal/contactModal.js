@@ -1,8 +1,6 @@
 import classes from './modal.module.scss';
 import { useForm, ValidationError } from '@formspree/react';
 
-// const ContactModal = (props) => {
-
 function ContactModal(props) {
   const [state, handleSubmit] = useForm('mdobjbdw');
 
@@ -118,9 +116,6 @@ function ContactModal(props) {
               </button>
             </div>
           </div>
-          {/* <button type='submit' disabled={state.submitting}>
-            Submit
-          </button> */}
         </form>
       </div>
     </div>

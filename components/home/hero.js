@@ -89,7 +89,7 @@ const Hero = () => {
               </a>
             </div>
             <div className={classes.ctaButtons}>
-              <a href='#portfolio' className='btn btn-outlined'>
+              <a href='#projects' className='btn btn-outlined'>
                 My Work
               </a>
               <a

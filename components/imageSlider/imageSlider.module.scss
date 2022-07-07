@@ -1,6 +1,7 @@
 .slider {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -34,6 +35,10 @@
 }
 
 .slide.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   transition-duration: 500ms;
 }
