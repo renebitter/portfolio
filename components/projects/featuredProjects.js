@@ -1,9 +1,16 @@
 import classes from './featuredProjects.module.scss';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const FeaturedProjects = (props) => {
   const { featuredProjects } = props;
+
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
 
   return (
     <section className={classes.portfolio} id='projects'>
@@ -11,7 +18,7 @@ const FeaturedProjects = (props) => {
         <h2>Featured projects</h2>
 
         {featuredProjects.map((project) => (
-          <div key={project._id} className={classes.project}>
+          <div key={project._id} className={classes.project} data-aos='fade-up'>
             <div className={classes.row}>
               <div className={classes.columnLeft}>
                 <h3>{project.title}</h3>

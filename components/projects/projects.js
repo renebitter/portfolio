@@ -1,10 +1,16 @@
 import classes from './projects.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Projects = (props) => {
   const [showProjects, setShowProjects] = useState(false);
   const { nonFeaturedProjects } = props;
+
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
 
   function showProjectsHandler() {
     const nonFeaturedProjects = document.getElementById('portfolioGallery');
@@ -26,7 +32,7 @@ const Projects = (props) => {
     <section className={classes.portfolioGallery} id='portfolioGallery'>
       <div className={classes.container}>
         {!showProjects && (
-          <div className={classes.buttonWrapper}>
+          <div className={classes.buttonWrapper} data-aos='fade-down'>
             <button className='btn btn-outlined' onClick={showProjectsHandler}>
               More Projects
             </button>
@@ -39,7 +45,10 @@ const Projects = (props) => {
             <div className={classes.galleryWrap}>
               <div className={classes.gallery}>
                 {nonFeaturedProjects.map((project) => (
-                  <div key={project._id} className={classes.card}>
+                  <div
+                    key={project._id}
+                    className={classes.card}
+                    data-aos='flip-up'>
                     <div className={classes.cardContent}>
                       <h4>{project.title}</h4>
                       <small>{project.subtitle}</small>

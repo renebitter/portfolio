@@ -1,8 +1,9 @@
 import classes from './hero.module.scss';
 import Image from 'next/image';
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from '../ui/modal/modal';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
   const [showModal, setShowModal] = useState();
@@ -14,16 +15,21 @@ const Hero = () => {
   function closeModalHandler() {
     setShowModal(false);
   }
+
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
+
   return (
     <section className={classes.greetings}>
       <div className={classes.container}>
         <div className={classes.row}>
           <div className={classes.columnLeft}>
-            <h3>Hi, my name is Rene.</h3>
-            <h1>
+            <h3 data-aos='fade-left'>Hi, my name is Rene.</h3>
+            <h1 data-aos='fade-right'>
               I&apos;m a React Frontend Developer with experience in e-commerce.
             </h1>
-            <p>
+            <p data-aos='fade-left' data-aos-delay='150'>
               I&apos;m fluent in English{' '}
               <span>
                 <Image
@@ -67,25 +73,34 @@ const Hero = () => {
                 href='https://github.com/renebitter'
                 target='_blank'
                 rel='noreferrer'>
-                <i className='fab fa-github'></i>
+                <i className='fab fa-github' data-aos='flip-up'></i>
               </a>
               <a
                 href='https://www.linkedin.com/in/rene-bitter/'
                 target='_blank'
                 rel='noreferrer'>
-                <i className='fab fa-linkedin'></i>
+                <i
+                  className='fab fa-linkedin'
+                  data-aos='flip-up'
+                  data-aos-delay='50'></i>
               </a>{' '}
               <a
                 href='https://twitter.com/Rene_Bitter'
                 target='_blank'
                 rel='noreferrer'>
-                <i className='fab fa-twitter'></i>
+                <i
+                  className='fab fa-twitter'
+                  data-aos='flip-up'
+                  data-aos-delay='100'></i>
               </a>{' '}
               <a
                 href='https://codepen.io/rbitterdev'
                 target='_blank'
                 rel='noreferrer'>
-                <i className='fab fa-codepen'></i>
+                <i
+                  className='fab fa-codepen'
+                  data-aos='flip-up'
+                  data-aos-delay='150'></i>
               </a>
             </div>
             <div className={classes.ctaButtons}>
@@ -107,12 +122,16 @@ const Hero = () => {
               width={360}
               height={360}
               alt='profile-pic'
+              data-aos='fade-left'
             />
           </div>
         </div>
         <div className={classes.iconScrollContainer}>
           <a href='#projects'>
-            <div className={classes.iconScroll}></div>
+            <div
+              className={classes.iconScroll}
+              data-aos='fade-down'
+              data-aos-offset='50'></div>
           </a>
         </div>
       </div>
