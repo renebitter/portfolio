@@ -15,7 +15,7 @@ const FeaturedProjects = (props) => {
   return (
     <section className={classes.portfolio} id='projects'>
       <div className={classes.container}>
-        <h2>Featured projects</h2>
+        <h2 data-aos='slide-right'>Featured projects</h2>
 
         {featuredProjects.map((project) => (
           <div key={project._id} className={classes.project} data-aos='fade-up'>

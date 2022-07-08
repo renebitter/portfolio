@@ -14,10 +14,10 @@ const FeaturedPosts = (props) => {
   return (
     <section className={classes.blog} id='blog'>
       <div className={classes.container}>
-        <h2>Blog</h2>
+        <h2 data-aos='slide-right'>Blog</h2>
 
         <div className={classes.galleryWrap}>
-          <h3 className={classes.galleryTitle} data-aos='fade-right'>
+          <h3 className={classes.galleryTitle} data-aos='fade-left'>
             Featured posts
           </h3>
           <div className={classes.gallery}>

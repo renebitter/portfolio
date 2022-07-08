@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section className={classes.about} id='about'>
       <div className={classes.container}>
-        <h2>About me</h2>
+        <h2 data-aos='slide-right'>About me</h2>
 
         <div className={classes.row}>
           <div className={classes.columnLeft} data-aos='fade-right'>
