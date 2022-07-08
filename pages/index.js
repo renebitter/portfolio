@@ -4,7 +4,7 @@ import FeaturedProjects from '../components/projects/featuredProjects';
 import Projects from '../components/projects/projects';
 import About from '../components/home/about';
 import FeaturedPosts from '../components/posts/featuredPosts';
-import Footer from '../components/home/footer';
+import Footer from '../components/layout/footer';
 import { getFeaturedPosts } from '../util/posts-util';
 import {
   getFeaturedProjects,

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import ImageSlider from '../imageSlider/imageSlider';
+import ImageSlider from '../ui/imageSlider/imageSlider';
 import classes from './projectDetail.module.scss';
 
 const ProjectDetail = (props) => {

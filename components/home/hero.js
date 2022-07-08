@@ -2,7 +2,7 @@ import classes from './hero.module.scss';
 import Image from 'next/image';
 
 import { useState } from 'react';
-import Modal from '../modal/modal';
+import Modal from '../ui/modal/modal';
 
 const Hero = () => {
   const [showModal, setShowModal] = useState();

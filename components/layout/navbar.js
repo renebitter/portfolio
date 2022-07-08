@@ -1,6 +1,6 @@
 import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
-import Modal from '../modal/modal';
+import Modal from '../ui/modal/modal';
 import Link from 'next/link';
 
 const Navbar = (props) => {
@@ -53,6 +53,7 @@ const Navbar = (props) => {
           <Link href='/'>
             <a className={classes.logo}>{'</>'}</a>
           </Link>
+
           <nav
             className={
               navExpanded
@@ -94,6 +95,7 @@ const Navbar = (props) => {
               </a>
             </div>
           </nav>
+
           <button className={classes.icon} onClick={toggleNav}>
             <i className='fa fa-bars'></i>
           </button>

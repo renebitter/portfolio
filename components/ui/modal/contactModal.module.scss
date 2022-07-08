@@ -1,15 +1,5 @@
-.backdrop {
-  position: fixed;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.75);
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-.contactModal,
-.projectModal {
+.contactModal {
+  text-align: center;
   border-radius: 5px;
   background-color: var(--background-card);
   padding: 1rem;
@@ -23,27 +13,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.contactModalConfirmation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .linkedinLink {
-    i {
-      font-size: 4rem;
-    }
-  }
-
-  .confirmationButton {
-    button {
-      width: 100%;
-    }
-  }
-}
-
-.contactModal {
-  text-align: center;
 
   .close {
     position: absolute;
@@ -127,60 +96,19 @@
   }
 }
 
-.projectModal {
-  text-align: center;
-  width: 90%;
-
-  .close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-
-  .main {
-    .projectRow {
-      .image {
-        text-align: center;
-        align-items: center;
-      }
-
-      .modalLinks {
-        a {
-          margin-right: 15px;
-          color: var(--accent);
-        }
-
-        a:hover {
-          color: var(--text-primary);
-        }
-
-        i {
-          margin-right: 5px;
-          color: var(--text-primary);
-        }
-      }
+.contactModalConfirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .linkedinLink {
+    i {
+      font-size: 4rem;
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    padding: 2rem;
-
-    .main {
-      .projectRow {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 50px;
-
-        .image {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 25px;
-
-          .modalLinks {
-            display: flex;
-          }
-        }
-      }
+  .confirmationButton {
+    button {
+      width: 100%;
     }
   }
 }

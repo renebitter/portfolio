@@ -1,4 +1,4 @@
-import classes from './modal.module.scss';
+import classes from './contactModal.module.scss';
 import { useForm, ValidationError } from '@formspree/react';
 
 function ContactModal(props) {

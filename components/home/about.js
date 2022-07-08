@@ -16,14 +16,22 @@ const About = () => {
             <p>
               My developer career started with a great emphasis on e-commerce as
               a Shopware Frontend Developer and I even worked on the development
-              of Shopware 6 itself. Later on I specialized in React and
-              it&apos;s ecosystem.
+              of <i className='fas fa-link'></i>{' '}
+              <a
+                href='https://github.com/shopware/platform'
+                target='_blank'
+                rel='noreferrer'>
+                Shopware 6
+              </a>
+              . Later on I specialized in React and it&apos;s ecosystem. I
+              really like problem-solving in general and am addicted to the
+              feeling of solving it.
             </p>
 
             <p>
               Besides Web Development I have a diverse work experience ranging
-              from Airfreight Logistics at the Frankfurt Airport to Customer
-              Support in Tech Companies around Europe and Brazil.
+              from Airfreight Logistics at the Frankfurt Airport in Germany to
+              Customer Support in Tech Companies around Europe and Brazil.
             </p>
 
             <p>
@@ -34,13 +42,15 @@ const About = () => {
             </p>
           </div>
 
-          <div className={`${classes.columnRight} ${classes.profilePic}`}>
-            <Image
-              src='/portfolio/images/profile-pic-2.webp'
-              width={360}
-              height={360}
-              alt='profile-pic'
-            />
+          <div className={classes.columnRight}>
+            <div className={classes.imageContainer}>
+              <Image
+                src='/portfolio/images/profile-pic-2.webp'
+                width={600}
+                height={600}
+                alt='profile-pic'
+              />
+            </div>
           </div>
         </div>
       </div>

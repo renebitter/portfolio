@@ -4,7 +4,7 @@
     var(--gradient-primary),
     var(--gradient-secondary)
   );
-  color: #fff;
+  color: var(--text-secondary);
   text-align: center;
   padding: 25px;
 
@@ -13,7 +13,7 @@
     i {
       font-size: 2rem;
       margin: 0 5px;
-      color: white;
+      color: var(--text-secondary);
     }
   }
 }
