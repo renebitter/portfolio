@@ -15,7 +15,6 @@ Todo:
 - Filter projects per tech
 - Refactor allProjects/nonFeaturedProjects double code
 - Animated projects card/pills/image:hover
-- React animation
 
 - Add loading animation to sending message on contact form
 
