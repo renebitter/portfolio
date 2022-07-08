@@ -15,17 +15,10 @@ const Projects = (props) => {
   function showProjectsHandler() {
     const nonFeaturedProjects = document.getElementById('portfolioGallery');
 
-    if (showProjects) {
-      setShowProjects(false);
-      nonFeaturedProjects.scrollIntoView({
-        behavior: 'smooth',
-      });
-    } else {
-      setShowProjects(true);
-      nonFeaturedProjects.scrollIntoView({
-        behavior: 'smooth',
-      });
-    }
+    setShowProjects(true);
+    nonFeaturedProjects.scrollIntoView({
+      behavior: 'smooth',
+    });
   }
 
   return (
@@ -33,7 +26,7 @@ const Projects = (props) => {
       <div className={classes.container}>
         {!showProjects && (
           <div className={classes.buttonWrapper} data-aos='fade-down'>
-            <button className='btn btn-outlined' onClick={showProjectsHandler}>
+            <button className='btn btn-filled' onClick={showProjectsHandler}>
               More Projects
             </button>
           </div>
@@ -86,11 +79,9 @@ const Projects = (props) => {
               </div>
             </div>
             <div className={classes.buttonWrapper}>
-              <button
-                className='btn btn-outlined'
-                onClick={showProjectsHandler}>
-                Close Projects
-              </button>
+              <Link href='/projects/'>
+                <button className='btn btn-filled'>View All Projects</button>
+              </Link>
             </div>
           </>
         )}
