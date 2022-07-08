@@ -111,7 +111,7 @@ const Hero = () => {
           </div>
         </div>
         <div className={classes.iconScrollContainer}>
-          <a href='#portfolio'>
+          <a href='#projects'>
             <div className={classes.iconScroll}></div>
           </a>
         </div>
