@@ -7,17 +7,16 @@ const Projects = (props) => {
   const { nonFeaturedProjects } = props;
 
   function showProjectsHandler() {
-    const portfolioGallery = document.getElementById('portfolioGallery');
-    const portfolio = document.getElementById('portfolio');
+    const nonFeaturedProjects = document.getElementById('portfolioGallery');
 
     if (showProjects) {
       setShowProjects(false);
-      portfolioGallery.scrollIntoView({
+      nonFeaturedProjects.scrollIntoView({
         behavior: 'smooth',
       });
     } else {
       setShowProjects(true);
-      portfolioGallery.scrollIntoView({
+      nonFeaturedProjects.scrollIntoView({
         behavior: 'smooth',
       });
     }

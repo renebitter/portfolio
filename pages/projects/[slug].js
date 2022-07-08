@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { getProjects, getProjectSlugs } from '../../util/projects-util';
+import { getAllProjects, getProjectSlugs } from '../../util/projects-util';
 import ProjectDetail from '../../components/projects/projectDetail';
 
 const ProjectDetailPage = (props) => {
@@ -20,7 +20,7 @@ const ProjectDetailPage = (props) => {
 export const getStaticProps = (context) => {
   const { params } = context;
   const { slug } = params;
-  const project = getProjects().find((project) => project._id === slug);
+  const project = getAllProjects().find((project) => project._id === slug);
 
   return {
     props: {
