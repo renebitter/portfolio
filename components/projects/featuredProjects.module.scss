@@ -25,12 +25,12 @@
     }
 
     .portfolioLinks {
-      display: flex;
-      flex-direction: row;
-
+      margin-top: auto;
       a {
         margin-right: 15px;
         color: var(--accent);
+        display: block;
+        margin-bottom: 10px;
       }
 
       a:hover {
@@ -38,6 +38,7 @@
       }
 
       i {
+        width: 20px;
         margin-right: 5px;
         color: var(--text-primary);
       }
@@ -88,6 +89,13 @@
       width: 50%;
       margin: 0;
       margin-left: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1020px) {
+    .portfolioLinks {
+      display: flex;
+      flex-direction: row;
     }
   }
 }

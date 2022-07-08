@@ -35,13 +35,12 @@
     }
 
     .portfolioLinks {
-      display: flex;
-      flex-direction: row;
       margin-top: auto;
-
       a {
         margin-right: 15px;
         color: var(--accent);
+        display: block;
+        margin-bottom: 10px;
       }
 
       a:hover {
@@ -49,6 +48,7 @@
       }
 
       i {
+        width: 20px;
         margin-right: 5px;
         color: var(--text-primary);
       }
@@ -75,6 +75,13 @@
 
     .card {
       margin-bottom: unset;
+    }
+  }
+
+  @media only screen and (min-width: 1020px) {
+    .portfolioLinks {
+      display: flex;
+      flex-direction: row;
     }
   }
 }
