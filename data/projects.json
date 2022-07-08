@@ -116,7 +116,7 @@
     "subtitle": "React, Typescript, Next.js, Mongo, Node, Express, Contentful ",
     "description": "Current project under development.",
     "image": "typescript.webp",
-    "isFeatured": true
+    "isFeatured": false
   },
 
   {

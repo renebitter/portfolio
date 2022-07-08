@@ -1,14 +1,21 @@
 import classes from './about.module.scss';
+import { useEffect } from 'react';
 import Image from 'next/image';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
+
   return (
     <section className={classes.about} id='about'>
       <div className={classes.container}>
         <h2>About me</h2>
 
         <div className={classes.row}>
-          <div className={classes.columnLeft}>
+          <div className={classes.columnLeft} data-aos='fade-right'>
             <h3>
               Moved by the desire to work with something creative I began
               learning Web Development in 2017.
@@ -49,6 +56,7 @@ const About = () => {
                 width={600}
                 height={600}
                 alt='profile-pic'
+                data-aos='fade-left'
               />
             </div>
           </div>
