@@ -8,12 +8,18 @@
     padding: 50px 50px 0;
   }
 
-  .filterButtons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    button {
-      margin: 2px;
+  .filter {
+    p {
+      text-align: center;
+    }
+
+    .filterButtons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      button {
+        margin: 2px;
+      }
     }
   }
 
