@@ -1,10 +1,20 @@
 .projectsGallery {
+  min-height: 100vh;
   padding: 50px 15px;
 
   .buttonWrapper {
     display: flex;
     justify-content: center;
     padding: 50px 50px 0;
+  }
+
+  .filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    button {
+      margin: 2px;
+    }
   }
 
   .galleryWrap {

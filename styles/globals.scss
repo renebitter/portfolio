@@ -1,6 +1,7 @@
 :root {
   --background: whitesmoke;
   --background-card: #ffffff;
+  --background-secondary: #8bb2c3;
   --text-primary: black;
   --text-secondary: #6e6d7a;
   --text-tertiary: #8bb2c3;
@@ -18,6 +19,7 @@
 [data-theme='dark'] {
   --background: #22272e;
   --background-card: #373e47;
+  --background-secondary: #efe3cf;
   --text-primary: #adbac7;
   --text-secondary: #efe3cf;
   --text-tertiary: #8bb2c3;
@@ -82,6 +84,16 @@ button {
   padding: 15px 25px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
     0 1px 5px 0 rgb(0 0 0 / 20%);
+
+  &.active {
+    color: black;
+    background-color: var(--background-secondary);
+  }
+
+  &.sm {
+    width: unset;
+    padding: 5px 10px;
+  }
 }
 
 .btn-outlined {

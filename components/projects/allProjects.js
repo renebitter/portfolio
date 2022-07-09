@@ -1,22 +1,46 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import classes from './allProjects.module.scss';
 
-const allProjects = (props) => {
+const AllProjects = (props) => {
   const { projects } = props;
-
+  const [filter, setFilter] = useState('all');
+  const [activeButton, setActiveButton] = useState('all');
   const selectedTechs = [];
 
+  //Map through all used techs and add them individually to selectedTechs array
+  //TODO: change project.subtitle to project.techs and refactor to an array
   projects.map((project) => {
+    //Complete array
     const techs = project.subtitle;
 
     if (Array.isArray(techs)) {
+      //Array item
       for (const tech of techs) {
         if (!selectedTechs.includes(tech)) selectedTechs.push(tech);
       }
     }
   });
 
+  //Sort techs alphabetically
   selectedTechs.sort();
+
+  //Set "filter" & current active button
+  const handleClick = (tech) => {
+    setFilter(tech);
+    setActiveButton(tech);
+  };
+
+  //Filter projects according to "filter"
+  let filteredProjects;
+
+  if (filter === 'all') {
+    filteredProjects = projects;
+  } else {
+    filteredProjects = projects.filter((tech) =>
+      tech.subtitle.includes(filter)
+    );
+  }
 
   return (
     <div className={classes.projectsGallery}>
@@ -24,21 +48,39 @@ const allProjects = (props) => {
         <h1>Projects</h1>
         <div>
           Techs:
-          <div>
+          <div className={classes.filterButtons}>
+            <button
+              onClick={() => handleClick('all')}
+              className={
+                activeButton === 'all'
+                  ? 'btn btn-outlined sm active'
+                  : 'btn btn-outlined sm'
+              }>
+              All
+            </button>
             {selectedTechs.map((tech) => (
-              <button className='btn btn-outlined' key={tech}>
+              <button
+                onClick={() => handleClick(tech)}
+                className={
+                  activeButton === tech
+                    ? 'btn btn-outlined sm active'
+                    : 'btn btn-outlined sm'
+                }
+                key={tech}>
                 {tech}
               </button>
             ))}
           </div>
         </div>
+
         <div className={classes.galleryWrap}>
           <div className={classes.gallery}>
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <div key={project._id} className={classes.card}>
                 <div className={classes.cardContent}>
                   <h4>{project.title}</h4>
                   <small>
+                    {/* TODO: checks if array, because data is currently mixed with strings */}
                     {Array.isArray(project.subtitle)
                       ? project.subtitle.join(', ')
                       : project.subtitle}
@@ -77,4 +119,4 @@ const allProjects = (props) => {
     </div>
   );
 };
-export default allProjects;
+export default AllProjects;
