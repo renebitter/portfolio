@@ -46,7 +46,6 @@ const Navbar = (props) => {
   return (
     <>
       <div
-        id='navbar'
         className={
           sticky ? `${classes.navbar}  ${classes.sticky}` : `${classes.navbar} `
         }>

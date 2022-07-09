@@ -1,5 +1,5 @@
 import classes from './allProjects.module.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,11 +8,6 @@ const AllProjects = (props) => {
   const [filter, setFilter] = useState('all');
   const [activeButton, setActiveButton] = useState('all');
   const selectedTechs = [];
-
-  //Workaround to display Navbar on mobile, since for the homepage it's display:none
-  useEffect(() => {
-    document.getElementById('navbar').style.display = 'block';
-  }, []);
 
   //Map through all used techs and add them individually to selectedTechs array
   //TODO: change project.subtitle to project.techs and refactor to an array

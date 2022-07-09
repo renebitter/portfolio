@@ -1,5 +1,4 @@
 .navbar {
-  display: none;
   z-index: 1;
   height: 65px;
   width: 100%;
@@ -40,7 +39,6 @@
   }
 
   &.sticky {
-    display: block;
     position: fixed;
     top: 0;
     color: red;
@@ -81,12 +79,6 @@
       display: block;
       padding: 25px 0;
     }
-  }
-}
-
-@media only screen and (min-width: 480px) {
-  .navbar {
-    display: block;
   }
 }
 
