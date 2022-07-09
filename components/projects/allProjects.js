@@ -4,17 +4,45 @@ import classes from './allProjects.module.scss';
 const allProjects = (props) => {
   const { projects } = props;
 
+  const selectedTechs = [];
+
+  projects.map((project) => {
+    const techs = project.subtitle;
+
+    if (Array.isArray(techs)) {
+      for (const tech of techs) {
+        if (!selectedTechs.includes(tech)) selectedTechs.push(tech);
+      }
+    }
+  });
+
+  selectedTechs.sort();
+
   return (
     <div className={classes.projectsGallery}>
       <div className='container'>
         <h1>Projects</h1>
+        <div>
+          Techs:
+          <div>
+            {selectedTechs.map((tech) => (
+              <button className='btn btn-outlined' key={tech}>
+                {tech}
+              </button>
+            ))}
+          </div>
+        </div>
         <div className={classes.galleryWrap}>
           <div className={classes.gallery}>
             {projects.map((project) => (
               <div key={project._id} className={classes.card}>
                 <div className={classes.cardContent}>
                   <h4>{project.title}</h4>
-                  <small>{project.subtitle}</small>
+                  <small>
+                    {Array.isArray(project.subtitle)
+                      ? project.subtitle.join(', ')
+                      : project.subtitle}
+                  </small>
                   <p>{project.description}</p>
                 </div>
 
