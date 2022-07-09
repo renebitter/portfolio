@@ -17,7 +17,7 @@ const FeaturedPosts = (props) => {
         <h2 data-aos='slide-right'>Blog</h2>
 
         <div className={classes.galleryWrap}>
-          <h3 className={classes.galleryTitle} data-aos='fade-left'>
+          <h3 className={classes.galleryTitle} data-aos='fade-up'>
             Featured posts
           </h3>
           <div className={classes.gallery}>

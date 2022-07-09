@@ -155,7 +155,7 @@
   {
     "_id": "7",
     "title": "Blog",
-    "subtitle": "React, Next.js, Mongodb",
+    "subtitle": "React, Next.js, Markdown, Mongodb",
     "description": "Blog posts written in markdown and rendered with \"react-markdown\". Notifications displayed via react portal through \"_document.js.\". Contact form using mongodb.",
     "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
     "githubLink": "https://github.com/renebitter/nextjs-blog"
