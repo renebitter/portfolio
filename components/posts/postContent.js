@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import classes from './postContent.module.scss';
@@ -10,11 +9,6 @@ import {
 
 const PostContent = (props) => {
   const { post, currentTheme } = props;
-
-  //Workaround to display Navbar on mobile, since for the homepage it's display:none
-  useEffect(() => {
-    document.getElementById('navbar').style.display = 'block';
-  }, []);
 
   const title = post.title;
   const content = post.content;
