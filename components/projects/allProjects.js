@@ -42,13 +42,14 @@ const AllProjects = (props) => {
       tech.subtitle.includes(filter)
     );
   }
+  //TODO: Add filteredProjects.length to respective btns
 
   return (
     <div className={classes.projectsGallery}>
       <div className='container'>
         <h1>Projects</h1>
-        <div>
-          Techs:
+        <div className={classes.filter}>
+          <p>Filter per tech:</p>
           <div className={classes.filterButtons}>
             <button
               onClick={() => handleClick('all')}
