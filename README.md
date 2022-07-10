@@ -12,6 +12,8 @@ Third party static contact form (formspree).
 
 Todo:
 
+- Add animation modal contact
+- Add Filter to other projects
 - Add all posts page + Filter
 - Refactor allProjects/nonFeaturedProjects double code
 - Animated btn/image:hover
