@@ -49,7 +49,7 @@ const AllProjects = (props) => {
       <div className='container'>
         <h1>Projects</h1>
         <div className={classes.filter}>
-          <p>Filter per tech:</p>
+          <p>Sort by tech:</p>
           <div className={classes.filterButtons}>
             <button
               onClick={() => handleClick('all')}
