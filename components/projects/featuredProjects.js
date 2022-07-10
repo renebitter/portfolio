@@ -23,9 +23,9 @@ const FeaturedProjects = (props) => {
               <div className={classes.columnLeft}>
                 <h3>{project.title}</h3>
                 <small>
-                  {Array.isArray(project.subtitle)
-                    ? project.subtitle.join(', ')
-                    : project.subtitle}
+                  {Array.isArray(project.tech)
+                    ? project.tech.join(', ')
+                    : project.tech}
                 </small>
                 <p className={classes.description}>{project.description}</p>
 

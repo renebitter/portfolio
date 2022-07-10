@@ -10,10 +10,9 @@ const AllProjects = (props) => {
   const selectedTechs = [];
 
   //Map through all used techs and add them individually to selectedTechs array
-  //TODO: change project.subtitle to project.techs and refactor to an array
   projects.map((project) => {
     //Complete array
-    const techs = project.subtitle;
+    const techs = project.tech;
 
     if (Array.isArray(techs)) {
       //Array item
@@ -38,9 +37,7 @@ const AllProjects = (props) => {
   if (filter === 'all') {
     filteredProjects = projects;
   } else {
-    filteredProjects = projects.filter((tech) =>
-      tech.subtitle.includes(filter)
-    );
+    filteredProjects = projects.filter((tech) => tech.tech.includes(filter));
   }
   //TODO: Add filteredProjects.length to respective btns
 
@@ -94,9 +91,9 @@ const AllProjects = (props) => {
                     <h4>{project.title}</h4>
                     <small>
                       {/* TODO: checks if array, because data is currently mixed with strings */}
-                      {Array.isArray(project.subtitle)
-                        ? project.subtitle.join(', ')
-                        : project.subtitle}
+                      {Array.isArray(project.tech)
+                        ? project.tech.join(', ')
+                        : project.tech}
                     </small>
                     <p>{project.description}</p>
                   </div>

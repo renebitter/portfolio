@@ -14,7 +14,11 @@ const ProjectDetail = (props) => {
         <h1>{project.title}</h1>
 
         <div>
-          <small>{project.subtitle}</small>
+          <small>
+            {Array.isArray(project.tech)
+              ? project.tech.join(', ')
+              : project.tech}
+          </small>
           <p>{project.description}</p>
         </div>
 

@@ -49,7 +49,11 @@ const Projects = (props) => {
                     data-aos='flip-up'>
                     <div className={classes.cardContent}>
                       <h4>{project.title}</h4>
-                      <small>{project.subtitle}</small>
+                      <small>
+                        {Array.isArray(project.tech)
+                          ? project.tech.join(', ')
+                          : project.tech}
+                      </small>
                       <p>{project.description}</p>
                     </div>
 
