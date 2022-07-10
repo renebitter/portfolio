@@ -80,7 +80,9 @@ const Projects = (props) => {
             </div>
             <div className={classes.buttonWrapper}>
               <Link href='/projects/'>
-                <button className='btn btn-filled'>View All Projects</button>
+                <button data-aos='fade-up' className='btn btn-filled'>
+                  View All Projects
+                </button>
               </Link>
             </div>
           </>

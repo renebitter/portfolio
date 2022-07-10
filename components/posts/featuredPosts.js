@@ -1,6 +1,7 @@
 import classes from './featuredPosts.module.scss';
 import PostItem from './postItem';
 import { useEffect } from 'react';
+import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -26,6 +27,13 @@ const FeaturedPosts = (props) => {
               posts.map((post) => <PostItem post={post} key={post.slug} />)}
           </div>
         </div>
+      </div>
+      <div className={classes.buttonWrapper}>
+        <Link href='/posts/'>
+          <button data-aos='fade-up' className='btn btn-filled'>
+            View All Posts
+          </button>
+        </Link>
       </div>
     </section>
   );
