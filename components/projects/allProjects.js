@@ -51,7 +51,9 @@ const AllProjects = (props) => {
         <div className={classes.filter}>
           <p>Sort by tech:</p>
           <div className={classes.filterButtons}>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               onClick={() => handleClick('all')}
               className={
                 activeButton === 'all'
@@ -59,9 +61,11 @@ const AllProjects = (props) => {
                   : 'btn btn-outlined sm'
               }>
               All
-            </button>
+            </motion.button>
             {selectedTechs.map((tech) => (
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={() => handleClick(tech)}
                 className={
                   activeButton === tech
@@ -70,7 +74,7 @@ const AllProjects = (props) => {
                 }
                 key={tech}>
                 {tech}
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>

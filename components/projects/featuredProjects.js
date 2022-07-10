@@ -22,7 +22,11 @@ const FeaturedProjects = (props) => {
             <div className={classes.row}>
               <div className={classes.columnLeft}>
                 <h3>{project.title}</h3>
-                <small>{project.subtitle}</small>
+                <small>
+                  {Array.isArray(project.subtitle)
+                    ? project.subtitle.join(', ')
+                    : project.subtitle}
+                </small>
                 <p className={classes.description}>{project.description}</p>
 
                 <div className={classes.portfolioLinks}>

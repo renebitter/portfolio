@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const Projects = (props) => {
   const [showProjects, setShowProjects] = useState(false);
@@ -26,9 +27,13 @@ const Projects = (props) => {
       <div className={classes.container}>
         {!showProjects && (
           <div className={classes.buttonWrapper} data-aos='fade-down'>
-            <button className='btn btn-filled' onClick={showProjectsHandler}>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className='btn btn-filled'
+              onClick={showProjectsHandler}>
               More Projects
-            </button>
+            </motion.button>
           </div>
         )}
         {showProjects && (
@@ -78,11 +83,14 @@ const Projects = (props) => {
                 ))}
               </div>
             </div>
-            <div className={classes.buttonWrapper}>
+            <div data-aos='fade-up' className={classes.buttonWrapper}>
               <Link href='/projects/'>
-                <button data-aos='fade-up' className='btn btn-filled'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className='btn btn-filled'>
                   View All Projects
-                </button>
+                </motion.button>
               </Link>
             </div>
           </>

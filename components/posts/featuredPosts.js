@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const FeaturedPosts = (props) => {
   const { posts } = props;
@@ -28,11 +29,14 @@ const FeaturedPosts = (props) => {
           </div>
         </div>
       </div>
-      <div className={classes.buttonWrapper}>
+      <div data-aos='fade-up' className={classes.buttonWrapper}>
         <Link href='/posts/'>
-          <button data-aos='fade-up' className='btn btn-filled'>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className='btn btn-filled'>
             View All Posts
-          </button>
+          </motion.button>
         </Link>
       </div>
     </section>

@@ -4,9 +4,14 @@ import { useState, useEffect } from 'react';
 import Modal from '../ui/modal/modal';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [showModal, setShowModal] = useState();
+
+  function buttonHandler() {
+    window.location.href = '#projects';
+  }
 
   function showModalHandler() {
     setShowModal(true);
@@ -104,15 +109,20 @@ const Hero = () => {
               </a>
             </div>
             <div className={classes.ctaButtons}>
-              <a href='#projects' className='btn btn-outlined'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='btn btn-outlined'
+                onClick={buttonHandler}>
                 My Work
-              </a>
-              <a
-                href='#!'
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className='btn btn-filled'
                 onClick={showModalHandler}>
                 Let&apos;s Talk
-              </a>
+              </motion.button>
             </div>
           </div>
 
