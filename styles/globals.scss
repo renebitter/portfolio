@@ -46,6 +46,7 @@ body {
 .app {
   color: var(--text-primary);
   background-color: var(--background);
+  transition: background 2s;
   min-height: 100vh;
 }
 
