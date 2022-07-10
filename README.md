@@ -12,17 +12,16 @@ Third party static contact form (formspree).
 
 Todo:
 
-- Filter projects per tech
+- Add all posts page + Filter
 - Refactor allProjects/nonFeaturedProjects double code
-- Animated projects card/pills/image:hover
-
+- Animated btn/image:hover
+- Full project descriptions
+- Dark mode / useLocalStorage
 - Add loading animation to sending message on contact form
 
-- Check for prop drilling vs context
-- Full project description
-- Dark mode / useLocalStorage
-- Refactor anchors to buttons
-- React carousel
+- Check for prop drilling vs context?
+- Refactor anchors to buttons?
+- React carousel?
 - Parallax?
 - www.flaticon.com
 
@@ -30,5 +29,5 @@ Blog posts:
 
 - Blog post: How to build a Next.js Portfolio with Blog Website
 - Blog post: Must know JS (interview questions)
+- Blog post: Must know React (interview questions)
 - Blog post: Using redux for MERNShop
-- Blog post: scroll-snap vs JS
