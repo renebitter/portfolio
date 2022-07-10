@@ -4,11 +4,13 @@ const Posts = (props) => {
   const { posts } = props;
 
   return (
-    <div>
-      <h1>All Posts</h1>
-      {posts.map((post, index) => (
-        <div key={index}>{post.title}</div>
-      ))}
+    <div className='allPosts' style={{ minHeight: '100vh' }}>
+      <div className='container'>
+        <h1 style={{ textAlign: 'center' }}>All Posts</h1>
+        {posts.map((post, index) => (
+          <div key={index}>{post.title}</div>
+        ))}
+      </div>
     </div>
   );
 };

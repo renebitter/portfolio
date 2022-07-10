@@ -47,7 +47,7 @@ const AllProjects = (props) => {
   return (
     <div className={classes.projectsGallery}>
       <div className='container'>
-        <h1>Projects</h1>
+        <h1>All Projects</h1>
         <div className={classes.filter}>
           <p>Sort by tech:</p>
           <div className={classes.filterButtons}>
