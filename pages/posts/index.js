@@ -2,7 +2,7 @@ import { getAllPosts } from '../../util/posts-util';
 
 const Posts = (props) => {
   const { posts } = props;
-  console.log(posts);
+
   return (
     <div>
       <h1>All Posts</h1>
