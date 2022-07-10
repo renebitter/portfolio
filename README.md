@@ -16,6 +16,8 @@ Todo:
 - Add Filter to other projects
 - Add all posts page + Filter
 - Refactor allProjects/nonFeaturedProjects double code
+- Refactor components (e.g. projects/projectCard)
+- Capitalize Components file name?
 - Animated btn/image:hover
 - Full project descriptions
 - Dark mode / useLocalStorage
