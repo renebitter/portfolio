@@ -1,4 +1,4 @@
-import classes from './featuredProjects.module.scss';
+import classes from './featuredProjectItem.module.scss';
 import { useEffect } from 'react';
 
 import Image from 'next/image';
@@ -27,7 +27,7 @@ const FeaturedProjectItem = (props) => {
             </small>
             <p className={classes.description}>{project.description}</p>
 
-            <div className={classes.portfolioLinks}>
+            <div className={classes.projectLinks}>
               {project.githubLink && (
                 <a href={project.githubLink} target='_blank' rel='noreferrer'>
                   <i className='fab fa-github'></i>
@@ -53,6 +53,7 @@ const FeaturedProjectItem = (props) => {
             <div className={classes.card}>
               <Link href={`/projects/${project._id}`}>
                 <a>
+                  <div className={classes.clickDetails}>Click for details</div>
                   <Image
                     src={`/portfolio/images/projects/${project.image}`}
                     width={500}
