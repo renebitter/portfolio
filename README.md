@@ -13,6 +13,7 @@ Third party static contact form (formspree).
 Todo:
 
 - Add animation modal contact
+- Replace AOS by framer-motion
 - Add Filter to other projects
 - Add all posts page + Filter
 - Refactor allProjects/nonFeaturedProjects double code

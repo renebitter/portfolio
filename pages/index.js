@@ -17,7 +17,7 @@ export default function Home(props) {
         <title>Rene Bitter &lt;Web Developer /&gt;</title>
         <meta
           name='description'
-          content='My personal web development portfolio including various frontend and fullstack projects as well as web development blog articles'
+          content='My personal web development portfolio including various frontend and fullstack projects as well as web development blog articles. Tech-Stack: React, Next.js, Redux, Typescript, Node.js, Express, MongoDB, Bootstrap, Shopware.'
         />
       </Head>
       <Hero />
