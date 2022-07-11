@@ -112,14 +112,14 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className='btn btn-outlined'
+                className='btn btn-filled'
                 onClick={buttonHandler}>
                 My Work
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className='btn btn-filled'
+                className='btn btn-outlined'
                 onClick={showModalHandler}>
                 Let&apos;s Talk
               </motion.button>

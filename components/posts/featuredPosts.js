@@ -28,16 +28,17 @@ const FeaturedPosts = (props) => {
               posts.map((post) => <PostItem post={post} key={post.slug} />)}
           </div>
         </div>
-      </div>
-      <div data-aos='fade-up' className={classes.buttonWrapper}>
-        <Link href='/posts/'>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className='btn btn-filled'>
-            View All Posts
-          </motion.button>
-        </Link>
+
+        <div data-aos='fade-up' className={classes.buttonWrapper}>
+          <Link href='/posts/'>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className='btn btn-outlined'>
+              View All Posts
+            </motion.button>
+          </Link>
+        </div>
       </div>
     </section>
   );

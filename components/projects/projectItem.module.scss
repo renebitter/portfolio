@@ -1,0 +1,51 @@
+.card {
+  border-radius: 5px;
+  padding: 25px;
+  background-color: var(--background-card);
+  border: 1px solid var(--border-card); //rgb(93, 101, 105) #cecece
+  transition: background 1s;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+
+  h4 {
+    margin: 0;
+    color: var(--text-secondary);
+  }
+
+  small {
+    color: var(--text-tertiary);
+  }
+
+  .projectLinks {
+    margin-top: auto;
+    a {
+      margin-right: 15px;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      color: var(--text-primary);
+    }
+
+    i {
+      width: 20px;
+      margin-right: 5px;
+      color: var(--text-primary);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: unset;
+  }
+
+  @media only screen and (min-width: 1020px) {
+    .projectLinks {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

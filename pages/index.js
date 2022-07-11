@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Hero from '../components/home/hero';
 import FeaturedProjects from '../components/projects/featuredProjects';
-import Projects from '../components/projects/projects';
 import About from '../components/home/about';
 import FeaturedPosts from '../components/posts/featuredPosts';
 import { getFeaturedPosts } from '../util/posts-util';
@@ -22,7 +21,6 @@ export default function Home(props) {
       </Head>
       <Hero />
       <FeaturedProjects featuredProjects={props.featuredProjects} />
-      {/* <Projects nonFeaturedProjects={props.nonFeaturedProjects} /> */}
       <About />
       <FeaturedPosts posts={props.posts} />
     </>
