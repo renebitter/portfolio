@@ -90,7 +90,7 @@ const Hero = () => {
                   data-aos-delay='50'></i>
               </a>{' '}
               <a
-                href='https://twitter.com/Rene_Bitter'
+                href='https://twitter.com/devrbitter'
                 target='_blank'
                 rel='noreferrer'>
                 <i
