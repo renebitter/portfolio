@@ -6,12 +6,6 @@
     text-align: center;
   }
 
-  .buttonWrapper {
-    display: flex;
-    justify-content: center;
-    padding: 50px 50px 0;
-  }
-
   .filter {
     p {
       text-align: center;
@@ -31,50 +25,6 @@
     margin-top: 50px;
   }
 
-  .galleryTitle {
-    margin-bottom: 15px;
-  }
-
-  .card {
-    border-radius: 5px;
-    padding: 25px;
-    background-color: var(--background-card);
-    border: 1px solid var(--border-card); //rgb(93, 101, 105) #cecece
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    min-height: 260px;
-
-    h4 {
-      margin: 0;
-      color: var(--text-secondary);
-    }
-
-    small {
-      color: var(--text-tertiary);
-    }
-
-    .portfolioLinks {
-      display: flex;
-      flex-direction: row;
-      margin-top: auto;
-
-      a {
-        margin-right: 15px;
-        color: var(--accent);
-      }
-
-      a:hover {
-        color: var(--text-primary);
-      }
-
-      i {
-        margin-right: 5px;
-        color: var(--text-primary);
-      }
-    }
-  }
-
   @media only screen and (min-width: 768px) {
     padding: 50px 15px;
 
@@ -91,10 +41,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
-    }
-
-    .card {
-      margin-bottom: unset;
     }
   }
 }
