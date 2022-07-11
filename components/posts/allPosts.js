@@ -14,7 +14,7 @@ const AllPosts = (props) => {
   }, []);
 
   return (
-    <section className={`${classes.blog} vh-100`}>
+    <section className={`${classes.blog} mvh-100`}>
       <div className='container'>
         <h2 className='text-center' data-aos='slide-up'>
           All Blog Posts
