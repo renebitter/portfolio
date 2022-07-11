@@ -7,7 +7,7 @@ const ProjectDetail = (props) => {
 
   return (
     <div className={classes.projectDetail}>
-      <div className='container section'>
+      <div className='container section mvh-100'>
         <h1>{project.title}</h1>
 
         <div>
