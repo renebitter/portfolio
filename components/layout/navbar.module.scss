@@ -2,9 +2,9 @@
   z-index: 1;
   height: 65px;
   width: 100%;
-  position: relative;
+  position: fixed;
   // transition: ease 2s;
-  transition: background 2s;
+  transition: background 0.5s;
 
   .container {
     display: flex;
@@ -74,7 +74,7 @@
     right: 0;
     top: 65px;
     width: 100%;
-    background-color: var(--transparent-secondary);
+    background-color: var(--transparent-primary);
 
     a {
       display: block;

@@ -32,7 +32,7 @@ const Navbar = (props) => {
   };
 
   function fixNavbar() {
-    if (window.pageYOffset >= 400) {
+    if (window.pageYOffset >= 100) {
       setSticky(true);
     } else {
       setSticky(false);
