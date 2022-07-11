@@ -4,6 +4,7 @@
   .row {
     display: flex;
     flex-flow: column;
+    height: 100%;
   }
 
   .columnLeft {
@@ -79,7 +80,7 @@
       margin: auto;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .row {
@@ -92,7 +93,7 @@
       align-self: center;
       display: flex;
       flex-direction: column;
-      width: 60%;
+      width: 55%;
       margin-bottom: unset;
 
       h1 {
@@ -115,6 +116,8 @@
       width: 40%;
       margin: auto;
       &.profilePic {
+        max-width: 460px;
+        max-height: 460px;
         margin: auto;
       }
       img {

@@ -129,8 +129,8 @@ const Hero = () => {
           <div className={`${classes.columnRight} ${classes.profilePic}`}>
             <Image
               src='/portfolio/images/profile-pic.webp'
-              width={360}
-              height={360}
+              width={460}
+              height={460}
               alt='profile-pic'
               data-aos='fade-left'
             />
