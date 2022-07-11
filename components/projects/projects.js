@@ -57,7 +57,7 @@ const Projects = (props) => {
                       <p>{project.description}</p>
                     </div>
 
-                    <div className={classes.portfolioLinks}>
+                    <div className={classes.projectLinks}>
                       {project.githubLink && (
                         <a
                           href={project.githubLink}

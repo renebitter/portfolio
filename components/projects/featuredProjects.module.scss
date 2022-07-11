@@ -1,4 +1,4 @@
-.portfolio {
+.projects {
   padding: 50px 15px;
 
   .project {
@@ -8,6 +8,12 @@
     border: 1px solid var(--border-light);
     border-radius: 5px;
     padding: 25px;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px 0;
   }
 
   .columnLeft {
@@ -94,7 +100,7 @@
   }
 
   @media only screen and (min-width: 1020px) {
-    .portfolioLinks {
+    .projectLinks {
       display: flex;
       flex-direction: row;
     }

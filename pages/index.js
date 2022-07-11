@@ -22,7 +22,7 @@ export default function Home(props) {
       </Head>
       <Hero />
       <FeaturedProjects featuredProjects={props.featuredProjects} />
-      <Projects nonFeaturedProjects={props.nonFeaturedProjects} />
+      {/* <Projects nonFeaturedProjects={props.nonFeaturedProjects} /> */}
       <About />
       <FeaturedPosts posts={props.posts} />
     </>
