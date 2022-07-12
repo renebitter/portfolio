@@ -42,5 +42,10 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
     }
+
+    .filterButtons {
+      width: 50%;
+      margin: auto;
+    }
   }
 }
