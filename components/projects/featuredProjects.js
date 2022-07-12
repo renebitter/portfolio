@@ -31,7 +31,6 @@ const FeaturedProjects = (props) => {
           <motion.div
             drag='x'
             dragConstraints={{ right: 0, left: -width }}
-            dragElastic={1}
             whileTap={{ scale: 0.99, cursor: 'grabbing' }}
             onDragEnd={(event, info) => console.log(info.point.x, info.point.y)}
             className={classes.innerCarousel}>
