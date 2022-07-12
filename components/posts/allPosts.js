@@ -1,24 +1,13 @@
-import classes from './featuredPosts.module.scss';
+import classes from './allPosts.module.scss';
 import PostItem from './postItem';
-import { useEffect } from 'react';
-import Link from 'next/link';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { motion } from 'framer-motion';
 
 const AllPosts = (props) => {
   const { posts } = props;
 
-  useEffect(() => {
-    Aos.init({ duration: 500 });
-  }, []);
-
   return (
-    <section className={`${classes.blog} mvh-100`}>
+    <section className={classes.blog}>
       <div className='container'>
-        <h2 className='text-center' data-aos='slide-up'>
-          All Blog Posts
-        </h2>
+        <h1 className='text-center'>All Blog Posts</h1>
 
         <div className={classes.galleryWrap}>
           <div className={classes.gallery}>
