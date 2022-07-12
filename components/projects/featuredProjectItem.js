@@ -24,17 +24,12 @@ const FeaturedProjectItem = (props) => {
         <div className={classes.row}>
           <div className={classes.columnRight}>
             <div className={classes.card}>
-              <Link href={`/projects/${project._id}`}>
-                <a>
-                  <div className={classes.clickDetails}>Click for details</div>
-                  <Image
-                    src={`/portfolio/images/projects/${project.image}`}
-                    width={600}
-                    height={460}
-                    alt={project.title}
-                  />
-                </a>
-              </Link>
+              <Image
+                src={`/portfolio/images/projects/${project.image}`}
+                width={600}
+                height={460}
+                alt={project.title}
+              />
             </div>
           </div>
 
