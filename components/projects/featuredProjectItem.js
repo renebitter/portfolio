@@ -4,27 +4,41 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const FeaturedProjectItem = (props) => {
   const { project } = props;
 
-  useEffect(() => {
-    Aos.init({ duration: 500 });
-  }, []);
-
   return (
     <>
-      <div className={classes.project} data-aos='fade-up'>
+      <div className={classes.project}>
+        <div className='title'>
+          <h3>{project.title}</h3>
+          <small>
+            {Array.isArray(project.tech)
+              ? project.tech.join(', ')
+              : project.tech}
+          </small>
+        </div>
+
         <div className={classes.row}>
+          <div className={classes.columnRight}>
+            <div className={classes.card}>
+              <Link href={`/projects/${project._id}`}>
+                <a>
+                  <div className={classes.clickDetails}>Click for details</div>
+                  <Image
+                    src={`/portfolio/images/projects/${project.image}`}
+                    width={600}
+                    height={460}
+                    alt={project.title}
+                  />
+                </a>
+              </Link>
+            </div>
+          </div>
+
           <div className={classes.columnLeft}>
-            <h3>{project.title}</h3>
-            <small>
-              {Array.isArray(project.tech)
-                ? project.tech.join(', ')
-                : project.tech}
-            </small>
             <p className={classes.description}>{project.description}</p>
 
             <div className={classes.projectLinks}>
@@ -44,22 +58,6 @@ const FeaturedProjectItem = (props) => {
                 <a>
                   <i className='fa fa-circle-info'></i>
                   Project details
-                </a>
-              </Link>
-            </div>
-          </div>
-
-          <div className={classes.columnRight}>
-            <div className={classes.card}>
-              <Link href={`/projects/${project._id}`}>
-                <a>
-                  <div className={classes.clickDetails}>Click for details</div>
-                  <Image
-                    src={`/portfolio/images/projects/${project.image}`}
-                    width={500}
-                    height={360}
-                    alt={project.title}
-                  />
                 </a>
               </Link>
             </div>
