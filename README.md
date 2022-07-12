@@ -12,6 +12,7 @@ Third party static contact form (formspree).
 
 Todo:
 
+- Fix carousel mobile performance issue
 - Featured Projects add swipeable previews of next cards or navigation arrows.
 - Add animation modal contact
 - Replace AOS by framer-motion
