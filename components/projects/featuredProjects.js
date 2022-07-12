@@ -27,21 +27,22 @@ const FeaturedProjects = (props) => {
     <section className={classes.projects} id='projects'>
       <div className={classes.container}>
         <h2 data-aos='slide-right'>Featured projects</h2>
-
-        <Swiper
-          effect={'cards'}
-          grabCursor={true}
-          modules={[EffectCards, Pagination]}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          className='mySwiper'>
-          {featuredProjects.map((project) => (
-            <SwiperSlide key={project._id}>
-              <FeaturedProjectItem project={project} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div data-aos='flip-up'>
+          <Swiper
+            effect={'cards'}
+            grabCursor={true}
+            modules={[EffectCards, Pagination]}
+            pagination={{
+              dynamicBullets: true,
+            }}
+            className='mySwiper'>
+            {featuredProjects.map((project) => (
+              <SwiperSlide key={project._id}>
+                <FeaturedProjectItem project={project} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         <div data-aos='fade-up' className={classes.buttonWrapper}>
           <Link href='/projects/'>

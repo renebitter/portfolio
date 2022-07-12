@@ -136,10 +136,10 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className={classes.iconScrollContainer}>
+        <div className='iconScrollContainer'>
           <a href='#projects'>
             <div
-              className={classes.iconScroll}
+              className='iconScroll'
               data-aos='fade-down'
               data-aos-offset='50'></div>
           </a>

@@ -56,10 +56,6 @@
     }
   }
 
-  .iconScroll {
-    display: none;
-  }
-
   @media only screen and (min-width: 480px) {
     .columnRight {
       &.profilePic {
@@ -123,43 +119,6 @@
       img {
         max-width: 100%;
         height: auto;
-      }
-    }
-  }
-  @media only screen and (min-width: 768px) and (min-height: 768px) {
-    .iconScrollContainer {
-      .iconScroll {
-        position: relative;
-        margin: auto;
-        display: block;
-        width: 20px;
-        height: 40px;
-        border: 2px solid var(--border-card);
-        border-radius: 25px;
-      }
-
-      .iconScroll:before {
-        position: absolute;
-        left: 50%;
-        content: '';
-        width: 8px;
-        height: 8px;
-        background: var(--text-secondary);
-        margin-left: -4px;
-        top: 2px;
-        border-radius: 4px;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        animation-name: scroll;
-      }
-      @keyframes scroll {
-        0% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-          transform: translateY(26px);
-        }
       }
     }
   }
