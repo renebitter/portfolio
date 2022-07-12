@@ -12,7 +12,7 @@ Third party static contact form (formspree).
 
 Todo:
 
-- Sections max 100vh. Featured Projects add swipeable carousel with side previews of next cards. Add "View all projects" button. Remove "Other projects".
+- Featured Projects add swipeable previews of next cards or navigation arrows.
 - Add animation modal contact
 - Replace AOS by framer-motion
 - Add Filter to other projects
