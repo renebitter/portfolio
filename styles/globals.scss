@@ -145,3 +145,23 @@ button {
     display: flex;
   }
 }
+
+// Swiper fix
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top {
+  border-radius: 5px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -30px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--text-secondary) !important;
+}

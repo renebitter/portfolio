@@ -2,20 +2,22 @@ import classes from './featuredProjects.module.scss';
 import { useEffect, useState, useRef } from 'react';
 import FeaturedProjectItem from './featuredProjectItem';
 import Link from 'next/link';
+
+// Animations
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
+// import required modules
+import { EffectCards, Pagination } from 'swiper';
 
 const FeaturedProjects = (props) => {
   const { featuredProjects } = props;
-
-  //TODO: set sone snap to next element with "onDragEnd"
-  const [width, setWidth] = useState(0);
-  const carousel = useRef();
-
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
 
   useEffect(() => {
     Aos.init({ duration: 500 });
@@ -26,19 +28,20 @@ const FeaturedProjects = (props) => {
       <div className={classes.container}>
         <h2 data-aos='slide-right'>Featured projects</h2>
 
-        {/* TODO: Add navigation arrows */}
-        <motion.div ref={carousel} className={classes.carousel}>
-          <motion.div
-            drag='x'
-            dragConstraints={{ right: 0, left: -width }}
-            whileTap={{ scale: 0.99, cursor: 'grabbing' }}
-            onDragEnd={(event, info) => console.log(info.point.x, info.point.y)}
-            className={classes.innerCarousel}>
-            {featuredProjects.map((project) => (
-              <FeaturedProjectItem key={project._id} project={project} />
-            ))}
-          </motion.div>
-        </motion.div>
+        <Swiper
+          effect={'cards'}
+          grabCursor={true}
+          modules={[EffectCards, Pagination]}
+          pagination={{
+            dynamicBullets: true,
+          }}
+          className='mySwiper'>
+          {featuredProjects.map((project) => (
+            <SwiperSlide key={project._id}>
+              <FeaturedProjectItem project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
         <div data-aos='fade-up' className={classes.buttonWrapper}>
           <Link href='/projects/'>
