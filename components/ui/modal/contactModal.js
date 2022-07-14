@@ -1,5 +1,6 @@
 import classes from './contactModal.module.scss';
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from 'framer-motion';
 
 function ContactModal(props) {
   const [state, handleSubmit] = useForm('mdobjbdw');
@@ -56,16 +57,20 @@ function ContactModal(props) {
           </div>
 
           <div className={classes.confirmationButton}>
-            <button className='btn btn-outlined' onClick={props.onClose}>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className='btn btn-filled'
+              onClick={props.onClose}>
               OK
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
     );
   }
   return (
-    <div className={classes.modal}>
+    <div div className={classes.modal}>
       <div className={classes.contactModal}>
         <a href='#!' className={classes.close} onClick={props.onClose}>
           <i className='fa fa-xmark'></i>
@@ -108,12 +113,14 @@ function ContactModal(props) {
               </a>
             </div>
             <div className={classes.sendLink}>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 type='submit'
                 disabled={state.submitting}
                 className='btn btn-filled'>
                 Send Message
-              </button>
+              </motion.button>
             </div>
           </div>
         </form>

@@ -55,6 +55,12 @@
     }
   }
 
+  .linkedinLink {
+    i {
+      color: var(--text-tertiary);
+    }
+  }
+
   .action {
     margin-bottom: 20px;
     display: flex;
@@ -63,7 +69,7 @@
 
     i {
       font-size: 3.4rem;
-      color: var(--text-primary);
+      color: var(--text-tertiary);
     }
 
     .sendLink {
