@@ -32,7 +32,7 @@ const About = () => {
               </a>
               . Later on I specialized in React and it&apos;s ecosystem. I
               really like problem-solving in general and am addicted to the
-              feeling of solving it.
+              feeling of solving them.
             </p>
 
             <p>

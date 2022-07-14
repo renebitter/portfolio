@@ -1,39 +1,8 @@
-:root {
-  --background: whitesmoke;
-  --background-card: #ffffff;
-  --background-secondary: #8bb2c3;
-  --text-primary: black;
-  --text-secondary: #6e6d7a;
-  --text-tertiary: #8bb2c3;
-  --accent: #f4494e;
-  --transparent-primary: #fffffff2;
-  --transparent-secondary: #fffffffc;
-  --border: #f8f8f8;
-  --border-light: #6464640d;
-  --border-card: #cecece;
-  --button-color: #687886;
-  --button-border: #687886;
-  --gradient-primary: #8bb2c3;
-  --gradient-secondary: #aab8c5;
-}
-[data-theme='dark'] {
-  --background: #22272e;
-  --background-card: #373e47;
-  --background-secondary: #efe3cf;
-  --text-primary: #adbac7;
-  --text-secondary: #efe3cf;
-  --text-tertiary: #8bb2c3;
-  --accent: #ff787e;
-  --transparent-primary: #2d333bed;
-  --transparent-secondary: #242729fc;
-  --border: #4b5154;
-  --border-light: #ffffff0d;
-  --border-card: #4b5154;
-  --button-color: #efe3cf;
-  --button-border: #687886;
-  --gradient-primary: #8bb2c3;
-  --gradient-secondary: #aab8c5;
-}
+@import './colors';
+@import './buttons';
+@import './swiper';
+@import './utils';
+@import './ui';
 
 html,
 body {
@@ -41,13 +10,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-.app {
-  color: var(--text-primary);
-  background-color: var(--background);
-  transition: background 1s;
-  min-height: 100vh;
 }
 
 * {
@@ -70,144 +32,4 @@ html {
 h2 {
   font-size: 2rem;
   color: var(--text-secondary);
-}
-
-button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
-
-// ULTIS
-.text-center {
-  text-align: center;
-}
-
-.mvh-100 {
-  min-height: 100vh;
-}
-
-.mt-50 {
-  margin-top: 50px;
-}
-
-.btn {
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  padding: 15px 25px;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
-    0 1px 5px 0 rgb(0 0 0 / 20%);
-
-  &.active {
-    color: black;
-    background-color: var(--background-secondary);
-  }
-
-  &.sm {
-    width: unset;
-    padding: 5px 10px;
-  }
-}
-
-.btn-outlined {
-  background-color: transparent;
-  color: var(--button-color);
-  border: 1px solid var(--button-border);
-}
-
-.btn-filled {
-  color: #fff;
-  background-image: linear-gradient(
-    310deg,
-    var(--gradient-primary),
-    var(--gradient-secondary)
-  );
-}
-
-@media only screen and (min-width: 480px) {
-  .btn {
-    width: unset;
-  }
-}
-
-.section {
-  padding: 50px 15px;
-}
-
-@media only screen and (min-width: 768px) {
-  .section {
-    padding: 100px 25px;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .row {
-    display: flex;
-  }
-}
-
-.iconScroll {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) and (min-height: 768px) {
-  .iconScrollContainer {
-    .iconScroll {
-      position: relative;
-      margin: auto;
-      display: block;
-      width: 20px;
-      height: 40px;
-      border: 2px solid var(--border-card);
-      border-radius: 25px;
-    }
-
-    .iconScroll:before {
-      position: absolute;
-      left: 50%;
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: var(--text-secondary);
-      margin-left: -4px;
-      top: 2px;
-      border-radius: 4px;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite;
-      animation-name: scroll;
-    }
-    @keyframes scroll {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(26px);
-      }
-    }
-  }
-}
-
-// Swiper fix
-.swiper-3d .swiper-slide-shadow,
-.swiper-3d .swiper-slide-shadow-bottom,
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right,
-.swiper-3d .swiper-slide-shadow-top {
-  border-radius: 5px;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: -30px !important;
-}
-
-.swiper-pagination-bullet {
-  background-color: var(--text-secondary) !important;
 }

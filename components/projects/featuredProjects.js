@@ -49,7 +49,7 @@ const FeaturedProjects = (props) => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className='btn btn-outlined'>
+              className='btn btn-filled'>
               View All Projects
             </motion.button>
           </Link>

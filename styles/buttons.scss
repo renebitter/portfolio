@@ -1,0 +1,42 @@
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px 25px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+
+  &.active {
+    color: black;
+    background-color: var(--background-secondary);
+  }
+
+  &.sm {
+    width: unset;
+    padding: 5px 10px;
+  }
+}
+
+.btn-outlined {
+  color: var(--button-color);
+  background-color: transparent;
+  border: 1px solid var(--button-border);
+}
+
+.btn-filled {
+  color: var(--background-card);
+  background-color: var(--background-secondary);
+  border: 1px solid var(--button-border);
+}
+
+@media only screen and (min-width: 480px) {
+  .btn {
+    width: unset;
+  }
+}
