@@ -13,8 +13,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 // import required modules
-import { EffectCards, Pagination } from 'swiper';
+import { EffectCards, Pagination, Navigation } from 'swiper';
 
 const FeaturedProjects = (props) => {
   const { featuredProjects } = props;
@@ -31,7 +32,8 @@ const FeaturedProjects = (props) => {
           <Swiper
             effect={'cards'}
             grabCursor={true}
-            modules={[EffectCards, Pagination]}
+            modules={[EffectCards, Pagination, Navigation]}
+            navigation={true}
             pagination={{
               dynamicBullets: true,
             }}
