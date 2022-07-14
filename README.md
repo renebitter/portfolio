@@ -12,25 +12,18 @@ Third party static contact form (formspree).
 
 Todo:
 
-- Fix carousel mobile performance issue
-- Featured Projects add swipeable previews of next cards or navigation arrows.
-- Add animation modal contact
-- Replace AOS by framer-motion
-- Add Filter to other projects
-- Add all posts page + Filter
-- Refactor allProjects/nonFeaturedProjects double code
-- Refactor components (e.g. projects/projectCard)
-- Capitalize Components file name?
-- Animated btn/image:hover
+- Add filter to posts page
+- Add images for projects and posts small cards
+
 - Full project descriptions
 - Dark mode / useLocalStorage
-- Add loading animation to sending message on contact form
+- Parallax?
+
+Less important:
 
 - Check for prop drilling vs context?
-- Refactor anchors to buttons?
-- React carousel?
-- Parallax?
-- www.flaticon.com
+- Add loading animation to sending message on contact form?
+- Replace AOS by framer-motion?
 
 Blog posts:
 

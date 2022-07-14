@@ -18,6 +18,16 @@ const Footer = () => {
         </a>
       </div>
       <div>© Rene Bitter</div>
+      <small>
+        Icons used from{' '}
+        <a href='https://www.flaticon.com/' target='_blank' rel='noreferrer'>
+          Flaticon
+        </a>{' '}
+        &{' '}
+        <a href='https://fontawesome.com/' target='_blank' rel='noreferrer'>
+          Font Awesome
+        </a>
+      </small>
     </footer>
   );
 };
