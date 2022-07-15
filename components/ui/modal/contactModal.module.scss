@@ -78,6 +78,8 @@
   }
 
   @media only screen and (min-width: 768px) {
+    min-width: 600px;
+    overflow: hidden;
     padding: 2rem;
 
     .contactForm {

@@ -41,6 +41,11 @@ const Navbar = (props) => {
   }
 
   useEffect(() => {
+    if (showModal) document.body.style.overflow = 'hidden';
+    if (!showModal) document.body.style.overflow = 'unset';
+  }, [showModal]);
+
+  useEffect(() => {
     window.onscroll = fixNavbar;
   }, []);
 
@@ -102,11 +107,9 @@ const Navbar = (props) => {
           </button>
         </div>
       </div>
-      {showModal && (
-        <AnimatePresence>
-          <Modal contact onClose={closeModalHandler} />
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        {showModal && <Modal contact onClose={closeModalHandler} />}
+      </AnimatePresence>
       <main>{props.children}</main>
     </>
   );

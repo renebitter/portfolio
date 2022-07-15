@@ -22,6 +22,11 @@ const Hero = () => {
   }
 
   useEffect(() => {
+    if (showModal) document.body.style.overflow = 'hidden';
+    if (!showModal) document.body.style.overflow = 'unset';
+  }, [showModal]);
+
+  useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
 
@@ -145,12 +150,9 @@ const Hero = () => {
           </a>
         </div>
       </div>
-
-      {showModal && (
-        <AnimatePresence>
-          <Modal contact onClose={closeModalHandler} />
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        {showModal && <Modal contact onClose={closeModalHandler} />}
+      </AnimatePresence>
     </section>
   );
 };
