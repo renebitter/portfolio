@@ -17,6 +17,7 @@ Todo:
 
 - Full project descriptions / Finish Layout
 - Dark mode / useLocalStorage
+- Fix/Add animation to mobile navbar (background when open)
 - Parallax?
 
 Less important:

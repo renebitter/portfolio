@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Modal from '../ui/modal/modal';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
   const [showModal, setShowModal] = useState();
@@ -146,7 +146,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {showModal && <Modal contact onClose={closeModalHandler} />}
+      {showModal && (
+        <AnimatePresence>
+          <Modal contact onClose={closeModalHandler} />
+        </AnimatePresence>
+      )}
     </section>
   );
 };

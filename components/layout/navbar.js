@@ -2,6 +2,7 @@ import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
 import Modal from '../ui/modal/modal';
 import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
 
 const Navbar = (props) => {
   const [navExpanded, setNavExpanded] = useState(false);
@@ -101,7 +102,11 @@ const Navbar = (props) => {
           </button>
         </div>
       </div>
-      {showModal && <Modal contact onClose={closeModalHandler} />}
+      {showModal && (
+        <AnimatePresence>
+          <Modal contact onClose={closeModalHandler} />
+        </AnimatePresence>
+      )}
       <main>{props.children}</main>
     </>
   );
