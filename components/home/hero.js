@@ -145,12 +145,9 @@ const Hero = () => {
           </a>
         </div>
       </div>
-
-      {showModal && (
-        <AnimatePresence>
-          <Modal contact onClose={closeModalHandler} />
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        {showModal && <Modal contact onClose={closeModalHandler} />}
+      </AnimatePresence>
     </section>
   );
 };
