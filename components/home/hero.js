@@ -22,6 +22,11 @@ const Hero = () => {
   }
 
   useEffect(() => {
+    if (showModal) document.body.style.overflow = 'hidden';
+    if (!showModal) document.body.style.overflow = 'unset';
+  }, [showModal]);
+
+  useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
 

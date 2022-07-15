@@ -41,6 +41,11 @@ const Navbar = (props) => {
   }
 
   useEffect(() => {
+    if (showModal) document.body.style.overflow = 'hidden';
+    if (!showModal) document.body.style.overflow = 'unset';
+  }, [showModal]);
+
+  useEffect(() => {
     window.onscroll = fixNavbar;
   }, []);
 
