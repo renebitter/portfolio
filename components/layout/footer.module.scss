@@ -1,9 +1,5 @@
 .footer {
-  background-image: linear-gradient(
-    310deg,
-    var(--gradient-primary),
-    var(--gradient-secondary)
-  );
+  background-color: var(--background-card);
   color: var(--text-secondary);
   text-align: center;
   padding: 25px;
