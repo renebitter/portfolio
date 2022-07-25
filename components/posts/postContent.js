@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown';
-import Image from 'next/image';
+// import Image from 'next/image';
 import classes from './postContent.module.scss';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {

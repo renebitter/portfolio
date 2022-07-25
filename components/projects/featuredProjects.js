@@ -1,5 +1,5 @@
 import classes from './featuredProjects.module.scss';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect } from 'react';
 import FeaturedProjectItem from './featuredProjectItem';
 import Link from 'next/link';
 

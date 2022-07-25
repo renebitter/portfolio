@@ -1,10 +1,6 @@
 import classes from './featuredProjectItem.module.scss';
-import { useEffect } from 'react';
-
 import Image from 'next/image';
 import Link from 'next/link';
-
-import { motion } from 'framer-motion';
 
 const FeaturedProjectItem = (props) => {
   const { project } = props;
