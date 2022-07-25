@@ -105,8 +105,8 @@
     "title": "Portfolio-Blog website",
     "tech": ["React", "Next.js", "Markdown", "Sass"],
     "description": "Developed with Next.js using Static Site Generation. Dynamic pages for projects and blog posts. Blog posts written in markdown and rendered with react-markdown. Framer motion for the \"eye candy\".",
-    "liveLink": "https://nextjs-blog-renebitter.vercel.app/",
-    "githubLink": "https://github.com/renebitter/nextjs-blog",
+    "liveLink": "https://renebitter.github.io/portfolio",
+    "githubLink": "https://github.com/renebitter/portfolio",
     "image": "portfolio.jpg",
     "isFeatured": true
   },
