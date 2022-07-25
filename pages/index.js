@@ -21,8 +21,8 @@ export default function Home(props) {
       </Head>
       <Hero />
       <FeaturedProjects featuredProjects={props.featuredProjects} />
-      <About />
       <FeaturedPosts posts={props.posts} />
+      <About />
     </>
   );
 }

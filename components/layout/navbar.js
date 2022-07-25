@@ -71,13 +71,14 @@ const Navbar = (props) => {
               <Link href='/#projects'>
                 <a onClick={closeNav}>Projects</a>
               </Link>
-              <Link href='/#about'>
-                <a onClick={closeNav}>About</a>
-              </Link>
+
               <Link href='/#blog'>
                 <a href='#blog' onClick={closeNav}>
                   Blog
                 </a>
+              </Link>
+              <Link href='/#about'>
+                <a onClick={closeNav}>About</a>
               </Link>
               <a
                 href='#!'
@@ -85,7 +86,7 @@ const Navbar = (props) => {
                   showModalHandler();
                   closeNav();
                 }}>
-                Contact
+                <i className='fa fa-envelope'></i>
               </a>
               <a
                 href='#!'
