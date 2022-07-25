@@ -4,6 +4,7 @@ date: '2022-06-23'
 image: github-01.png
 excerpt: 'In this post I go through the steps to deploy my Portfolio-Blog developed with Next.js on Github. By the end of it you will be able to automate the deployment by each new commit to the repository.'
 isFeatured: true
+tech: ['Next.js']
 ---
 
 # How to deploy a static Next.js website on Github Pages

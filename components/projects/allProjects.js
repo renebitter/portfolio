@@ -39,7 +39,9 @@ const AllProjects = (props) => {
   if (filter === 'all') {
     filteredProjects = projects;
   } else {
-    filteredProjects = projects.filter((tech) => tech.tech.includes(filter));
+    filteredProjects = projects.filter((project) =>
+      project.tech.includes(filter)
+    );
   }
   //TODO: Add filteredProjects.length to respective btns
 
