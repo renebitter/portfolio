@@ -1,6 +1,7 @@
 [
   {
     "_id": "1",
+    "slug": "mernshop",
     "title": "eCommerce website - MERN Fullstack",
     "tech": ["React", "Redux", "MongoDB", "Node", "Express", "Bootstrap"],
     "description": "Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.",

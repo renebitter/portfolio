@@ -1,9 +1,21 @@
 import Image from 'next/image';
-import ImageSlider from '../ui/imageSlider/imageSlider';
 import classes from './projectDetail.module.scss';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const ProjectDetail = (props) => {
   const { project } = props;
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
 
   return (
     <div className={classes.projectDetail}>
@@ -37,7 +49,29 @@ const ProjectDetail = (props) => {
         {project.screenshots ? (
           <div>
             <h2>Screenshots & description</h2>
-            <ImageSlider slides={project.screenshots} />
+            <Swiper
+              rewind={true}
+              grabCursor={true}
+              modules={[Pagination, Navigation]}
+              navigation={true}
+              pagination={pagination}
+              // pagination={{
+              //   dynamicBullets: true,
+              // }}
+              className='mySwiper'>
+              {project.screenshots.map((screenshot, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    layout='responsive'
+                    // objectFit='cover'
+                    src={`../../portfolio/images/projects/${project.slug}/${screenshot.screenshot}`}
+                    width={800}
+                    height={560}
+                    alt={screenshot.description}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         ) : (
           project.image && (

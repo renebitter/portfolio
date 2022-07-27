@@ -37,7 +37,7 @@ const FeaturedProjects = (props) => {
             pagination={{
               dynamicBullets: true,
             }}
-            className='mySwiper'>
+            className='featuredProjects mySwiper'>
             {featuredProjects.map((project) => (
               <SwiperSlide key={project._id}>
                 <FeaturedProjectItem project={project} />
