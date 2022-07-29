@@ -19,7 +19,7 @@ const ProjectDetail = (props) => {
 
   return (
     <div className={classes.projectDetail}>
-      <div className='container section mvh-100'>
+      <div className='container section mvh-100 projectDetail'>
         <h1>{project.title}</h1>
 
         <div>
@@ -51,24 +51,26 @@ const ProjectDetail = (props) => {
             <h2>Screenshots & description</h2>
             <Swiper
               rewind={true}
-              grabCursor={true}
+              // grabCursor={true}
               modules={[Pagination, Navigation]}
               navigation={true}
-              pagination={pagination}
+              // pagination={pagination}
               // pagination={{
               //   dynamicBullets: true,
               // }}
               className='mySwiper'>
               {project.screenshots.map((screenshot, index) => (
                 <SwiperSlide key={index}>
-                  <Image
-                    layout='responsive'
-                    // objectFit='cover'
-                    src={`../../portfolio/images/projects/${project.slug}/${screenshot.screenshot}`}
-                    width={800}
-                    height={560}
-                    alt={screenshot.description}
-                  />
+                  <>
+                    <Image
+                      // layout='responsive'
+                      src={`../../portfolio/images/projects/${project.slug}/${screenshot.screenshot}`}
+                      width={600}
+                      height={460}
+                      alt={screenshot.description}
+                    />
+                    <div>{screenshot.description}</div>
+                  </>
                 </SwiperSlide>
               ))}
             </Swiper>

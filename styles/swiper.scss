@@ -34,3 +34,15 @@
     left: -15px !important;
   }
 }
+
+.projectDetail {
+  .swiper {
+    margin: 50px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
