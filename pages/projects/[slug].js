@@ -8,7 +8,7 @@ const ProjectDetailPage = (props) => {
   return (
     <>
       <Head>
-        <title>{project.title}</title>
+        <title>Project - {project.title}</title>
         <meta name='description' content={props.project.description} />
       </Head>
 
