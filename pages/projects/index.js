@@ -1,10 +1,22 @@
 import { getAllProjects } from '../../util/projects-util';
 import AllProjects from '../../components/projects/allProjects';
+import Head from 'next/head';
 
 const Projects = (props) => {
   const { projects } = props;
 
-  return <AllProjects projects={projects} />;
+  return (
+    <>
+      <Head>
+        <title>All Projects</title>
+        <meta
+          name='description'
+          content='List of all of my projects. Tech-Stack: React, Next.js, Redux, Typescript, Node.js, Express, MongoDB, Bootstrap, Shopware.'
+        />
+      </Head>
+      <AllProjects projects={projects} />;
+    </>
+  );
 };
 export default Projects;
 
