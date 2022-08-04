@@ -67,23 +67,39 @@ const ProjectDetail = (props) => {
           </p>
           <div>
             <h3>File structure</h3>
-            <div>
-              <Image
-                // layout='responsive'
-                src={`../../portfolio/images/projects/mernshop/mernshop-files-backend.png`}
-                width={374}
-                height={582}
-                alt='alt'
-              />
-            </div>
-            <div>
-              <Image
-                // layout='responsive'
-                src={`../../portfolio/images/projects/mernshop/mernshop-files-frontend.png`}
-                width={374}
-                height={859}
-                alt='alt'
-              />
+            <div className='d-flex'>
+              <div className='mr-25'>
+                Backend
+                <br />
+                <br />
+                <div>
+                  <a href='#'>
+                    <Image
+                      // layout='responsive'
+                      src={`../../portfolio/images/projects/mernshop/mernshop-files-backend.png`}
+                      width={300}
+                      height={500}
+                      alt='alt'
+                    />
+                  </a>
+                </div>
+              </div>
+              <div>
+                Frontend
+                <br />
+                <br />
+                <div>
+                  <a href='#'>
+                    <Image
+                      // layout='responsive'
+                      src={`../../portfolio/images/projects/mernshop/mernshop-files-frontend.png`}
+                      width={300}
+                      height={500}
+                      alt='alt'
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div>
