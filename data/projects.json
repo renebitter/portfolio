@@ -176,5 +176,13 @@
     "description": "Simple resort website with room listing and filter settings. Used react context API for state management and Contentful for content (image, text) delivery.",
     "liveLink": "https://react-resort-project.netlify.app/",
     "githubLink": "https://github.com/renebitter/react_resort"
+  },
+  {
+    "_id": "10",
+    "title": "Github Finder",
+    "tech": ["React", "Context"],
+    "description": "React app for user searching using github API and context.",
+    "liveLink": "https://github-finder-54654564789731.netlify.app/",
+    "githubLink": "https://github.com/renebitter/github_finder"
   }
 ]
