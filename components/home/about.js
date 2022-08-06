@@ -59,6 +59,20 @@ const About = () => {
                 data-aos='fade-left'
               />
             </div>
+            <div className={classes.quote} data-aos='fade-left'>
+              &quot;Perspective is everything and everything starts with a
+              dot.&quot;
+              <span className={classes.tooltip}>
+                *OCD trigger warning* In case you were wondering about my
+                logo...{' '}
+                <Image
+                  src='/portfolio/images/icons/mindblown.png'
+                  alt='mindblown'
+                  width={40}
+                  height={40}
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,21 +1,16 @@
 import Image from 'next/image';
 import classes from './projectDetail.module.scss';
+import Link from 'next/link';
 
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
+import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const ProjectDetail = (props) => {
   const { project } = props;
-
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    },
-  };
 
   const iframe =
     '<iframe style="border:none" width="100%" height="450" src="https://whimsical.com/embed/aqVxiWzGmMuuHVkkEmWH4"></iframe>';
@@ -31,14 +26,39 @@ const ProjectDetail = (props) => {
   return (
     <div className={classes.projectDetail}>
       <div className='container section mvh-100 projectDetail'>
+        <Link href='/projects/'>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className='btn btn-filled'>
+            View All Projects
+          </motion.button>
+        </Link>
         <div className={classes.card}>
           <h1>{project.title}</h1>
-          <div className='mb-100'>
+          <div className='mb-10'>
             <small>
               {Array.isArray(project.tech)
                 ? project.tech.join(', ')
                 : project.tech}
             </small>
+          </div>
+
+          <div className='mb-100'>
+            <div className={classes.projectLinks}>
+              {project.githubLink && (
+                <a href={project.githubLink} target='_blank' rel='noreferrer'>
+                  <i className='fab fa-github'></i>
+                  Github
+                </a>
+              )}
+              {project.liveLink && (
+                <a href={project.liveLink} target='_blank' rel='noreferrer'>
+                  <i className='fas fa-link'></i>
+                  Website
+                </a>
+              )}
+            </div>
           </div>
 
           <div className='mb-50'>
@@ -63,48 +83,11 @@ const ProjectDetail = (props) => {
             <div className='mb-50'>
               <h2>Structure</h2>
               <p>
-                Below I listed the file structure and diagrams for both backend
-                and frontend. Some code was omitted for simplicity matter (e.g.
-                order controllers).
+                See below the diagrams for both backend and frontend. Some code
+                was omitted for simplicity matter (e.g. orderController).
               </p>
             </div>
-            <div className='mb-50'>
-              <h3>File structure</h3>
-              <div className='d-flex'>
-                <div className='mr-25'>
-                  Backend
-                  <br />
-                  <br />
-                  <div>
-                    <a href='#'>
-                      <Image
-                        // layout='responsive'
-                        src={`../../portfolio/images/projects/mernshop/mernshop-files-backend.png`}
-                        width={300}
-                        height={500}
-                        alt='alt'
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  Frontend
-                  <br />
-                  <br />
-                  <div>
-                    <a href='#'>
-                      <Image
-                        // layout='responsive'
-                        src={`../../portfolio/images/projects/mernshop/mernshop-files-frontend.png`}
-                        width={300}
-                        height={500}
-                        alt='alt'
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             <div>
               <h3>Backend Diagram</h3>
               <div className='mb-50'>
@@ -188,29 +171,22 @@ const ProjectDetail = (props) => {
               <h2>Screenshots</h2>
               <Swiper
                 rewind={true}
-                // grabCursor={true}
-                modules={[Pagination, Navigation]}
+                grabCursor={true}
+                modules={[Navigation]}
                 navigation={true}
-                // pagination={pagination}
-                pagination={{
-                  dynamicBullets: true,
-                }}
                 className='mySwiper'>
                 {project.screenshots.map((screenshot, index) => (
-                  <>
-                    <SwiperSlide key={index}>
-                      <Image
-                        // layout='responsive'
-                        src={`../../portfolio/images/projects/${project.slug}/${screenshot.screenshot}`}
-                        width={1100}
-                        height={800}
-                        alt={screenshot.description}
-                      />
-                      {/* <div className={classes.card}>
-                        {screenshot.description}
-                      </div> */}
-                    </SwiperSlide>
-                  </>
+                  <SwiperSlide key={index}>
+                    <Image
+                      src={`../../portfolio/images/projects/${project.slug}/${screenshot.screenshot}`}
+                      width={1000}
+                      height={700}
+                      alt={screenshot.description}
+                    />
+                    <div className={classes.description}>
+                      {index + 1}. {screenshot.description}
+                    </div>
+                  </SwiperSlide>
                 ))}
               </Swiper>
             </div>
@@ -226,24 +202,6 @@ const ProjectDetail = (props) => {
               </div>
             )
           )}
-
-          <div>
-            <h2>Links</h2>
-            <div className={classes.projectLinks}>
-              {project.githubLink && (
-                <a href={project.githubLink} target='_blank' rel='noreferrer'>
-                  <i className='fab fa-github'></i>
-                  Github
-                </a>
-              )}
-              {project.liveLink && (
-                <a href={project.liveLink} target='_blank' rel='noreferrer'>
-                  <i className='fas fa-link'></i>
-                  Website
-                </a>
-              )}
-            </div>
-          </div>
         </div>
       </div>
     </div>
