@@ -110,7 +110,8 @@ const ProjectDetail = (props) => {
                   Best regarded as Endpoints. Route methods (get, post, put,
                   delete) are defined for the specified route and used in
                   conjunction with a controller and middleware functions, which
-                  hold the logic. (e.g. router.post('/login', authUser))
+                  hold the logic. (e.g. router.post(&apos;/login&apos;,
+                  authUser))
                 </p>
                 <h4>Controllers</h4>
                 <p>
@@ -161,7 +162,7 @@ const ProjectDetail = (props) => {
                   state
                 </p>
                 <h4>Screens</h4>
-                <p>useDispatch & useSelector from 'react-redux'</p>
+                <p>useDispatch & useSelector from &apos;react-redux&apos;</p>
               </div>
             </div>
           </div>

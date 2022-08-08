@@ -63,13 +63,12 @@ const About = () => {
               &quot;Perspective is everything and everything starts with a
               dot.&quot;
               <span className={classes.tooltip}>
-                *OCD trigger warning* In case you were wondering about my
-                logo...{' '}
+                In case you were wondering about my logo...{' '}
                 <Image
                   src='/portfolio/images/icons/mindblown.png'
                   alt='mindblown'
-                  width={40}
-                  height={40}
+                  width={20}
+                  height={20}
                 />
               </span>
             </div>
