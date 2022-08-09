@@ -59,7 +59,7 @@ const About = () => {
                 data-aos='fade-left'
               />
             </div>
-            <div className={classes.quote} data-aos='fade-left'>
+            <div className={classes.quote} data-aos='fade-right'>
               &quot;Perspective is everything and everything starts with a
               dot.&quot;
               <span className={classes.tooltip}>

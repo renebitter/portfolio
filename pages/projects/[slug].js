@@ -1,5 +1,9 @@
 import Head from 'next/head';
-import { getAllProjects, getProjectSlugs } from '../../util/projects-util';
+import {
+  getAllProjects,
+  getProjectSlugs,
+  getProjectMarkdown,
+} from '../../util/projects-util';
 import ProjectDetail from '../../components/projects/projectDetail';
 
 const ProjectDetailPage = (props) => {
@@ -20,7 +24,11 @@ const ProjectDetailPage = (props) => {
 export const getStaticProps = (context) => {
   const { params } = context;
   const { slug } = params;
+  //JSON file
   const project = getAllProjects().find((project) => project._id === slug);
+
+  //Markdown file
+  const projectMarkdown = getProjectMarkdown(slug);
 
   return {
     props: {

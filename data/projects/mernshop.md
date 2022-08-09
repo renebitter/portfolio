@@ -1,170 +1,190 @@
 ---
 title: 'eCommerce website - MERN Fullstack'
-date: '2022-06-23'
+date: '2022-04-03'
 image: mernshop.webp
 excerpt: 'Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.'
 isFeatured: true
-tech: ['Next.js', "React", "Redux", "MongoDB", "Node", "Express", "Bootstrap"]
-liveLink: "https://mernshop-99.herokuapp.com/"
-githubLink: "https://github.com/renebitter/mernshop"
-isFeatured: true
+tech: ['Next.js', 'React', 'Redux', 'MongoDB', 'Node', 'Express', 'Bootstrap']
+liveLink: 'https://mernshop-99.herokuapp.com/'
+githubLink: 'https://github.com/renebitter/mernshop'
+screenshots:
+  [
+    {
+      'screenshot': '01-home.png',
+      'description': 'Homepage with navbar and hero element.',
+    },
+    {
+      'screenshot': '02-home.png',
+      'description': 'Homepage. Carousel with 3 top-rated products and general product listing.',
+    },
+    {
+      'screenshot': '03-home.png',
+      'description': 'Homepage. Product listing and pagination.',
+    },
+    {
+      'screenshot': '04-product-detail-page.png',
+      'description': 'Product detail page. Product description, review rating, price, stock status, quantity selector, add to cart button and review section.',
+    },
+    { 'screenshot': '06-cart-empty.png', 'description': 'Empty cart.' },
+    {
+      'screenshot': '05-cart-full.png',
+      'description': 'Multiple products added to cart. Quantity selection and price updates.',
+    },
+    { 'screenshot': '07-shipping.png', 'description': 'Shipping address.' },
+    {
+      'screenshot': '08-payment.png',
+      'description': 'Payment method selection.',
+    },
+    {
+      'screenshot': '09-order-summary.png',
+      'description': 'Order summary including shipping address, payment method, order items, prices and total price.',
+    },
+    { 'screenshot': '10-order-payment.png', 'description': 'Order payment.' },
+    {
+      'screenshot': '11-order-paypal.png',
+      'description': 'Paypal integration.',
+    },
+    {
+      'screenshot': '12-order-paid.png',
+      'description': 'Order summary - paid.',
+    },
+    { 'screenshot': '14-sign-in.png', 'description': 'Sign in.' },
+    { 'screenshot': '15-register.png', 'description': 'Sign up.' },
+    {
+      'screenshot': '16-admin-user-list.png',
+      'description': 'Admin user list.',
+    },
+    {
+      'screenshot': '17-admin-user-edit.png',
+      'description': 'Admin user edit.',
+    },
+    {
+      'screenshot': '18-admin-product-list.png',
+      'description': 'Admin product list.',
+    },
+    {
+      'screenshot': '19-admin-product-edit.png',
+      'description': 'Admin product edit/create.',
+    },
+    {
+      'screenshot': '20-admin-order-list.png',
+      'description': 'Admin order list.',
+    },
+    {
+      'screenshot': '21-admin-order-edit.png',
+      'description': 'Admin order edit. Mark as delivered.',
+    },
+    {
+      'screenshot': '22-admin-order-edit-2.png',
+      'description': 'Admin order delivered.',
+    },
+    {
+      'screenshot': '23-user-profile-orders.png',
+      'description': 'User profile orders.',
+    },
+    {
+      'screenshot': '24-user-profile-order-delivered.png',
+      'description': 'User profile order delivered.',
+    },
+  ]
 ---
 
 # eCommerce website - MERN Fullstack
 
-![Image ...](/portfolio/images/projects/mernshop.webp)
+[Github](https://github.com/renebitter/mernshop)
+[Website](https://mernshop-99.herokuapp.com/)
 
-<div className='mb-100'>
-            <div className={classes.projectLinks}>
-              {project.githubLink && (
-                <a href={project.githubLink} target='_blank' rel='noreferrer'>
-                  <i className='fab fa-github'></i>
-                  Github
-                </a>
-              )}
-              {project.liveLink && (
-                <a href={project.liveLink} target='_blank' rel='noreferrer'>
-                  <i className='fas fa-link'></i>
-                  Website
-                </a>
-              )}
-            </div>
-          </div>
+## Description
 
-## Introduction
+Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.
 
-I've wanted to build a cool, or at least presentable, Portfolio-Blog for a while now. Since I've been working a lot with Next.js lately, I figured it would be a great idea to build this portfolio using Next.js instead of some plain html/css/js. And since I didn't want to pay for hosting just right now, Github Pages should do the trick.
+## Key takeaways
 
-The original idea was to **next build** and **next export** the project and then manually upload the generated files to a repository. Since this didn't work the way I was thinking, I searched and found an even better solution. This involves using Github Actions and a third party CI/CD solution available at Github Marketplace. The one I used is ["Deploy to Github Pages"](https://github.com/marketplace/actions/deploy-to-github-pages).
+This is a complex project both in the backend and frontend.
+Besides all route and controller logic with authentication, CRUD
+and so on in the backend, my main takeaway for this project is the
+state management with Redux in the frontend.
+<br />
+<br />
+Explain redux usage...
 
-### 1. Github Actions
+## Structure
 
-1. In your repository go to actions and add a workflow by choosing Node.js:
+See below the diagrams for both backend and frontend. Some code was omitted for simplicity matter (e.g. orderController).
 
-   ![Image ...](/portfolio/images/posts/static-site-to-github-pages/github-actions-01.jpg)
+### Backend Diagram
 
-2. You'll get a **node.js.yml** file like the one bellow:
+<iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/aqVxiWzGmMuuHVkkEmWH4"></iframe>
 
-   ```yml
-   # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-   # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+#### Server
 
-   name: Node.js CI
+The heart of the backend application. Connects to the DB via
+config/db and uses all routes made available by routes (order,
+product, user, upload) and error handling directly from the
+middleware.
 
-   on:
-     push:
-       branches: ['main']
-     pull_request:
-       branches: ['main']
+#### Config/db
 
-     jobs:
-     build:
+Makes the connection to the database.
 
-     runs-on: ubuntu-latest
+#### Routes
 
-     strategy:
-       matrix:
-         node-version: [12.x, 14.x, 16.x]
-         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+Best regarded as Endpoints. Route methods (get, post, put,
+delete) are defined for the specified route and used in
+conjunction with a controller and middleware functions, which
+hold the logic. (e.g. router.post(&apos;/login&apos;,
+authUser))
 
-     steps:
-       - uses: actions/checkout@v3
-       - name: Use Node.js ${{ matrix.node-version }}
-         uses: actions/setup-node@v3
-         with:
-           node-version: ${{ matrix.node-version }}
-           cache: 'npm'
-       - run: npm ci
-       - run: npm run build --if-present
-       - run: npm test
-   ```
+#### Controllers
 
-3. Select the node version e.g. **node-version: [16.x]** then start replacing at **- run: npm ci** like the code below. Since I'm using **yarn** I also changed the respective **npm** commands. For example: **run: yarn install --frozen-lockfile** is equivalent to **run: npm ci**.
+Best regarded as the application logic. The functions defined
+here will be requested when hitting the defined
+routes/endpoints. It is the place where the logic for a given
+route is applied.
 
-   We also need to bypass Jekyll since it doesn't recognize folders that start with an underscore, like "\_next". More about bypassing Jekyll on Github [Github Blog](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/) and [Stackoverflow](https://stackoverflow.com/questions/61450307/js-and-css-not-loading-when-hosting-next-application-on-github-pages).
+#### Middleware
 
-   The section starting with **- name: Deploy** is the ["Deploy to Github Pages"](https://github.com/marketplace/actions/deploy-to-github-pages).
+Either called directly from server.js for errorHandling or
+from a given route, in this case userRoute, for both protect
+and isAdmin functions. protect will make sure that the user is
+logged in by verifying their bearer token (which is generated
+by the util). isAdmin will make sure that the given user has
+admin rights.
 
-   ```yml
-   - run: npm install -g yarn # Installs yarn.
-   - run: yarn install --frozen-lockfile # Performs a clean install.
-   - run: yarn build && export # Generates and exports files into "out" folder.
-   - run: touch ./out/.nojekyll # This bypasses Github's Jekyll since it doesn't recognize folders that start with an underscore, like "_next".
+#### Utils
 
-   - name: Deploy
-     uses: JamesIves/github-pages-deploy-action@v4.3.3
-     with:
-       branch: gh-pages # The branch the action should deploy to.
-       folder: out # The folder the action should deploy.
-   ```
+Generates a token which is called from the userController.
+(e.g. when logging in a user)
 
-4. The content of the folder **out** is then deployed to the **gh-pages** branch, which is then used by Github Pages.
+#### Models
 
-### 2. Next.js config
+Defines the DB schema for a given model. userModal.js also
+uses bcrypt to compare and hash passwords.
 
-#### - Custom image loader & basePath
+### Frontend Diagram
 
-1. In the Next.js application, we need to change the **next.config.js** file. We need to add a custom image loader since the standard one doesn't support **next export** which you can see in the error message bellow. More about built-in image loaders [official doc](https://nextjs.org/docs/api-reference/next/image#loader-configuration). This was a trial and error and the one that worked for me was the "akamai".
+<iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/PMxfFafALUS8a2DTdF6ogt"></iframe>
 
-   Error message:
+#### Store
 
-   ```txt
-   Error: Image Optimization using Next.js' default loader is not compatible with `next export`.
-     Possible solutions:
-       - Use `next start` to run a server, which includes the Image Optimization API.
-       - Use any provider which supports Image Optimization (like Vercel).
-       - Configure a third-party loader in `next.config.js`.
-       - Use the `loader` prop for `next/image`.
-     Read more: https://nextjs.org/docs/messages/export-image-api
-   ```
+Combines all reducers and apply thunk (middleware that allows
+you to return functions).
 
-   next.config.js:
+#### Constants
 
-   ```js
-   /** @type {import('next').NextConfig} */
-   const isProd = process.env.NODE_ENV === 'production';
-   const nextConfig = {
-     reactStrictMode: true,
-     images: {
-       loader: 'akamai',
-       path: isProd ? 'https://<your github account>.github.io/' : '',
-     },
-     basePath: '/<your github repo>',
-   };
+Just holds the constants names.
 
-   module.exports = nextConfig;
-   ```
+#### Actions
 
-2. As seen above, you also need to define a **basePath**. The reason behind it is that images/assets will not load because your repository name will be part of the URL. There is another option called [assetPrefix](https://nextjs.org/docs/api-reference/next.config.js/cdn-support-with-asset-prefix) but it is discouraged. By the way you can also use a **isProduction** variable like this:
+Explain... Fetches API and dispatches...
 
-   next.config.js:
+#### Reducers
 
-   ```js
-   const isProd = process.env.NODE_ENV === 'production';
-   //and then something like this ternary :
-   basePath: isProd ? '/<your github repo>' : '',
-   ```
+Explain... Takes previous state and action, and returns next
+state
 
-#### - Changing Image src
+#### Screens
 
-1. Replace each image src as described in the [official docs](https://nextjs.org/docs/api-reference/next.config.js/basepath#images)
+useDispatch & useSelector from &apos;react-redux&apos;
 
-   ```jsx
-   <Image
-     src='/images/profile-pic.png'
-     width={360}
-     height={360}
-     alt='profile-pic'
-   />
-   ```
-
-   ```jsx
-   <Image
-     src='/<your github repo>/images/profile-pic.png'
-     width={360}
-     height={360}
-     alt='profile-pic'
-   />
-   ```
-
-Thanks for following until here and I hope it helps you too!
+<!-- Screenshots -->

@@ -1,4 +1,7 @@
 import projects from '../data/projects.json';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 export const getAllProjects = () => {
   return projects;
@@ -14,3 +17,5 @@ export const getNonFeaturedProjects = () => {
 export const getProjectSlugs = () => {
   return getAllProjects().map((project) => ({ params: { slug: project._id } }));
 };
+
+export const getProjectMarkdown = () => {};
