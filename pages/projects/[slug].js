@@ -1,22 +1,17 @@
 import Head from 'next/head';
-import {
-  getAllProjects,
-  getProjectSlugs,
-  getProjectMarkdown,
-} from '../../util/projects-util';
-import ProjectDetail from '../../components/projects/projectDetail';
+import ProjectContent from '../../components/projects/projectContent';
+import { getProjectData, getProjectsFiles } from '../../util/projects-util';
 
 const ProjectDetailPage = (props) => {
-  const { project } = props;
+  const { project, currentTheme } = props;
 
   return (
     <>
       <Head>
         <title>Project - {project.title}</title>
-        <meta name='description' content={props.project.description} />
+        <meta name='description' content={project.excerpt} />
       </Head>
-
-      <ProjectDetail project={props.project} />
+      <ProjectContent project={project} currentTheme={currentTheme} />
     </>
   );
 };
@@ -24,25 +19,24 @@ const ProjectDetailPage = (props) => {
 export const getStaticProps = (context) => {
   const { params } = context;
   const { slug } = params;
-  //JSON file
-  const project = getAllProjects().find((project) => project._id === slug);
-
-  //Markdown file
-  const projectMarkdown = getProjectMarkdown(slug);
+  const projectData = getProjectData(slug);
 
   return {
     props: {
-      project: project,
+      project: projectData,
     },
     revalidate: 600,
   };
 };
 
 export const getStaticPaths = () => {
-  const slugs = getProjectSlugs();
+  const projectsFilenames = getProjectsFiles();
+  const slugs = projectsFilenames.map((fileName) =>
+    fileName.replace(/\.md$/, '')
+  );
 
   return {
-    paths: slugs,
+    paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: false,
   };
 };

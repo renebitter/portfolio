@@ -1,6 +1,6 @@
+import Head from 'next/head';
 import { getAllProjects } from '../../util/projects-util';
 import AllProjects from '../../components/projects/allProjects';
-import Head from 'next/head';
 
 const Projects = (props) => {
   const { projects } = props;
@@ -14,7 +14,7 @@ const Projects = (props) => {
           content='List of all of my projects. Tech-Stack: React, Next.js, Redux, Typescript, Node.js, Express, MongoDB, Bootstrap, Shopware.'
         />
       </Head>
-      <AllProjects projects={projects} />;
+      <AllProjects projects={projects} />
     </>
   );
 };

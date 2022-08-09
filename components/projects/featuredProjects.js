@@ -38,8 +38,8 @@ const FeaturedProjects = (props) => {
               dynamicBullets: true,
             }}
             className='featuredProjects mySwiper'>
-            {featuredProjects.map((project) => (
-              <SwiperSlide key={project._id}>
+            {featuredProjects.map((project, index) => (
+              <SwiperSlide key={index}>
                 <FeaturedProjectItem project={project} />
               </SwiperSlide>
             ))}

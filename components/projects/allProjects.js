@@ -43,7 +43,7 @@ const AllProjects = (props) => {
       project.tech.includes(filter)
     );
   }
-  //TODO: Add filteredProjects.length to respective btns
+  //TODO: Add filteredProjects.length to respective btns for qty indication
 
   return (
     <div className={classes.projectsGallery}>
@@ -83,8 +83,8 @@ const AllProjects = (props) => {
         <div className={classes.galleryWrap}>
           <div className={classes.gallery}>
             <AnimatePresence>
-              {filteredProjects.map((project) => (
-                <ProjectItem key={project._id} project={project} />
+              {filteredProjects.map((project, index) => (
+                <ProjectItem key={index} project={project} />
               ))}
             </AnimatePresence>
           </div>

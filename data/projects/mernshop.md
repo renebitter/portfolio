@@ -91,8 +91,11 @@ screenshots:
 
 # eCommerce website - MERN Fullstack
 
-[Github](https://github.com/renebitter/mernshop)
-[Website](https://mernshop-99.herokuapp.com/)
+<small>Next.js, React, Redux, MongoDB, Node, Express, Bootstrap</small>
+
+<i className='fab fa-github'>[ Github](https://github.com/renebitter/mernshop)</i>
+<br />
+<i className='fas fa-link'>[ Website](https://mernshop-99.herokuapp.com/)</i>
 
 ## Description
 
@@ -115,6 +118,8 @@ See below the diagrams for both backend and frontend. Some code was omitted for 
 ### Backend Diagram
 
 <iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/aqVxiWzGmMuuHVkkEmWH4"></iframe>
+<br />
+<br />
 
 #### Server
 
@@ -164,6 +169,8 @@ uses bcrypt to compare and hash passwords.
 ### Frontend Diagram
 
 <iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/PMxfFafALUS8a2DTdF6ogt"></iframe>
+<br />
+<br />
 
 #### Store
 

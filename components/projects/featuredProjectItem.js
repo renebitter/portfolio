@@ -45,7 +45,7 @@ const FeaturedProjectItem = (props) => {
                   Website
                 </a>
               )}
-              <Link href={`/projects/${project._id}`}>
+              <Link href={`/projects/${project.slug}`}>
                 <a>
                   <i className='fa fa-circle-info'></i>
                   Project details
