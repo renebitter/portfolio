@@ -12,8 +12,11 @@ import 'swiper/css/navigation';
 const ProjectDetail = (props) => {
   const { project } = props;
 
-  const iframe =
+  const backendIframe =
     '<iframe style="border:none" width="100%" height="450" src="https://whimsical.com/embed/aqVxiWzGmMuuHVkkEmWH4"></iframe>';
+
+  const frontendIframe =
+    '<iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/PMxfFafALUS8a2DTdF6ogt"></iframe>';
 
   function Iframe(props) {
     return (
@@ -91,7 +94,7 @@ const ProjectDetail = (props) => {
             <div>
               <h3>Backend Diagram</h3>
               <div className='mb-50'>
-                <Iframe iframe={iframe} />
+                <Iframe iframe={backendIframe} />
               </div>
 
               <div className='mb-50'>
@@ -144,7 +147,7 @@ const ProjectDetail = (props) => {
             <div>
               <h3>Frontend Diagram</h3>
               <div className='mb-50'>
-                <Iframe iframe={iframe} />
+                <Iframe iframe={frontendIframe} />
               </div>
               <div className='mb-50'>
                 <h4>Store</h4>
