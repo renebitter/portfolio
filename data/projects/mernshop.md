@@ -1,101 +1,78 @@
 ---
-title: 'eCommerce website - MERN Fullstack'
-date: '2022-04-03'
-image: mernshop.webp
-excerpt: 'Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.'
-isFeatured: true
-tech: ['React', 'Redux', 'MongoDB', 'Node', 'Express', 'Bootstrap']
-liveLink: 'https://mernshop-99.herokuapp.com/'
-githubLink: 'https://github.com/renebitter/mernshop'
-screenshots:
-  [
-    {
-      'screenshot': '01-home.png',
-      'description': 'Homepage with navbar and hero element.',
-    },
-    {
-      'screenshot': '02-home.png',
-      'description': 'Homepage. Carousel with 3 top-rated products and general product listing.',
-    },
-    {
-      'screenshot': '03-home.png',
-      'description': 'Homepage. Product listing and pagination.',
-    },
-    {
-      'screenshot': '04-product-detail-page.png',
-      'description': 'Product detail page. Product description, review rating, price, stock status, quantity selector, add to cart button and review section.',
-    },
-    { 'screenshot': '06-cart-empty.png', 'description': 'Empty cart.' },
-    {
-      'screenshot': '05-cart-full.png',
-      'description': 'Multiple products added to cart. Quantity selection and price updates.',
-    },
-    { 'screenshot': '07-shipping.png', 'description': 'Shipping address.' },
-    {
-      'screenshot': '08-payment.png',
-      'description': 'Payment method selection.',
-    },
-    {
-      'screenshot': '09-order-summary.png',
-      'description': 'Order summary including shipping address, payment method, order items, prices and total price.',
-    },
-    { 'screenshot': '10-order-payment.png', 'description': 'Order payment.' },
-    {
-      'screenshot': '11-order-paypal.png',
-      'description': 'Paypal integration.',
-    },
-    {
-      'screenshot': '12-order-paid.png',
-      'description': 'Order summary - paid.',
-    },
-    { 'screenshot': '14-sign-in.png', 'description': 'Sign in.' },
-    { 'screenshot': '15-register.png', 'description': 'Sign up.' },
-    {
-      'screenshot': '16-admin-user-list.png',
-      'description': 'Admin user list.',
-    },
-    {
-      'screenshot': '17-admin-user-edit.png',
-      'description': 'Admin user edit.',
-    },
-    {
-      'screenshot': '18-admin-product-list.png',
-      'description': 'Admin product list.',
-    },
-    {
-      'screenshot': '19-admin-product-edit.png',
-      'description': 'Admin product edit/create.',
-    },
-    {
-      'screenshot': '20-admin-order-list.png',
-      'description': 'Admin order list.',
-    },
-    {
-      'screenshot': '21-admin-order-edit.png',
-      'description': 'Admin order edit. Mark as delivered.',
-    },
-    {
-      'screenshot': '22-admin-order-edit-2.png',
-      'description': 'Admin order delivered.',
-    },
-    {
-      'screenshot': '23-user-profile-orders.png',
-      'description': 'User profile orders.',
-    },
-    {
-      'screenshot': '24-user-profile-order-delivered.png',
-      'description': 'User profile order delivered.',
-    },
-  ]
+  title: eCommerce website - MERN Fullstack
+  tech:
+    - React
+    - Redux
+    - MongoDB
+    - Node
+    - Express
+    - Bootstrap
+  description: >-
+    Fully functional e-commerce website including pages from product listing to
+    payment and admin area with CRUD functionality for users, products and
+    orders. Authentication handled with JWT. Redux for state management.
+  liveLink: https://mernshop-99.herokuapp.com/
+  githubLink: https://github.com/renebitter/mernshop
+  image: mernshop.webp
+  isFeatured: true
+  screenshots:
+    - screenshot: 01-home.png
+      description: Homepage with navbar and hero element.
+    - screenshot: 02-home.png
+      description: >-
+        Homepage. Carousel with 3 top-rated products and general product
+        listing.
+    - screenshot: 03-home.png
+      description: Homepage. Product listing and pagination.
+    - screenshot: 04-product-detail-page.png
+      description: >-
+        Product detail page. Product description, review rating, price, stock
+        status, quantity selector, add to cart button and review section.
+    - screenshot: 06-cart-empty.png
+      description: Empty cart.
+    - screenshot: 05-cart-full.png
+      description: Multiple products added to cart. Quantity selection and price updates.
+    - screenshot: 07-shipping.png
+      description: Shipping address.
+    - screenshot: 08-payment.png
+      description: Payment method selection.
+    - screenshot: 09-order-summary.png
+      description: >-
+        Order summary including shipping address, payment method, order items,
+        prices and total price.
+    - screenshot: 10-order-payment.png
+      description: Order payment.
+    - screenshot: 11-order-paypal.png
+      description: Paypal integration.
+    - screenshot: 12-order-paid.png
+      description: Order summary - paid.
+    - screenshot: 14-sign-in.png
+      description: Sign in.
+    - screenshot: 15-register.png
+      description: Sign up.
+    - screenshot: 16-admin-user-list.png
+      description: Admin user list.
+    - screenshot: 17-admin-user-edit.png
+      description: Admin user edit.
+    - screenshot: 18-admin-product-list.png
+      description: Admin product list.
+    - screenshot: 19-admin-product-edit.png
+      description: Admin product edit/create.
+    - screenshot: 20-admin-order-list.png
+      description: Admin order list.
+    - screenshot: 21-admin-order-edit.png
+      description: Admin order edit. Mark as delivered.
+    - screenshot: 22-admin-order-edit-2.png
+      description: Admin order delivered.
+    - screenshot: 23-user-profile-orders.png
+      description: User profile orders.
+    - screenshot: 24-user-profile-order-delivered.png
+      description: User profile order delivered.
 ---
 
 # eCommerce website - MERN Fullstack
 
 <small>React, Redux, MongoDB, Node, Express, Bootstrap</small>
-
-<i className='fab fa-github'>[ Github](https://github.com/renebitter/mernshop)</i>
-<br />
-<i className='fas fa-link'>[ Website](https://mernshop-99.herokuapp.com/)</i>
 
 ## Description
 
@@ -118,7 +95,6 @@ See below the diagrams for both backend and frontend. Some code was omitted for 
 ### Backend Diagram
 
 <iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/aqVxiWzGmMuuHVkkEmWH4"></iframe>
-<br />
 <br />
 
 #### Server
@@ -169,7 +145,6 @@ uses bcrypt to compare and hash passwords.
 ### Frontend Diagram
 
 <iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/PMxfFafALUS8a2DTdF6ogt"></iframe>
-<br />
 <br />
 
 #### Store

@@ -29,6 +29,22 @@ const ProjectContent = (props) => {
         </Link>
 
         <div className={classes.card}>
+          <div>
+            <div className={classes.projectLinks}>
+              {project.githubLink && (
+                <a href={project.githubLink} target='_blank' rel='noreferrer'>
+                  <i className='fab fa-github'></i>
+                  Github
+                </a>
+              )}
+              {project.liveLink && (
+                <a href={project.liveLink} target='_blank' rel='noreferrer'>
+                  <i className='fas fa-link'></i>
+                  Website
+                </a>
+              )}
+            </div>
+          </div>
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
 
           {project.screenshots ? (

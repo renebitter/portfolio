@@ -9,7 +9,7 @@ const ProjectDetailPage = (props) => {
     <>
       <Head>
         <title>Project - {project.title}</title>
-        <meta name='description' content={project.excerpt} />
+        <meta name='description' content={project.description} />
       </Head>
       <ProjectContent project={project} currentTheme={currentTheme} />
     </>

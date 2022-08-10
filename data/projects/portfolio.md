@@ -5,7 +5,7 @@
     - Next.js
     - Markdown
     - Sass
-  excerpt: >-
+  description: >-
     Developed with Next.js using Static Site Generation. Dynamic pages for
     projects and blog posts. Blog posts written in markdown and rendered with
     react-markdown. Framer motion for the "eye candy".
@@ -18,19 +18,6 @@
 # Portfolio-Blog website
 
 <small>React, Next.js, Markdown, Sass</small>
-
-  <div className='mb-100'>
-    <div className={classes.projectLinks}>
-        <a href="https://github.com/renebitter/portfolio" target='_blank' rel='noreferrer'>
-          <i className='fab fa-github'></i>
-          Github
-        </a>
-        <a href="https://renebitter.github.io/portfolio" target='_blank' rel='noreferrer'>
-          <i className='fas fa-link'></i>
-          Website
-        </a>
-    </div>
-  </div>
 
 ## Description
 
