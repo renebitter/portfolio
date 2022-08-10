@@ -22,21 +22,25 @@ const dropIn = {
 
 const Modal = (props) => {
   return (
-    <motion.div
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className={classes.backdrop}
-      onClick={props.onClose}>
-      <motion.div
-        onClick={(e) => e.stopPropagation()}
-        variants={dropIn}
-        initial='hidden'
-        animate='visible'
-        exit='exit'>
-        <ContactModal {...props} />
-      </motion.div>
-    </motion.div>
+    <>
+      {props.contact && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className={classes.backdrop}
+          onClick={props.onClose}>
+          <motion.div
+            onClick={(e) => e.stopPropagation()}
+            variants={dropIn}
+            initial='hidden'
+            animate='visible'
+            exit='exit'>
+            <ContactModal {...props} />
+          </motion.div>
+        </motion.div>
+      )}
+    </>
   );
 };
 export default Modal;

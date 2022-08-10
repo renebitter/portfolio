@@ -11,6 +11,56 @@
 
   small {
     color: var(--text-tertiary);
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    border-radius: 5px;
+    padding: 25px;
+    background-color: var(--background-card);
+    transition: background 1s;
+    border: 1px solid var(--border-card);
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    time {
+      color: var(--text-tertiary);
+    }
+
+    .cardAction {
+      display: flex;
+      flex-direction: row;
+      margin-top: auto;
+
+      a {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .description {
+    max-width: 1000px;
+    border-radius: 5px;
+    padding: 25px;
+    background-color: var(--background-card);
+    transition: background 1s;
+    border: 1px solid var(--border-card);
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .card {
+      margin-bottom: unset;
+    }
   }
 
   .projectLinks {

@@ -26,6 +26,36 @@
         border-radius: 50%;
       }
     }
+    .quote {
+      text-align: center;
+      margin-top: 25px;
+      font-style: italic;
+      position: relative;
+
+      .tooltip {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+        width: 340px;
+        background-color: var(--background-card);
+        border: 1px solid var(--border-card);
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -170px;
+      }
+    }
+    .quote:hover {
+      .tooltip {
+        visibility: visible;
+      }
+    }
   }
 
   @media only screen and (min-width: 1000px) {

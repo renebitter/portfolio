@@ -4,10 +4,9 @@ import FeaturedProjects from '../components/projects/featuredProjects';
 import About from '../components/home/about';
 import FeaturedPosts from '../components/posts/featuredPosts';
 import { getFeaturedPosts } from '../util/posts-util';
-import {
-  getFeaturedProjects,
-  getNonFeaturedProjects,
-} from '../util/projects-util';
+import { getFeaturedProjects } from '../util/projects-util';
+
+// TODO: rename posts to featuredPosts
 
 export default function Home(props) {
   return (
@@ -30,13 +29,11 @@ export default function Home(props) {
 export const getStaticProps = () => {
   const featuredPosts = getFeaturedPosts();
   const featuredProjects = getFeaturedProjects();
-  const nonFeaturedProjects = getNonFeaturedProjects();
 
   return {
     props: {
       posts: featuredPosts,
       featuredProjects: featuredProjects,
-      nonFeaturedProjects: nonFeaturedProjects,
     },
   };
 };

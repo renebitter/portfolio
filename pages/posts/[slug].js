@@ -3,13 +3,15 @@ import PostContent from '../../components/posts/postContent';
 import { getPostData, getPostsFiles } from '../../util/posts-util';
 
 const PostDetailPage = (props) => {
+  const { post, currentTheme } = props;
+
   return (
     <>
       <Head>
-        <title>{props.post.title}</title>
-        <meta name='description' content={props.post.excerpt} />
+        <title>{post.title}</title>
+        <meta name='description' content={post.excerpt} />
       </Head>
-      <PostContent post={props.post} currentTheme={props.currentTheme} />
+      <PostContent post={post} currentTheme={currentTheme} />
     </>
   );
 };
