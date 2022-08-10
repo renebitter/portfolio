@@ -1,5 +1,5 @@
 ---
-  title: Message Logger App - MERN Fullstack
+  title: Message Logger App (MERN Fullstack)
   tech:
     - React
     - Redux

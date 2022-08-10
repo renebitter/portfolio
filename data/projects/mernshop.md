@@ -1,5 +1,5 @@
 ---
-  title: eCommerce website - MERN Fullstack
+  title: eCommerce website (MERN Fullstack)
   tech:
     - React
     - Redux

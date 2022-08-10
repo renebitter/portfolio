@@ -1,5 +1,5 @@
 ---
-  title: Portfolio-Blog website
+  title: Portfolio-Blog
   tech:
     - React
     - Next.js

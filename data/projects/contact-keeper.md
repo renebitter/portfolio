@@ -1,5 +1,5 @@
 ---
-  title: Contact Keeper - MERN Fullstack
+  title: Contact Keeper (MERN Fullstack)
   tech:
     - React
     - MongoDB
