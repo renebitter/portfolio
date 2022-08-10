@@ -9,6 +9,14 @@
   flex-direction: column;
   min-height: 260px;
 
+  .image {
+    display: flex;
+    justify-content: center;
+    img {
+      border-radius: 4px;
+    }
+  }
+
   .placeholderContainer {
     margin: 20px 0;
     width: 100%;
@@ -40,18 +48,17 @@
   h4 {
     margin: 0;
     color: var(--text-secondary);
+    text-align: center;
   }
 
   small {
     color: var(--text-tertiary);
-  }
-
-  .info {
-    margin-top: auto;
+    text-align: center;
   }
 
   .projectLinks {
     margin-top: auto;
+    font-size: 0.9rem;
     a {
       margin-right: 15px;
       color: var(--accent);
@@ -72,22 +79,10 @@
 
   @media only screen and (min-width: 768px) {
     margin-bottom: unset;
-    .placeholderContainer {
-      max-height: 300px;
-      .placeholder {
-        width: 300px;
-        height: 300px;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 1020px) {
-    .placeholderContainer {
-      max-height: 400px;
-    }
     .projectLinks {
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
   }
 }

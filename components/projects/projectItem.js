@@ -13,56 +13,55 @@ const ProjectItem = (props) => {
       exit={{ scale: 0.1 }}
       layout
       className={classes.card}>
-      <div className={classes.cardContent}>
-        <h4>{project.title}</h4>
-        <small className='mb-10 d-block'>
-          {Array.isArray(project.tech) ? project.tech.join(', ') : project.tech}
-        </small>
+      <Link href={`/projects/${project.slug}`}>
+        <a>
+          <div className={classes.cardContent}>
+            <h4>{project.title}</h4>
+            <small className='mb-10 d-block'>
+              {Array.isArray(project.tech)
+                ? project.tech.join(', ')
+                : project.tech}
+            </small>
 
-        {project.image ? (
-          <div>
-            <Image
-              src={`../../portfolio/images/projects/${project.image}`}
-              width={620}
-              height={470}
-              alt=''
-            />
+            {project.image ? (
+              <div className={classes.image}>
+                <Image
+                  src={`../../portfolio/images/projects/${project.image}`}
+                  width={320}
+                  height={220}
+                  alt=''
+                />
+              </div>
+            ) : (
+              <div className={classes.placeholderContainer}>
+                <div className={classes.placeholder}>.</div>
+              </div>
+            )}
           </div>
-        ) : (
-          <div className={classes.placeholderContainer}>
-            <div className={classes.placeholder}>.</div>
-            {/* <Image
-              src={`../../portfolio/images/projects/typescript.webp`}
-              width={620}
-              height={470}
-              alt=''
-            /> */}
-          </div>
+        </a>
+      </Link>
+
+      <p>{project.description}</p>
+
+      <div className={classes.projectLinks}>
+        {project.githubLink && (
+          <a href={project.githubLink} target='_blank' rel='noreferrer'>
+            <i className='fab fa-github'></i>
+            Github
+          </a>
         )}
-      </div>
-
-      <div className={classes.info}>
-        <p>{project.description}</p>
-        <div className={classes.projectLinks}>
-          {project.githubLink && (
-            <a href={project.githubLink} target='_blank' rel='noreferrer'>
-              <i className='fab fa-github'></i>
-              Github
-            </a>
-          )}
-          {project.liveLink && (
-            <a href={project.liveLink} target='_blank' rel='noreferrer'>
-              <i className='fas fa-link'></i>
-              Website
-            </a>
-          )}
-          <Link href={`/projects/${project.slug}`}>
-            <a>
-              <i className='fa fa-circle-info'></i>
-              Project details
-            </a>
-          </Link>
-        </div>
+        {project.liveLink && (
+          <a href={project.liveLink} target='_blank' rel='noreferrer'>
+            <i className='fas fa-link'></i>
+            Website
+          </a>
+        )}
+        <Link href={`/projects/${project.slug}`}>
+          <a>
+            <i className='fa fa-circle-info'></i>
+            Details
+          </a>
+        </Link>
       </div>
     </motion.div>
   );
