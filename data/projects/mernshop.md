@@ -70,10 +70,6 @@
       description: User profile order delivered.
 ---
 
-# eCommerce website - MERN Fullstack
-
-<small>React, Redux, MongoDB, Node, Express, Bootstrap</small>
-
 ## Description
 
 Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.
