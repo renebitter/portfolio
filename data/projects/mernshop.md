@@ -4,7 +4,7 @@ date: '2022-04-03'
 image: mernshop.webp
 excerpt: 'Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.'
 isFeatured: true
-tech: ['Next.js', 'React', 'Redux', 'MongoDB', 'Node', 'Express', 'Bootstrap']
+tech: ['React', 'Redux', 'MongoDB', 'Node', 'Express', 'Bootstrap']
 liveLink: 'https://mernshop-99.herokuapp.com/'
 githubLink: 'https://github.com/renebitter/mernshop'
 screenshots:
@@ -91,7 +91,7 @@ screenshots:
 
 # eCommerce website - MERN Fullstack
 
-<small>Next.js, React, Redux, MongoDB, Node, Express, Bootstrap</small>
+<small>React, Redux, MongoDB, Node, Express, Bootstrap</small>
 
 <i className='fab fa-github'>[ Github](https://github.com/renebitter/mernshop)</i>
 <br />
