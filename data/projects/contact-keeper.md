@@ -9,6 +9,7 @@
   description: This is a MERN Fullstack project with authentication and CRUD functionality.
   liveLink: https://contactkeeper53773.herokuapp.com/
   githubLink: https://github.com/renebitter/contact_keeper
+  isFeatured: false
 ---
 
 ## Description

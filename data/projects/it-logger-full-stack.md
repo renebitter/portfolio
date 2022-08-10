@@ -11,6 +11,7 @@
     Functionalities: Add/delete logs & users; list logs/users
   liveLink: https://itlogger-04360.herokuapp.com/
   githubLink: https://github.com/renebitter/it-logger-full-stack
+  isFeatured: false
 ---
 
 ## Description

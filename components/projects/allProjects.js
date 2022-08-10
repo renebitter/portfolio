@@ -37,12 +37,13 @@ const AllProjects = (props) => {
   let filteredProjects;
 
   if (filter === 'all') {
-    filteredProjects = projects;
+    filteredProjects = projects.sort((a, b) => b.isFeatured - a.isFeatured);
   } else {
     filteredProjects = projects.filter((project) =>
       project.tech.includes(filter)
     );
   }
+
   //TODO: Add filteredProjects.length to respective btns for qty indication
 
   return (
