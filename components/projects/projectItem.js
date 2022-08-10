@@ -18,38 +18,51 @@ const ProjectItem = (props) => {
         <small className='mb-10 d-block'>
           {Array.isArray(project.tech) ? project.tech.join(', ') : project.tech}
         </small>
-        {project.image && (
+
+        {project.image ? (
           <div>
             <Image
               src={`../../portfolio/images/projects/${project.image}`}
-              width={665}
-              height={460}
+              width={620}
+              height={470}
               alt=''
             />
           </div>
+        ) : (
+          <div className={classes.placeholderContainer}>
+            <div className={classes.placeholder}>.</div>
+            {/* <Image
+              src={`../../portfolio/images/projects/typescript.webp`}
+              width={620}
+              height={470}
+              alt=''
+            /> */}
+          </div>
         )}
-        <p>{project.description}</p>
       </div>
 
-      <div className={classes.projectLinks}>
-        {project.githubLink && (
-          <a href={project.githubLink} target='_blank' rel='noreferrer'>
-            <i className='fab fa-github'></i>
-            Github
-          </a>
-        )}
-        {project.liveLink && (
-          <a href={project.liveLink} target='_blank' rel='noreferrer'>
-            <i className='fas fa-link'></i>
-            Website
-          </a>
-        )}
-        <Link href={`/projects/${project.slug}`}>
-          <a>
-            <i className='fa fa-circle-info'></i>
-            Project details
-          </a>
-        </Link>
+      <div className={classes.info}>
+        <p>{project.description}</p>
+        <div className={classes.projectLinks}>
+          {project.githubLink && (
+            <a href={project.githubLink} target='_blank' rel='noreferrer'>
+              <i className='fab fa-github'></i>
+              Github
+            </a>
+          )}
+          {project.liveLink && (
+            <a href={project.liveLink} target='_blank' rel='noreferrer'>
+              <i className='fas fa-link'></i>
+              Website
+            </a>
+          )}
+          <Link href={`/projects/${project.slug}`}>
+            <a>
+              <i className='fa fa-circle-info'></i>
+              Project details
+            </a>
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
