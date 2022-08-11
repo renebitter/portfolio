@@ -8,9 +8,7 @@
     - Express
     - Bootstrap
   description: >-
-    Fully functional e-commerce website including pages from product listing to
-    payment and admin area with CRUD functionality for users, products and
-    orders. Authentication handled with JWT. Redux for state management.
+    Fully functional e-commerce website. Auth (JWT), payment integration, admin area with CRUD and Redux.
   liveLink: https://mernshop-99.herokuapp.com/
   githubLink: https://github.com/renebitter/mernshop
   image: mernshop.webp
@@ -84,9 +82,42 @@ state management with Redux in the frontend.
 <br />
 Explain redux usage...
 
+<!-- TODO: Explain redux usage...-->
+
 ## Structure
 
-See below the diagrams for both backend and frontend. Some code was omitted for simplicity matter (e.g. orderController).
+See below the diagrams for both frontend and backend. Some code was omitted for simplicity matter (e.g. orderController).
+
+### Frontend Diagram
+
+<iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/PMxfFafALUS8a2DTdF6ogt"></iframe>
+<br />
+
+#### Store
+
+Combines all reducers and apply thunk (middleware that allows
+you to return functions).
+
+#### Constants
+
+Just holds the constants names.
+
+#### Actions
+
+Explain... Fetches API and dispatches...
+
+#### Reducers
+
+Explain... Takes previous state and action, and returns next
+state
+
+#### Screens
+
+useDispatch & useSelector from &apos;react-redux&apos;
+
+#### Components
+
+Explain...
 
 ### Backend Diagram
 
@@ -137,32 +168,3 @@ Generates a token which is called from the userController.
 
 Defines the DB schema for a given model. userModal.js also
 uses bcrypt to compare and hash passwords.
-
-### Frontend Diagram
-
-<iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/PMxfFafALUS8a2DTdF6ogt"></iframe>
-<br />
-
-#### Store
-
-Combines all reducers and apply thunk (middleware that allows
-you to return functions).
-
-#### Constants
-
-Just holds the constants names.
-
-#### Actions
-
-Explain... Fetches API and dispatches...
-
-#### Reducers
-
-Explain... Takes previous state and action, and returns next
-state
-
-#### Screens
-
-useDispatch & useSelector from &apos;react-redux&apos;
-
-<!-- Screenshots -->

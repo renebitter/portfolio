@@ -15,6 +15,8 @@ tech: ['Next.js']
 
 ##### 2022-06-23
 
+Update: Since July 27th, this procedure can be done completely by github without a third party solution. [github.blog](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/)
+
 ## Introduction
 
 I've wanted to build a cool, or at least presentable, Portfolio-Blog for a while now. Since I've been working a lot with Next.js lately, I figured it would be a great idea to build this portfolio using Next.js instead of some plain html/css/js. And since I didn't want to pay for hosting just right now, Github Pages should do the trick.

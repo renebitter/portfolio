@@ -15,4 +15,4 @@
 
 ## Description
 
-Next planned project.
+This should be a remake of the [<ins>mernshop</ins>](/portfolio/projects/mernshop) project but mainly using Next.js and Typescript.

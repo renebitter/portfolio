@@ -51,9 +51,20 @@ const ProjectContent = (props) => {
               : project.tech}
           </small>
 
+          {project.image && (
+            <div className={classes.projectImage}>
+              <Image
+                src={`../../portfolio/images/projects/${project.image}`}
+                width={500}
+                height={360}
+                alt=''
+              />
+            </div>
+          )}
+
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
 
-          {project.screenshots ? (
+          {project.screenshots && (
             <div className='mb-50'>
               <h2>Screenshots</h2>
               <Swiper
@@ -77,17 +88,6 @@ const ProjectContent = (props) => {
                 ))}
               </Swiper>
             </div>
-          ) : (
-            project.image && (
-              <div className={classes.projectImage}>
-                <Image
-                  src={`../../portfolio/images/projects/${project.image}`}
-                  width={500}
-                  height={360}
-                  alt=''
-                />
-              </div>
-            )
           )}
         </div>
       </div>
