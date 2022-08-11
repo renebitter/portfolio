@@ -93,6 +93,49 @@ See below the diagrams for both frontend and backend. Some code was omitted for 
 Combines all reducers and apply thunk (middleware that allows
 you to return functions).
 
+<details>
+
+  <summary>
+    <ins>View the code</ins>
+    <span>
+      <i class="fa-solid fa-angle-down"></i>
+    </span>
+  </summary>
+
+```js
+const reducer = combineReducers({
+  productList: productListReducer,
+  //followed by all other reducers...
+});
+
+const cartItemsFromStorage = localStorage.getItem('cartItems')
+  ? JSON.parse(localStorage.getItem('cartItems'))
+  : [];
+
+//followed by other localStorage variables...
+
+const initialState = {
+  cart: {
+    cartItems: cartItemsFromStorage,
+    shippingAddress: shippingAddressFromStorage,
+  },
+  userLogin: { userInfo: userInfoFromStorage },
+};
+
+const middleware = [thunk];
+
+const store = createStore(
+  reducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(...middleware))
+);
+
+export default store;
+```
+
+</details>
+<br />
+
 #### Constants
 
 Just holds the constants names. The cases are:
@@ -105,6 +148,15 @@ RESET<br />
 #### Actions
 
 Using async try/catch it fetches APIs and dispatches a type (e.g. REQUEST, SUCCESS, FAIL, RESET) that hits a Switch Case in the Reducer.
+
+<details>
+
+  <summary>
+    <ins>View the code</ins>
+    <span>
+      <i class="fa-solid fa-angle-down"></i>
+    </span>
+  </summary>
 
 ```jsx
 export const listProducts =
@@ -135,9 +187,21 @@ export const listProducts =
   };
 ```
 
+</details>
+<br />
+
 #### Reducers
 
 Takes previous state and action with its Switch Case and returns next state.
+
+<details>
+
+  <summary>
+    <ins>View the code</ins>
+    <span>
+      <i class="fa-solid fa-angle-down"></i>
+    </span>
+  </summary>
 
 ```jsx
 export const productListReducer = (state = { products: [] }, action) => {
@@ -158,6 +222,9 @@ export const productListReducer = (state = { products: [] }, action) => {
   }
 };
 ```
+
+</details>
+<br />
 
 #### Thunk
 

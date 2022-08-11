@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {
-  darcula,
+  atomDark,
   solarizedlight,
 } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
@@ -30,13 +30,15 @@ const ProjectContent = (props) => {
         <>
           {currentTheme === 'dark' ? (
             <SyntaxHighlighter
+              showLineNumbers
               language={language}
-              style={darcula}
+              style={atomDark}
               // eslint-disable-next-line react/no-children-prop
               children={children}
             />
           ) : (
             <SyntaxHighlighter
+              showLineNumbers
               language={language}
               style={solarizedlight}
               // eslint-disable-next-line react/no-children-prop

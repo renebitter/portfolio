@@ -16,6 +16,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+pre {
+  span {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

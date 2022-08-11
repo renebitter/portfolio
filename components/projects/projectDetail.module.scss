@@ -86,4 +86,22 @@
       color: var(--text-primary);
     }
   }
+
+  details > summary span {
+    transition: all 0.3s;
+    margin-left: 5px;
+  }
+
+  details[open] summary span {
+    transform: rotate(-180deg);
+  }
+
+  summary {
+    display: flex;
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
 }
