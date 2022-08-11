@@ -7,7 +7,7 @@ import {
 } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import Image from 'next/image';
-import classes from './projectDetail.module.scss';
+import classes from './projectContent.module.scss';
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
