@@ -77,12 +77,7 @@ Fully functional e-commerce website including pages from product listing to paym
 This is a complex project both in the backend and frontend.
 Besides all route and controller logic with authentication, CRUD
 and so on in the backend, my main takeaway for this project is the
-state management with Redux in the frontend.
-<br />
-<br />
-Explain redux usage...
-
-<!-- TODO: Explain redux usage...-->
+state management with Redux in the frontend which is depicted in the diagram below. Note to self: for the next project using state management I'll try to keep a cleaner Page/Component/State separation if possible.
 
 ## Structure
 
@@ -100,24 +95,82 @@ you to return functions).
 
 #### Constants
 
-Just holds the constants names.
+Just holds the constants names. The cases are:
+<br />
+REQUEST<br />
+SUCCESS<br />
+FAIL<br />
+RESET<br />
 
 #### Actions
 
-Explain... Fetches API and dispatches...
+Using async try/catch it fetches APIs and dispatches a type (e.g. REQUEST, SUCCESS, FAIL, RESET) that hits a Switch Case in the Reducer.
+
+```jsx
+export const listProducts =
+  (keyword = '', pageNumber = '') =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: PRODUCT_LIST_REQUEST,
+      });
+
+      const { data } = await axios.get(
+        `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+      );
+
+      dispatch({
+        type: PRODUCT_LIST_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: PRODUCT_LIST_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+    }
+  };
+```
 
 #### Reducers
 
-Explain... Takes previous state and action, and returns next
-state
+Takes previous state and action with its Switch Case and returns next state.
+
+```jsx
+export const productListReducer = (state = { products: [] }, action) => {
+  switch (action.type) {
+    case PRODUCT_LIST_REQUEST:
+      return { loading: true, products: [] };
+    case PRODUCT_LIST_SUCCESS:
+      return {
+        loading: false,
+        products: action.payload.products,
+        pages: action.payload.pages,
+        page: action.payload.page,
+      };
+    case PRODUCT_LIST_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+```
+
+#### Thunk
+
+Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling actions that might not be synchronous, for example, using axios to send a GET request as seen in the API call from Actions.
 
 #### Screens
 
-useDispatch & useSelector from &apos;react-redux&apos;
+useDispatch & useSelector from &apos;react-redux&apos;.<br />
+useDispatch will trigger the Action and useSelector will receive the state.
 
 #### Components
 
-Explain...
+Some components also use Redux.
 
 ### Backend Diagram
 

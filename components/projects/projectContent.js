@@ -1,5 +1,10 @@
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {
+  darcula,
+  solarizedlight,
+} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import Image from 'next/image';
 import classes from './projectDetail.module.scss';
@@ -13,8 +18,35 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const ProjectContent = (props) => {
-  const { project } = props;
+  const { project, currentTheme } = props;
   const content = project.content;
+
+  const customRenderers = {
+    code(code) {
+      const { className, children } = code;
+      const language = className.split('-')[1]; // className is something like language-js => We need the "js" part here
+
+      return (
+        <>
+          {currentTheme === 'dark' ? (
+            <SyntaxHighlighter
+              language={language}
+              style={darcula}
+              // eslint-disable-next-line react/no-children-prop
+              children={children}
+            />
+          ) : (
+            <SyntaxHighlighter
+              language={language}
+              style={solarizedlight}
+              // eslint-disable-next-line react/no-children-prop
+              children={children}
+            />
+          )}
+        </>
+      );
+    },
+  };
 
   return (
     <div className={classes.projectDetail}>
@@ -62,7 +94,11 @@ const ProjectContent = (props) => {
             </div>
           )}
 
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+          <ReactMarkdown
+            components={customRenderers}
+            rehypePlugins={[rehypeRaw]}>
+            {content}
+          </ReactMarkdown>
 
           {project.screenshots && (
             <div className='mb-50'>
