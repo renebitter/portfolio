@@ -228,16 +228,16 @@ export const productListReducer = (state = { products: [] }, action) => {
 
 #### Thunk
 
-Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling actions that might not be synchronous, for example, using axios to send a GET request as seen in the API call from Actions.
+Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling asynchronous actions like using axios to send a GET request as seen in the API call from the Actions section above.
 
 #### Screens
 
-useDispatch & useSelector from &apos;react-redux&apos;.<br />
-useDispatch will trigger the Action and useSelector will receive the state.
+useDispatch & useSelector are both Redux Hooks.<br />
+useDispatch will trigger the action and useSelector will receive the state.
 
 #### Components
 
-Some components also use Redux.
+Some components also use Redux, like ProductCarousel and Header.
 
 ### Backend Diagram
 
