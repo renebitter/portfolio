@@ -19,6 +19,15 @@
     color: var(--text-tertiary);
   }
 
+  strong {
+    background: #cecece;
+    padding: 0 4px;
+    border-radius: 4px;
+    color: black;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
   .card {
     border-radius: 5px;
     padding: 25px;
@@ -87,6 +96,7 @@
     }
   }
 
+  //Code collapse
   details > summary span {
     transition: all 0.3s;
     margin-left: 5px;
@@ -98,6 +108,7 @@
 
   summary {
     display: flex;
+    width: 100px;
     cursor: pointer;
   }
 
