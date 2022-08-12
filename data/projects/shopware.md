@@ -16,7 +16,7 @@
 
 Shopware is a modular, highly customizable open-source e-commerce platform.
 
-I worked on the development of [<ins>Shopware 6 source code</ins>](https://github.com/shopware/platform) and many other Shopware 5 and 6 projects for mid and large size B2B and B2C clients in Germany. My work consisted in developing and testing the Frontend using the template engines Smarty (SW5) and Twig (SW6) as well as jQuery, ES6, Bootstrap, LESS and SASS.
+I worked on the development of [<ins>Shopware 6 source code</ins>](https://github.com/shopware/platform) and many other Shopware 5 and 6 projects for mid and large size B2B and B2C clients in Germany. My work consisted in developing and testing the Frontend using the template engines Smarty (SW5) and Twig (SW6) as well as jQuery, ES6, Bootstrap, LESS and SASS. Docker and Vagrant for local development.
 
 Some of the shops I worked on:<br/>
 [<ins>krieg-online.de</ins>](https://krieg-online.de/)<br/>
