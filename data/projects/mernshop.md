@@ -136,14 +136,13 @@ export default store;
 </details>
 <br />
 
+#### Thunk
+
+Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling asynchronous actions like using axios to send a GET request as seen in the API call from the Actions section above.
+
 #### Constants
 
-Just holds the constants names. The cases are:
-<br />
-REQUEST<br />
-SUCCESS<br />
-FAIL<br />
-RESET<br />
+Just holds the constants names. The cases are: REQUEST, SUCCESS, FAIL, RESET.
 
 #### Actions
 
@@ -225,10 +224,6 @@ export const productListReducer = (state = { products: [] }, action) => {
 
 </details>
 <br />
-
-#### Thunk
-
-Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling asynchronous actions like using axios to send a GET request as seen in the API call from the Actions section above.
 
 #### Screens
 
