@@ -96,9 +96,9 @@ you to return functions).
 <details>
 
   <summary>
-    <ins>View the code</ins>
+    <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -151,9 +151,9 @@ Using async try/catch it fetches APIs and dispatches a type (e.g. REQUEST, SUCCE
 <details>
 
   <summary>
-    <ins>View the code</ins>
+    <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -196,9 +196,9 @@ Takes previous state and action with its Switch Case and returns next state.
 <details>
 
   <summary>
-    <ins>View the code</ins>
+    <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 

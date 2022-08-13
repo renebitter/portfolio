@@ -49,7 +49,7 @@ Gets static props for featuredPosts and featuredProjects and holds components of
   <summary>
     <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -96,7 +96,7 @@ Component, pageProps
   <summary>
     <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -135,7 +135,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
   <summary>
     <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -173,7 +173,7 @@ getStaticProps for all projects and sends props to AllProjects component.
   <summary>
     <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -215,7 +215,7 @@ getProjectsFiles() gets all markdown files in the data directory. slugs maps thr
   <summary>
     <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
@@ -273,7 +273,7 @@ ProjectContent explanation...
   <summary>
     <ins>View code</ins>
     <span>
-      <i class="fa-solid fa-angle-down"></i>
+      <i class="fa-solid fa-angle-right"></i>
     </span>
   </summary>
 
