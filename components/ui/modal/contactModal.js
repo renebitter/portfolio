@@ -76,7 +76,7 @@ function ContactModal(props) {
           <i className='fa fa-xmark'></i>
         </a>
 
-        <h2>Say hi!</h2>
+        <h2>Contact me</h2>
 
         <form
           id='contactForm'
