@@ -11,11 +11,6 @@ Dark mode also applies to blog post's preformatted text code.
 Third party static contact form (formspree).
 
 Todo:
-
-- Add filter to posts page
-- Add images for projects and posts small cards
-- Full project descriptions / Finish Layout
-
 - Dark mode / useLocalStorage
 - Fix/Add animation to mobile navbar (background when open)
 - Parallax? (About me image)
