@@ -16,11 +16,14 @@
 
 ## Description
 
-Developed with Next.js using Static Site Generation. Dynamic pages for
-projects and blog posts. Blog posts and project details written in markdown and rendered with
-react-markdown. Framer motion, AOS and Swiper for the "eye candy".
+Personal portfolio and blog website.
 
-\* Keep in mind that some of the code in the snippets has been omitted. Updates on the projects code may occur without updating this description.
+- Developed with Next.js using Static Site Generation.
+- Dynamic pages for projects and blog posts.
+- Blog posts and project details written in markdown and rendered with
+  react-markdown.
+- Framer motion, AOS and Swiper for the "eye candy".
+- Deployed with ["Deploy to GitHub Pages"](github.com/marketplace/actions/deploy-to-github-pages).
 
 ## Key takeaways
 
@@ -89,8 +92,6 @@ export const getStaticProps = () => {
 
 Encapsulates the whole app making components like Navbar and Footer available on all pages. Sets a default theme and takes in a theme change from the Navbar component.
 
-Component, pageProps
-
 <details>
 
   <summary>
@@ -128,7 +129,7 @@ function MyApp({ Component, pageProps }) {
 
 #### \_document
 
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+Custom 'Document' adds fonts and optimizes loading for all pages. The Head component used in '\_document' is not the same as 'next/head'.
 
 <details>
 
@@ -147,7 +148,24 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          // <link />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='anonymous'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins&display=swap'
+            rel='stylesheet'
+          />
+
+          <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'
+            integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=='
+            crossOrigin='anonymous'
+            referrerPolicy='no-referrer'
+          />
         </Head>
         <body>
           <Main />
@@ -208,7 +226,9 @@ export const getStaticProps = (context) => {
 
 getStaticProps & getStaticPaths for all dynamic pages and sends props to ProjectContent component.
 
-getProjectsFiles() gets all markdown files in the data directory. slugs maps through it and removes the '.md' extension and uses the file name as the slug.
+getProjectsFiles() gets all markdown files in the data directory.
+
+'const slugs' maps through all markdown files and removes the '.md' extension and uses the file name as the slug.
 
 <details>
 
@@ -267,6 +287,8 @@ export default ProjectDetailPage;
 #### ProjectContent
 
 ProjectContent explanation...
+
+Renders the content you are currently reading form the markdown file and sets theme for code snippets with 'const customRenderers'
 
 <details>
 
