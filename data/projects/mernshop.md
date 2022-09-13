@@ -70,18 +70,25 @@
 
 ## Description
 
-Fully functional e-commerce website including pages from product listing to payment and admin area with CRUD functionality for users, products and orders. Authentication handled with JWT. Redux for state management.
+Fully functional and fullstack e-commerce website.
+
+- Includes pages from product listing, product detail page, to user login, payment, shipment, etc.
+- Admin area with CRUD functionality for users, products and orders.
+- Authentication handled with JWT.
+- Redux for state management.
+- MongoDB
 
 ## Key takeaways
 
 This is a complex project both in the backend and frontend.
 Besides all route and controller logic with authentication, CRUD
 and so on in the backend, my main takeaway for this project is the
-state management with Redux in the frontend which is depicted in the diagram below. Note to self: for the next project using state management I'll try to keep a cleaner Page/Component/State separation if possible.
+state management with Redux in the frontend which is depicted in the diagram below.
 
 ## Structure
 
-See below the diagrams for both frontend and backend. Some code was omitted for simplicity matter (e.g. orderController).
+See below the diagrams for both frontend and backend.
+<small>\* Some code/components were omitted for simplicity matter (e.g. orderController).</small>
 
 ### Frontend Diagram
 
