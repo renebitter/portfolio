@@ -36,25 +36,3 @@ See below the diagram for the project.
 <iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/1ABxrptfzwLarfi5YJKX2"></iframe>
 <br />
 <br />
-
-#### Context
-
-Combines all reducers and apply thunk (middleware that allows
-you to return functions).
-
-#### Constants
-
-Just holds the constants names.
-
-#### Actions
-
-Explain... Fetches API and dispatches...
-
-#### Reducers
-
-Explain... Takes previous state and action, and returns next
-state
-
-#### Screens
-
-useDispatch & useSelector from &apos;react-redux&apos;

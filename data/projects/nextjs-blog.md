@@ -9,6 +9,7 @@
     Blog posts written in markdown and rendered with react-markdown.
   liveLink: https://nextjs-blog-renebitter.vercel.app/
   githubLink: https://github.com/renebitter/nextjs-blog
+  image: blog.png
   isFeatured: false
 ---
 

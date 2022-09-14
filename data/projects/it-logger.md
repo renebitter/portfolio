@@ -10,13 +10,16 @@
     This is a MERN Fullstack + Redux project with authentication and CRUD functionality.
   liveLink: https://itlogger-04360.herokuapp.com/
   githubLink: https://github.com/renebitter/it-logger-full-stack
+  image: it-logger.png
   isFeatured: false
 ---
 
 ## Description
 
-This is a MERN + Redux project with authentication and CRUD functionality.
-Functionalities: Add/delete logs & users; list logs/users
+This is a fullstack MERN + Redux project with CRUD functionality.
+
+- Adds/deletes logs & users
+- Lists logs/users
 
 ## Key takeaways
 
@@ -28,28 +31,12 @@ See below the diagram for the project.
 
 ### Diagram
 
+### Frontend Diagram
+
+<iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/6HhUtBd9MPuW2Q5dRBwkGp"></iframe>
+
+### Backend Diagram
+
 <iframe style="border:none" width="100%" height="550" src="https://whimsical.com/embed/8nz7fA3xLm9Go5eATXQBxq"></iframe>
 <br />
 <br />
-
-#### Store
-
-Combines all reducers and apply thunk (middleware that allows
-you to return functions).
-
-#### Constants
-
-Just holds the constants names.
-
-#### Actions
-
-Explain... Fetches API and dispatches...
-
-#### Reducers
-
-Explain... Takes previous state and action, and returns next
-state
-
-#### Screens
-
-useDispatch & useSelector from &apos;react-redux&apos;
