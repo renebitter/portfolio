@@ -6,8 +6,7 @@
     - Markdown
     - Sass
   description: >-
-    Next.js (SSG). Projects and posts written in markdown and rendered with
-    react-markdown.
+    Written with Next.js (SSG) and Markdown.
   liveLink: https://renebitter.github.io/portfolio
   githubLink: https://github.com/renebitter/portfolio
   image: portfolio.jpg

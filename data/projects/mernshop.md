@@ -8,7 +8,7 @@
     - Express
     - Bootstrap
   description: >-
-    MERN Fullstack fully functional e-commerce website. Auth (JWT), payment integration, admin area with CRUD and Redux.
+    Fullstack e-commerce website using the MERN stack and Redux.
   liveLink: https://mernshop-99.herokuapp.com/
   githubLink: https://github.com/renebitter/mernshop
   image: mernshop.webp

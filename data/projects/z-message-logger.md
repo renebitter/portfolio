@@ -7,7 +7,7 @@
     - Node
     - Express
   description: >-
-    This is a MERN Fullstack + Redux project with authentication and CRUD functionality.
+    This is a fullstack MERN + Redux project with CRUD functionality.
   liveLink: https://itlogger-04360.herokuapp.com/
   githubLink: https://github.com/renebitter/it-logger-full-stack
   image: it-logger.png
@@ -16,7 +16,7 @@
 
 ## Description
 
-This is a fullstack MERN + Redux project with CRUD functionality.
+Fullstack MERN + Redux project with CRUD functionality.
 
 - Adds/deletes logs & users
 - Lists logs/users
