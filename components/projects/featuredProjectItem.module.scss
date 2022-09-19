@@ -5,9 +5,10 @@
   border-radius: 5px;
   padding: 25px;
   min-width: 100%;
+  min-height: 480px;
 
   h3 {
-    margin-bottom: 0;
+    margin: 0;
     color: var(--text-secondary);
   }
 
@@ -18,27 +19,12 @@
 
   .columnLeft {
     .description {
-      margin: 25px 0;
+      margin-top: 25px 0;
+      margin-bottom: 0;
     }
 
     .projectLinks {
-      margin-top: auto;
-      a {
-        margin-right: 15px;
-        color: var(--accent);
-        display: block;
-        padding: 15px 15px 15px 0;
-      }
-
-      a:hover {
-        color: var(--text-primary);
-      }
-
-      i {
-        width: 20px;
-        margin-right: 5px;
-        color: var(--text-primary);
-      }
+      display: none;
     }
   }
 
@@ -65,16 +51,54 @@
   }
 
   @media only screen and (min-width: 768px) {
+    min-height: unset;
+    position: relative;
+
+    .titleContainer {
+      position: absolute;
+      width: 100%;
+    }
+
+    .title {
+      width: 50%;
+      padding-right: 30px;
+    }
+
     .row {
       display: flex;
     }
 
     .columnLeft {
+      margin-top: 50px;
       order: 1;
       width: 50%;
       display: flex;
       flex-direction: column;
       padding-right: 25px;
+
+      .projectLinks {
+        display: flex;
+        margin-top: auto;
+        a {
+          color: var(--accent);
+          display: block;
+          padding: 15px 10px 15px 0;
+          font-size: 0.9rem;
+        }
+
+        a:last-child {
+          padding-right: 0;
+        }
+
+        a:hover {
+          color: var(--text-primary);
+        }
+
+        i {
+          width: 20px;
+          color: var(--text-primary);
+        }
+      }
     }
 
     .columnRight {
@@ -82,13 +106,6 @@
       width: 50%;
       margin: 0;
       margin-left: auto;
-    }
-  }
-
-  @media only screen and (min-width: 1020px) {
-    .projectLinks {
-      display: flex;
-      flex-direction: row;
     }
   }
 }

@@ -8,25 +8,31 @@ const FeaturedProjectItem = (props) => {
   return (
     <>
       <div className={classes.project}>
-        <div className='title'>
-          <h3>{project.title}</h3>
-          <small>
-            {Array.isArray(project.tech)
-              ? project.tech.join(', ')
-              : project.tech}
-          </small>
+        <div className={classes.titleContainer}>
+          <div className={classes.title}>
+            <h3>{project.title}</h3>
+            <small>
+              {Array.isArray(project.tech)
+                ? project.tech.join(', ')
+                : project.tech}
+            </small>
+          </div>
         </div>
 
         <div className={classes.row}>
           <div className={classes.columnRight}>
-            <div className={classes.card}>
-              <Image
-                src={`/portfolio/images/projects/${project.image}`}
-                width={600}
-                height={460}
-                alt={project.title}
-              />
-            </div>
+            <Link href={`/projects/${project.slug}`}>
+              <a>
+                <div className={classes.card}>
+                  <Image
+                    src={`/portfolio/images/projects/${project.image}`}
+                    width={600}
+                    height={460}
+                    alt={project.title}
+                  />
+                </div>
+              </a>
+            </Link>
           </div>
 
           <div className={classes.columnLeft}>

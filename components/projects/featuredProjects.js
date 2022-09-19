@@ -46,7 +46,7 @@ const FeaturedProjects = (props) => {
           </Swiper>
         </div>
 
-        <div data-aos='fade-up' className={classes.buttonWrapper}>
+        <div className={classes.buttonWrapper}>
           <Link href='/projects/'>
             <motion.button
               whileHover={{ scale: 1.1 }}

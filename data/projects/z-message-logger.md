@@ -1,5 +1,5 @@
 ---
-  title: Message Logger App (MERN Fullstack)
+  title: Message Logger App
   tech:
     - React
     - Redux
@@ -11,7 +11,7 @@
   liveLink: https://itlogger-04360.herokuapp.com/
   githubLink: https://github.com/renebitter/it-logger-full-stack
   image: it-logger.png
-  isFeatured: false
+  isFeatured: true
 ---
 
 ## Description

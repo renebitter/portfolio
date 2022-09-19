@@ -1,5 +1,5 @@
 ---
-  title: eCommerce website (MERN Fullstack)
+  title: eCommerce website
   tech:
     - React
     - Redux
@@ -8,7 +8,7 @@
     - Express
     - Bootstrap
   description: >-
-    Fully functional e-commerce website. Auth (JWT), payment integration, admin area with CRUD and Redux.
+    MERN Fullstack fully functional e-commerce website. Auth (JWT), payment integration, admin area with CRUD and Redux.
   liveLink: https://mernshop-99.herokuapp.com/
   githubLink: https://github.com/renebitter/mernshop
   image: mernshop.webp
