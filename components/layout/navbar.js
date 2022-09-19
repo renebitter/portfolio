@@ -86,7 +86,11 @@ const Navbar = (props) => {
                   showModalHandler();
                   closeNav();
                 }}>
-                <i className='fa fa-envelope'></i>
+                {showModal ? (
+                  <i className='fa fa-envelope-open'></i>
+                ) : (
+                  <i className='fa fa-envelope'></i>
+                )}
               </a>
               <a
                 href='#!'
