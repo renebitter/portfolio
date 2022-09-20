@@ -5,7 +5,7 @@ import Footer from '../components/layout/footer';
 import { useState, useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
