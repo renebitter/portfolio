@@ -1,5 +1,5 @@
 ---
-  title: Next.js Authentication (next-auth)
+  title: Next.js Authentication
   tech:
     - React
     - Next.js
