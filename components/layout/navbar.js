@@ -5,15 +5,14 @@ import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 
 const Navbar = (props) => {
+  const { theme } = props;
   const [navExpanded, setNavExpanded] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [showModal, setShowModal] = useState();
-  const [theme, setTheme] = useState('dark');
 
   function setThemeHandler() {
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    props.theme(newTheme);
+    props.newTheme(newTheme);
   }
 
   function showModalHandler() {

@@ -2,14 +2,23 @@ import '../styles/globals.scss';
 import Head from 'next/head';
 import Navbar from '../components/layout/navbar';
 import Footer from '../components/layout/footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState();
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }, [setTheme]);
+
   return (
     <>
       <div className='app' data-theme={theme}>
-        <Navbar theme={setTheme}>
+        <Navbar theme={theme} newTheme={setTheme}>
           <Head>
             <meta
               name='viewport'
