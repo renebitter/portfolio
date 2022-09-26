@@ -60,10 +60,15 @@
 
   @media only screen and (min-width: 1000px) {
     padding: 100px 25px;
+    min-height: 100vh;
 
     .container {
       max-width: 1200px;
       margin: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .row {
