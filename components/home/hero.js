@@ -40,7 +40,7 @@ const Hero = () => {
               I&apos;m a React Frontend Developer with experience in e-commerce.
             </h1>
             <p data-aos='fade-left' data-aos-delay='150'>
-              I&apos;m fluent in English{' '}
+              I&apos;m fluent in{' '}
               <span>
                 <Image
                   src='/portfolio/images/usa.png'
@@ -48,8 +48,8 @@ const Hero = () => {
                   width={16}
                   height={16}
                 />
-              </span>
-              , German{' '}
+              </span>{' '}
+              English,{' '}
               <span>
                 <Image
                   src='/portfolio/images/germany.png'
@@ -57,8 +57,8 @@ const Hero = () => {
                   width={16}
                   height={16}
                 />
-              </span>
-              , Portuguese{' '}
+              </span>{' '}
+              German,{' '}
               <span>
                 <Image
                   src='/portfolio/images/brazil.png'
@@ -67,7 +67,7 @@ const Hero = () => {
                   height={16}
                 />
               </span>{' '}
-              and Javascript{' '}
+              Portuguese and{' '}
               <span>
                 <Image
                   src='/portfolio/images/js.png'
@@ -75,8 +75,8 @@ const Hero = () => {
                   width={16}
                   height={16}
                 />
-              </span>
-              .
+              </span>{' '}
+              Javascript.
             </p>
             <div className={classes.socialMedia}>
               <a
