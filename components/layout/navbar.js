@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Modal from '../ui/modal/modal';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
+import ThemeSwitcher from './themeSwitcher';
 
 const Navbar = (props) => {
   const { theme } = props;
@@ -97,11 +98,7 @@ const Navbar = (props) => {
                   setThemeHandler();
                   closeNav();
                 }}>
-                {theme === 'light' ? (
-                  <i className='fa fa-moon'></i>
-                ) : (
-                  <i className='fa fa-sun'></i>
-                )}
+                <ThemeSwitcher />
               </a>
             </div>
           </nav>
