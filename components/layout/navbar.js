@@ -1,8 +1,8 @@
 import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
-import Modal from '../ui/modal/modal';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
+import Modal from '../ui/modal/modal';
 import ThemeSwitcher from './themeSwitcher';
 
 const Navbar = (props) => {
@@ -98,7 +98,7 @@ const Navbar = (props) => {
                   setThemeHandler();
                   closeNav();
                 }}>
-                <ThemeSwitcher />
+                <ThemeSwitcher theme={theme} />
               </a>
             </div>
           </nav>

@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ThemeSwitcher = () => {
-  const [isOn, setIsOn] = useState(false);
+const ThemeSwitcher = (props) => {
+  const { theme } = props;
+
   return (
-    <div
-      //   className='container'
-      //   data-darkmode={isOn}
-      onClick={() => setIsOn(!isOn)}>
+    <div>
       <motion.div layout className='handle'>
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.i
-            className={`fa ${isOn ? 'fa-moon' : 'fa-sun'}`}
-            key={isOn ? 'moon' : 'sun'}
+            className={`fa ${theme === 'light' ? 'fa-moon' : 'fa-sun'}`}
+            key={theme === 'light' ? 'moon' : 'sun'}
             initial={{ y: -30, opacity: 0, rotate: 50 }}
             animate={{
               y: 0,

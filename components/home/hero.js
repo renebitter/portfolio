@@ -37,7 +37,7 @@ const Hero = () => {
           <div className={classes.columnLeft}>
             <h3 data-aos='fade-left'>Hi, my name is Rene.</h3>
             <h1 data-aos='fade-right'>
-              I&apos;m a React Frontend Developer with experience in e-commerce.
+              I&apos;m a React Front End Developer experienced in e-commerce.
             </h1>
             <p data-aos='fade-left' data-aos-delay='150'>
               I&apos;m fluent in{' '}
