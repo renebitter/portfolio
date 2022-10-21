@@ -22,8 +22,8 @@ const About = () => {
             </h3>
             <p>
               My developer career started with a great emphasis on e-commerce as
-              a Shopware Frontend Developer and I even worked on the development
-              of <i className='fas fa-link'></i>{' '}
+              a Shopware Front End Developer and I even worked on the
+              development of <i className='fas fa-link'></i>{' '}
               <a
                 href='https://github.com/shopware/platform'
                 target='_blank'
