@@ -16,12 +16,9 @@ const FeaturedPosts = (props) => {
   return (
     <section className={`${classes.blog} mvh-100`} id='blog'>
       <div className={classes.container}>
-        <h2 data-aos='slide-right'>Blog</h2>
+        <h2 data-aos='slide-right'>Featured posts</h2>
 
         <div className={classes.galleryWrap}>
-          <h3 className={classes.galleryTitle} data-aos='fade-up'>
-            Featured posts
-          </h3>
           <div className={classes.gallery}>
             {posts !== null &&
               posts !== undefined &&
