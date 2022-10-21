@@ -11,11 +11,10 @@ const Path = (props) => (
   />
 );
 
-const MenuToggle = ({ toggle, toggleNav }) => (
+const MenuToggle = ({ toggleNav }) => (
   <button
     className={`${classes.icon} ${classes.iconMain}`}
     onClick={() => {
-      toggle();
       toggleNav();
     }}>
     <svg width='45' height='45' viewBox='0 0 23 23'>
