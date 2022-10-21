@@ -42,17 +42,21 @@
     background-color: transparent;
     border: none;
 
-    i {
+    i,
+    svg {
       font-size: 1.5rem;
       color: var(--text-secondary);
-      padding: 5px;
-    }
 
-    &.iconMain {
-      i {
-        font-size: 2.2rem;
+      padding: 5px;
+
+      path {
+        stroke: var(--text-secondary);
       }
     }
+  }
+
+  .iconMain {
+    height: 40px;
   }
 
   &.sticky {

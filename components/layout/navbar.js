@@ -1,15 +1,21 @@
 import classes from './navbar.module.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
+
 import Modal from '../ui/modal/modal';
 import ThemeSwitcher from './themeSwitcher';
+import MenuToggle from './menuToggle';
 
 const Navbar = (props) => {
   const { theme } = props;
   const [navExpanded, setNavExpanded] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [showModal, setShowModal] = useState();
+
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
+  // const { height } = useDimensions(containerRef);
 
   function setThemeHandler() {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -73,7 +79,13 @@ const Navbar = (props) => {
               </Link> */}
 
               <Link href='/projects'>
-                <a onClick={closeNav}>Projects</a>
+                <a
+                  onClick={() => {
+                    closeNav();
+                    toggleOpen();
+                  }}>
+                  Projects
+                </a>
               </Link>
 
               {/* <Link href='/#blog'>
@@ -81,11 +93,23 @@ const Navbar = (props) => {
               </Link> */}
 
               <Link href='/posts'>
-                <a onClick={closeNav}>Blog</a>
+                <a
+                  onClick={() => {
+                    closeNav();
+                    toggleOpen();
+                  }}>
+                  Blog
+                </a>
               </Link>
 
               <Link href='/#about'>
-                <a onClick={closeNav}>About me</a>
+                <a
+                  onClick={() => {
+                    closeNav();
+                    toggleOpen();
+                  }}>
+                  About me
+                </a>
               </Link>
             </div>
           </nav>
@@ -111,11 +135,20 @@ const Navbar = (props) => {
               <ThemeSwitcher theme={theme} />
             </button>
 
-            <button
+            {/* <button
               className={`${classes.icon} ${classes.iconMain}`}
               onClick={toggleNav}>
               <i className='fa fa-bars'></i>
-            </button>
+            </button> */}
+
+            <motion.div
+              className={classes.iconMain}
+              initial={false}
+              animate={isOpen ? 'open' : 'closed'}
+              // custom={height}
+              ref={containerRef}>
+              <MenuToggle toggle={() => toggleOpen()} toggleNav={toggleNav} />
+            </motion.div>
           </div>
         </div>
       </div>
