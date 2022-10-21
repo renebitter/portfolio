@@ -1,36 +1,33 @@
 import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
 import Modal from '../ui/modal/modal';
 import ThemeSwitcher from './themeSwitcher';
+import MenuToggle from './menuToggle';
 
 const Navbar = (props) => {
   const { theme } = props;
-  const [navExpanded, setNavExpanded] = useState(false);
+
   const [sticky, setSticky] = useState(false);
   const [showModal, setShowModal] = useState();
+
+  const [navExpanded, setNavExpanded] = useState(false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   function setThemeHandler() {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     props.newTheme(newTheme);
   }
 
-  function showModalHandler() {
-    setShowModal(true);
+  function toggleModal() {
+    setShowModal(!showModal);
   }
 
-  function closeModalHandler() {
-    setShowModal(false);
-  }
-
-  const toggleNav = () => {
+  function toggleNav() {
     setNavExpanded(!navExpanded);
-  };
-
-  const closeNav = () => {
-    setNavExpanded(false);
-  };
+    toggleOpen();
+  }
 
   function fixNavbar() {
     if (window.pageYOffset >= 100) {
@@ -68,48 +65,79 @@ const Navbar = (props) => {
             }
             id='navMenu'>
             <div className={classes.linkWrapper}>
-              <Link href='/#projects'>
-                <a onClick={closeNav}>Projects</a>
+              <Link href='/projects'>
+                <motion.a
+                  style={{ cursor: 'pointer' }}
+                  initial={{ opacity: 0, y: -30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  onClick={toggleNav}>
+                  Projects
+                </motion.a>
               </Link>
 
-              <Link href='/#blog'>
-                <a href='#blog' onClick={closeNav}>
+              <Link href='/posts'>
+                <motion.a
+                  style={{ cursor: 'pointer' }}
+                  initial={{ opacity: 0, y: -30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  onClick={toggleNav}>
                   Blog
-                </a>
+                </motion.a>
               </Link>
+
               <Link href='/#about'>
-                <a onClick={closeNav}>About</a>
+                <motion.a
+                  style={{ cursor: 'pointer' }}
+                  initial={{ opacity: 0, y: -30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
+                  onClick={toggleNav}>
+                  About me
+                </motion.a>
               </Link>
-              <a
-                href='#!'
-                onClick={() => {
-                  showModalHandler();
-                  closeNav();
-                }}>
-                {showModal ? (
-                  <i className='fa fa-envelope-open'></i>
-                ) : (
-                  <i className='fa fa-envelope'></i>
-                )}
-              </a>
-              <a
-                href='#!'
-                onClick={() => {
-                  setThemeHandler();
-                  closeNav();
-                }}>
-                <ThemeSwitcher theme={theme} />
-              </a>
             </div>
           </nav>
 
-          <button className={classes.icon} onClick={toggleNav}>
-            <i className='fa fa-bars'></i>
-          </button>
+          <div className={classes.navContainer}>
+            <motion.button
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className={classes.icon}
+              onClick={() => {
+                toggleModal();
+              }}>
+              {showModal ? (
+                <i className='fa fa-envelope-open'></i>
+              ) : (
+                <i className='fa fa-envelope'></i>
+              )}
+            </motion.button>
+
+            <motion.button
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className={classes.icon}
+              onClick={() => {
+                setThemeHandler();
+              }}>
+              <ThemeSwitcher theme={theme} />
+            </motion.button>
+
+            <motion.div
+              className={classes.iconMain}
+              initial={false}
+              animate={isOpen ? 'open' : 'closed'}>
+              <MenuToggle toggleNav={toggleNav} />
+            </motion.div>
+          </div>
         </div>
       </div>
       <AnimatePresence>
-        {showModal && <Modal contact onClose={closeModalHandler} />}
+        {showModal && <Modal contact onClose={toggleModal} />}
       </AnimatePresence>
       <main>{props.children}</main>
     </>
