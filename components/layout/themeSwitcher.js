@@ -4,7 +4,7 @@ const ThemeSwitcher = (props) => {
   const { theme } = props;
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter initial={false}>
       <motion.i
         className={`fa ${theme === 'light' ? 'fa-moon' : 'fa-sun'}`}
         key={theme === 'light' ? 'moon' : 'sun'}

@@ -68,44 +68,55 @@ const Navbar = (props) => {
             }
             id='navMenu'>
             <div className={classes.linkWrapper}>
-              <Link href='/#projects'>
+              {/* <Link href='/#projects'>
+                <a onClick={closeNav}>Projects</a>
+              </Link> */}
+
+              <Link href='/projects'>
                 <a onClick={closeNav}>Projects</a>
               </Link>
 
-              <Link href='/#blog'>
-                <a href='#blog' onClick={closeNav}>
-                  Blog
-                </a>
+              {/* <Link href='/#blog'>
+                <a onClick={closeNav}>Blog</a>
+              </Link> */}
+
+              <Link href='/posts'>
+                <a onClick={closeNav}>Blog</a>
               </Link>
+
               <Link href='/#about'>
-                <a onClick={closeNav}>About</a>
+                <a onClick={closeNav}>About me</a>
               </Link>
-              <a
-                href='#!'
-                onClick={() => {
-                  showModalHandler();
-                  closeNav();
-                }}>
-                {showModal ? (
-                  <i className='fa fa-envelope-open'></i>
-                ) : (
-                  <i className='fa fa-envelope'></i>
-                )}
-              </a>
-              <a
-                href='#!'
-                onClick={() => {
-                  setThemeHandler();
-                  closeNav();
-                }}>
-                <ThemeSwitcher theme={theme} />
-              </a>
             </div>
           </nav>
 
-          <button className={classes.icon} onClick={toggleNav}>
-            <i className='fa fa-bars'></i>
-          </button>
+          <div className={classes.navContainer}>
+            <button
+              className={classes.icon}
+              onClick={() => {
+                showModalHandler();
+              }}>
+              {showModal ? (
+                <i className='fa fa-envelope-open'></i>
+              ) : (
+                <i className='fa fa-envelope'></i>
+              )}
+            </button>
+
+            <button
+              className={classes.icon}
+              onClick={() => {
+                setThemeHandler();
+              }}>
+              <ThemeSwitcher theme={theme} />
+            </button>
+
+            <button
+              className={`${classes.icon} ${classes.iconMain}`}
+              onClick={toggleNav}>
+              <i className='fa fa-bars'></i>
+            </button>
+          </div>
         </div>
       </div>
       <AnimatePresence>
