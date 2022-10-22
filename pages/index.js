@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Hero from '../components/home/hero';
-import FeaturedProjects from '../components/projects/featuredProjects';
+import FeaturedProjects from '../components/home/featuredProjects/featuredProjects';
+import FeaturedPosts from '../components/home/featuredPosts';
 import About from '../components/home/about';
-import FeaturedPosts from '../components/posts/featuredPosts';
 import { getFeaturedPosts } from '../util/posts-util';
 import { getFeaturedProjects } from '../util/projects-util';
 

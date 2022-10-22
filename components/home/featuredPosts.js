@@ -1,5 +1,5 @@
 import classes from './featuredPosts.module.scss';
-import PostItem from './postItem';
+import PostItem from '../posts/postItem';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Aos from 'aos';

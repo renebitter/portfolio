@@ -1,6 +1,6 @@
 import '../styles/globals.scss';
 import Head from 'next/head';
-import Navbar from '../components/layout/navbar';
+import Navbar from '../components/layout/navbar/navbar';
 import Footer from '../components/layout/footer';
 import { useState, useEffect } from 'react';
 

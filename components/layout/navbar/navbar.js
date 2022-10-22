@@ -2,7 +2,7 @@ import classes from './navbar.module.scss';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AnimatePresence, motion, useCycle } from 'framer-motion';
-import Modal from '../ui/modal/modal';
+import Modal from '../../layout/modal/modal';
 import ThemeSwitcher from './themeSwitcher';
 import MenuToggle from './menuToggle';
 

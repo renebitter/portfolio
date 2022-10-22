@@ -1,7 +1,7 @@
 import classes from './hero.module.scss';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import Modal from '../ui/modal/modal';
+import Modal from '../layout/modal/modal';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { motion, AnimatePresence } from 'framer-motion';
