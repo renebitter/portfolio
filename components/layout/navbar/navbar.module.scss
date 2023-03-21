@@ -1,0 +1,149 @@
+.navbar {
+  z-index: 2;
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  transition: background 0.3s;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    background-color: var(--transparent-primary);
+    box-shadow: 0 6px 30px 2px rgb(0 0 0 / 3%), 0 3px 15px 1px rgb(0 0 0 / 2%),
+      0 1px 8px 1px rgb(0 0 0 / 1%);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+  }
+
+  .logo {
+    z-index: 3;
+    font-weight: bold;
+    background-color: #efe3cf;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+      0 1px 5px 0 rgb(0 0 0 / 20%);
+  }
+
+  .navMenu {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 0;
+    padding-top: 65px;
+
+    a {
+      font-size: 1.3rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    a:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .linkWrapper a:hover {
+      color: var(--text-tertiary);
+    }
+
+    &.responsive {
+      height: auto;
+      width: 100%;
+      display: block;
+      text-align: center;
+      right: 0;
+      background-color: var(--transparent-primary);
+
+      a {
+        display: block;
+        padding: 25px 0;
+      }
+    }
+  }
+
+  .navContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+
+      i,
+      svg {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+
+        padding: 5px;
+
+        path {
+          stroke: var(--text-secondary);
+        }
+      }
+    }
+
+    .iconMain {
+      height: 40px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: unset;
+    }
+
+    .navMenu {
+      height: auto;
+      display: flex;
+      width: 45%;
+      top: 0;
+      padding-top: 0;
+      position: static;
+
+      &.responsive {
+        width: 45%;
+        display: flex;
+        // position: unset;
+        background-color: transparent;
+      }
+
+      .linkWrapper {
+        padding: unset;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      a {
+        border-bottom: none;
+        filter: drop-shadow(0px 3px 2px rgb(0 0 0 / 15%));
+      }
+
+      a:first-child {
+        border-top: none;
+      }
+    }
+
+    .iconMain {
+      display: none;
+    }
+  }
+}

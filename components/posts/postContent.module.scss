@@ -1,0 +1,57 @@
+.postContent {
+  padding: 50px 15px;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text-secondary);
+  }
+
+  a {
+    color: var(--accent);
+  }
+
+  img {
+    max-width: 100%;
+    // &:first-child {
+    //   display: block;
+    //   margin: auto;
+    //   height: 400px;
+    // }
+  }
+
+  strong {
+    background: #cecece;
+    padding: 0 4px;
+    border-radius: 4px;
+    color: black;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  ol {
+    margin-bottom: 50px;
+  }
+
+  pre {
+    font-size: 0.8rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 100px 25px;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      text-align: center;
+    }
+
+    li {
+      margin-bottom: 35px;
+    }
+  }
+}

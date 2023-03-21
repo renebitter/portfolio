@@ -1,0 +1,36 @@
+.card {
+  border-radius: 5px;
+  padding: 25px;
+  background-color: var(--background-card);
+  transition: background 1s;
+  border: 1px solid var(--border-card);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+
+  h4 {
+    margin: 0;
+    color: var(--text-secondary);
+  }
+
+  time {
+    color: var(--text-tertiary);
+  }
+
+  .cardAction {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+
+    a {
+      color: var(--accent);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    margin-bottom: unset;
+  }
+}

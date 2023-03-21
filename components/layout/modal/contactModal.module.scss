@@ -1,0 +1,116 @@
+.contactModal {
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--background-card);
+  padding: 1rem;
+  overflow: auto;
+  z-index: 3;
+  position: fixed;
+  max-width: 1200px;
+  min-width: 340px;
+  max-height: 100vh;
+  min-height: 580px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .inputField {
+    margin: 25px 0;
+
+    label {
+      margin-bottom: 5px;
+      text-align: left;
+      display: block;
+    }
+
+    input,
+    textarea {
+      color: var(--text-primary);
+      background-color: transparent;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--text-secondary);
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid var(--text-secondary);
+      border-radius: 5px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+
+    textarea {
+      width: 100%;
+      height: 175px;
+    }
+  }
+
+  .action {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    i {
+      font-size: 3.4rem;
+      color: var(--background-secondary);
+    }
+
+    .sendLink {
+      align-self: center;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    min-width: 600px;
+    overflow: hidden;
+    padding: 2rem;
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      height: 425px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .inputField {
+      margin: 25px 0;
+      width: 100%;
+    }
+
+    .action {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.contactModalConfirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .linkedinLink {
+    i {
+      font-size: 4rem;
+    }
+  }
+
+  .confirmationButton {
+    button {
+      width: 100%;
+    }
+  }
+}

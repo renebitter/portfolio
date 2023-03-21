@@ -1,0 +1,111 @@
+.project {
+  background-color: var(--background-card);
+  transition: background 1s;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  padding: 25px;
+  min-width: 100%;
+  min-height: 480px;
+
+  h3 {
+    margin: 0;
+    color: var(--text-secondary);
+  }
+
+  small {
+    font-style: italic;
+    color: var(--text-tertiary);
+  }
+
+  .columnLeft {
+    .description {
+      margin-top: 25px 0;
+      margin-bottom: 0;
+    }
+
+    .projectLinks {
+      display: none;
+    }
+  }
+
+  .columnRight {
+    max-width: 500px;
+    margin: 25px auto 0;
+
+    .card {
+      pointer-events: none;
+      border: 1px solid #ffffff0d;
+      border-radius: 5px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        border-radius: 5px;
+      }
+
+      //NEXT.JS's img spans
+      span {
+        display: block !important;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    min-height: unset;
+    position: relative;
+
+    .titleContainer {
+      position: absolute;
+      width: 100%;
+    }
+
+    .title {
+      width: 50%;
+      padding-right: 30px;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .columnLeft {
+      margin-top: 50px;
+      order: 1;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding-right: 25px;
+
+      .projectLinks {
+        display: flex;
+        margin-top: auto;
+        a {
+          color: var(--accent);
+          display: block;
+          padding: 15px 10px 15px 0;
+          font-size: 0.9rem;
+        }
+
+        a:last-child {
+          padding-right: 0;
+        }
+
+        a:hover {
+          color: var(--text-primary);
+        }
+
+        i {
+          width: 20px;
+          color: var(--text-primary);
+        }
+      }
+    }
+
+    .columnRight {
+      order: 2;
+      width: 50%;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+}
