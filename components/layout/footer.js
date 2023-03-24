@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <div>Lorem Ipsum</div>
       <small>
-        Icons used from{' '}
+        Icons by{' '}
         <a href='https://www.flaticon.com/' target='_blank' rel='noreferrer'>
           Flaticon
         </a>{' '}
