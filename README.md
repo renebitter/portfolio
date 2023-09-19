@@ -4,7 +4,7 @@ Developed with Next.js and Sass. Posts and projects are written in markdown and 
 
 Live at: 
 
-[renebitter.github.io/portfolio/](renebitter.github.io/portfolio/)
+[https://renebitter.github.io/portfolio/](https://renebitter.github.io/portfolio/)
 
 [https://renebitter.dev](https://renebitter.dev)
 
